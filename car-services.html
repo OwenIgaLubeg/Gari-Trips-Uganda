@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Hire Services | Gari Trips</title>
+    <!-- Added for AOS and fonts from semuliki-park -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* ====== RESET & BASE STYLES ====== */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+
+        /* ====== HEADER ====== */
+        header {
+          /* Removed background — navbar is now fixed on top */
+          padding: 90px 0 0; /* Push content below fixed navbar */
+        }
+
+        header h1 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        /* Removed old nav styles — using semuliki navbar */
+
+        /* ====== MAIN LAYOUT ====== */
+        main {
+          max-width: 1200px;
+          margin: 30px auto;
+          padding: 0 20px;
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+          main {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        section {
+          margin-bottom: 30px;
+        }
+
+        h2 {
+          color: #2c5282;
+          border-bottom: 2px solid #4CAF50;
+          padding-bottom: 8px;
+          margin-bottom: 16px;
+          font-size: 1.6rem;
+        }
+
+        p {
+          margin-bottom: 16px;
+          font-size: 1.05rem;
+        }
+
+        /* ====== BLOG / CAR POSTS ====== */
+        .post {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+          margin-bottom: 25px;
+          transition: transform 0.3s ease;
+        }
+
+        .post:hover {
+          transform: translateY(-5px);
+        }
+
+        .post h3 {
+          color: #1a3a5f;
+          margin-bottom: 8px;
+        }
+
+        .post .date {
+          font-size: 0.9rem;
+          color: #777;
+          margin-bottom: 12px;
+        }
+
+        .post img {
+          width: 100%;
+          height: auto;
+          border-radius: 6px;
+          margin: 12px 0;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* ====== VIDEO SIDEBAR ====== */
+        .video-sidebar {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+          height: fit-content;
+          position: sticky;
+          top: 20px;
+        }
+
+        .video-sidebar h3 {
+          color: #2c5282;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+
+        .video-sidebar video {
+          width: 100%;
+          border-radius: 6px;
+          display: block;
+        }
+
+        /* ====== CONTACT FORM ====== */
+        .contact-section {
+          grid-column: 1 / -1;
+        }
+
+        #contact-form {
+          background: white;
+          padding: 25px;
+          border-radius: 8px;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+          max-width: 600px;
+        }
+
+        #contact-form label {
+          display: block;
+          margin: 12px 0 6px;
+          font-weight: 600;
+          color: #2c5282;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+        }
+
+        #contact-form textarea {
+          height: 120px;
+          resize: vertical;
+        }
+
+        #contact-form button {
+          background: #4CAF50;
+          color: white;
+          border: none;
+          padding: 12px 20px;
+          border-radius: 6px;
+          font-size: 1.1rem;
+          cursor: pointer;
+          margin-top: 15px;
+          transition: background 0.3s;
+        }
+
+        #contact-form button:hover {
+          background: #45a049;
+        }
+
+        /* ====== FOOTER ====== */
+        footer {
+          background: #1a3a5f;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          margin-top: 40px;
+        }
+
+        .phone-contact {
+          margin-top: 8px;
+          font-weight: 600;
+        }
+
+        /* ========== NAVBAR STYLING FROM SEMULIKI ========== */
+        nav.newNav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav__logo {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navLinks {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+        }
+
+        .navLinks a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #123456;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+        }
+
+        @media (max-width: 992px) {
+            .navLinks { display: none; }
+            .hamburger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR FROM semuliki-park.html ========== -->
+<nav class="newNav">
+    <div style="display: flex; align-items: center;">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <div style="
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    margin-right: 12px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                "
+                 onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';"
+            >
+                <img
+                        src="gari-trips-images/gari-trips-logo-black.png"
+                        alt="Site Logo"
+                        style="width: 32px; height: auto; object-fit: contain;"
+                >
+            </div>
+            <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-right: 0.5vw;">.</span></span>
+        </a>
+    </div>
+    <ul class="navLinks">
+        <li class="link" data-aos=""><a href="index.html">Home</a></li>
+        <li class="link" data-aos=""><a href="about.html">About</a></li>
+        <li class="link dropdown" data-aos="">
+            <a href="#" class="dropdown">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li class="link" data-aos=""><a href="package.html">Safari Packages</a></li>
+        <li class="link" data-aos=""><a href="packages.html">Accomodations</a></li>
+        <li class="link" data-aos=""><a href="blog.html">Our Blogs</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
+    </ul>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <div class="toggle-container" data-aos="fade-down">
+            <input id="themeToggle" class="toggle" type="checkbox" style="width: 40px; height: 20px;">
+        </div>
+        <div class="language-switcher" style="display: flex; align-items: center; gap: 8px;">
+            <label for="language-select" style="font-size: 0.9rem; color: #fff; font-weight: 500;">🌐</label>
+            <select id="language-select" style="padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; font-size: 0.85rem; color: #333;">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+                <option value="nl">Nederlands</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========== YOUR ORIGINAL CONTENT (UNCHANGED) ========== -->
+<header>
+    <h1>Car Rental Services at Gari Trips</h1>
+</header>
+
+<main>
+    <!-- Main Content -->
+    <div>
+        <section id="home">
+            <h2>Explore East Africa with Gari Trips Car Hire</h2>
+            <p>
+                Welcome to Gari Trips Car Hire Services, where your journey begins with comfort and convenience. Whether you're planning an adventurous safari, a family getaway, or a corporate event, our diverse fleet of vehicles is designed to meet all your travel needs. From luxury vans to rugged Land Cruisers, we provide reliable and stylish transportation options that ensure you explore the beauty of Uganda and East Africa in complete comfort.
+            </p>
+            <p>
+                Discover the freedom to travel at your own pace and create unforgettable memories with us!
+            </p>
+        </section>
+
+        <section id="about">
+            <h2>Fleet of Vans and Land Cruisers</h2>
+            <p>
+                Choose from our premium fleet of 4x4 Land Cruisers and spacious vans for your next adventure or group travel. With a variety of sizes and configurations, we accommodate any number of passengers—ensuring a safe, comfortable, and efficient travel experience across Uganda’s national parks and scenic routes.
+            </p>
+        </section>
+
+        <section id="blog">
+            <h2>Our Vehicle Gallery</h2>
+            <div id="posts">
+                <!-- Posts will be inserted by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Section (spans full width) -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p class="phone-contact">Call us: <strong>+256 704 018220</strong></p>
+            <form
+                    id="contact-form"
+                    name="car-services-contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+            >
+                <input type="hidden" name="form-name" value="car-services-contact" />
+                <p hidden>
+                    <label>Don’t fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" />
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Sidebar: Video -->
+    <div class="video-sidebar">
+        <h3>On Safari with Gari Trips</h3>
+        <video controls poster="/gari-trips-images/cars-1.jpg">
+            <source src="/gari-trips-images/cars-on-tripi-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</main>
+
+<footer>
+    <p>All rights reserved &copy; GARI TRIPS UGANDA</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000 });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carPosts = [
+            {
+                title: "Toyota Land Cruiser (4x4)",
+                date: "Ideal for Safari & Rough Terrain",
+                content: "Rugged, reliable, and fully equipped for East African safaris. Perfect for Queen Elizabeth, Murchison Falls, and Bwindi.",
+                imageUrl: "/gari-trips-images/cars-1.jpg"
+            },
+            {
+                title: "Luxury Tent-car (7-Seater)",
+                date: "Group Travel & Airport Transfers",
+                content: "Comfortable seating, AC, and ample luggage space for families, tour groups, or corporate events.",
+                imageUrl: "/gari-trips-images/cars-2.jpg"
+            },
+            {
+                title: "Luxury SUV (7-Seater)",
+                date: "Premium Comfort & Style",
+                content: "For travelers seeking elegance and performance. Great for city tours and scenic drives across Uganda.",
+                imageUrl: "/gari-trips-images/cars-3.jpg"
+            }
+        ];
+
+        const postsContainer = document.getElementById("posts");
+
+        carPosts.forEach(post => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("post");
+
+            const postTitle = document.createElement("h3");
+            postTitle.textContent = post.title;
+
+            const postDate = document.createElement("p");
+            postDate.classList.add("date");
+            postDate.textContent = post.date;
+
+            const postImage = document.createElement("img");
+            postImage.src = post.imageUrl;
+            postImage.alt = post.title;
+
+            const postContent = document.createElement("p");
+            postContent.textContent = post.content;
+
+            postElement.appendChild(postTitle);
+            postElement.appendChild(postDate);
+            postElement.appendChild(postImage);
+            postElement.appendChild(postContent);
+
+            postsContainer.appendChild(postElement);
+        });
+
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                alert('Thank you! Your message has been sent. We will contact you soon.');
+            });
+        }
+    });
+</script>
+</body>
+</html>

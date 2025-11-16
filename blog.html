@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="blog_page_title">Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <style>
+        ::-webkit-scrollbar{
+        width: 15px;
+      }
+
+      ::-webkit-scrollbar-track{
+        background: #d1e5ff;
+      }
+
+      ::-webkit-scrollbar-thumb{
+        background: linear-gradient( 90deg,rgb(63, 120, 244),rgb(245, 89, 239) );
+        border-radius: 10px;
+        height:  100px;
+      }
+    </style>
+</head>
+
+<body>
+<a href="index.html" class="home-button">
+    <i class="fas fa-home"></i> Gari Trips
+</a>
+<video autoplay muted loop id="background-video">
+    <source src="gari-trips-images/gari-blogs-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="video-overlay"></div>
+<section class="hero">
+    <div class="hero-content">
+        <h1 data-lang="blog_hero_title">Our Blogs</h1>
+        <p data-lang="blog_hero_subtitle">Discover amazing safari adventure stories and experiences.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 data-lang="scroll_down">Scroll down to see the blogs</h2>
+        <h1>↓</h1>
+    </div>
+</section>
+
+<div class="content-wrapper">
+    <main>
+        <div class="filter-controls">
+            <button id="reset-filters" class="reset-filters-btn" data-lang="our_clients">Our Clients</button>
+        </div>
+        <section id="blog-posts">
+            <!-- Blog posts will be dynamically inserted here -->
+        </section>
+        <aside>
+            <div class="widget semi-transparent-box" id="categories-widget">
+                <h3 data-lang="popular_categories">Popular Categories</h3>
+                <ul id="categories-list">
+                    <!-- Categories will be dynamically inserted here -->
+                </ul>
+            </div>
+
+            <div class="widget semi-transparent-box">
+                <h3 data-lang="useful_links">Useful Links</h3>
+                <ul>
+                    <li><a href="#cnt-form" data-lang="customize_safari">Customize Safari</a></li>
+                    <li><a href="index.html" data-lang="book_accommodation">Book Your accomodation</a></li>
+                    <li><a href="feedback.html" data-lang="rate_services">Rate Our Services</a></li>
+                    <li><a href="#cnt-form" data-lang="past_customers">Know from Our Past Customers</a></li>
+                </ul>
+            </div>
+            <div class="widget semi-transparent-box">
+                <h3 data-lang="related_posts">Related Posts</h3>
+                <!-- Related posts will be dynamically inserted here -->
+            </div>
+            <div class="widget semi-transparent-box">
+                <h3 data-lang="subscribe_newsletter">Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" data-lang-placeholder="email_placeholder" placeholder="Your email address" required>
+                    <button type="submit" data-lang="subscribe_btn">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+</div>
+
+<script>
+    const blogPosts = [
+      {
+        title: "From Kampala to the Wild",
+        date: "July 12, 2023",
+        author: "Nikos Papadopoulos",
+        image: "gari-trips-images/blogs-2.jpg",
+        content: "A 7-Day Itinerary for First-Time Visitors to Uganda. Maximize your trip with this expertly crafted route: gorillas in Bwindi, chimps in Kibale, lions in Queen Elizabeth, and a sunset cruise on the Nile.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 342,
+        comments: 56,
+        link: "#"
+      },
+      {
+        title: "Family-Friendly Safaris in Uganda",
+        date: "July 16, 2023",
+        author: "Emma Thompson",
+        image: "gari-trips-images/blogs-3.jpg",
+        content: "Yes, You Can Take Kids on a Gorilla Trek! With the right planning, Uganda offers unforgettable—and surprisingly accessible—wildlife experiences for families. Find out age requirements, safety tips, and kid-friendly lodges.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 287,
+        comments: 42,
+        link: "#"
+      },
+      {
+        title: "Why Bwindi Impenetrable Forest Is a Must-Visit for Every Gorilla Lover",
+        date: "July 15, 2024",
+        author: "Carlos Rodriguez",
+        image: "gari-trips-images/blogs-10.jpg",
+        content: "Discover the magic of tracking mountain gorillas in Uganda’s UNESCO-listed Bwindi—and why this once-in-a-lifetime encounter tops every adventurer’s bucket list.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 401,
+        comments: 73,
+        link: "#"
+      },
+      {
+        title: "5 Reasons Uganda Is the Ultimate Safari Destination in East Africa",
+        date: "July 14, 2024",
+        author: "Yuki Tanaka",
+        image: "gari-trips-images/blogs-1.jpg",
+        content: "Beyond gorillas and chimps, Uganda offers incredible biodiversity, the source of the Nile, and landscapes ranging from savannahs to snow-capped mountains.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 365,
+        comments: 58,
+        link: "#"
+      },
+      {
+        title: "Wildlife Safari in Kenya: An Unforgettable Adventure",
+        date: "July 22, 2024",
+        author: "Zara Patel",
+        image: "gari-trips-images/blogs-7.jpg",
+        content: "Embark on a thrilling safari through the vast African savanna. Encounter majestic lions, graceful giraffes, and powerful elephants in their natural habitat. Experience the magic of the African wilderness.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 385,
+        comments: 72,
+        link: "#"
+      },
+      {
+        title: "Packing List for Your First Uganda Safari",
+        date: "Dec 21, 2023",
+        author: "Ben Carter",
+        image: "gari-trips-images/blogs-4.jpg",
+        content: "What to Bring (and What to Leave Behind). Don’t overpack! Learn the essentials—from quick-dry clothing to neutral-toned gear—that will keep you comfortable and camera-ready on your East African adventure.",
+        tags: ["Hiking", "Nature", "Adventure", "Sailing"],
+        likes: 312,
+        comments: 48,
+        link: "#"
+      },
+      {
+        title: "How Gari Trips Supports Conservation and Local Communities in East Africa",
+        date: "Nov 23, 2023",
+        author: "Maria Silva",
+        image: "gari-trips-images/blogs-5.jpg",
+        content: "We believe travel should protect, not exploit. Learn how your safari with Gari Trips directly funds anti-poaching efforts, education, and sustainable tourism.",
+        tags: ["Culture", "Rainforest", "Nature", "Conservation"],
+        likes: 420,
+        comments: 85,
+        link: "#"
+      },
+      {
+        title: "Chimpanzee Trekking in Kibale National Park",
+        date: "Sept 20, 2024",
+        author: "Luca Rossi",
+        image: "gari-trips-images/blogs-6.jpg",
+        content: "From dense rainforest hikes to face-to-face moments with our closest relatives, here’s your ultimate guide to chimp tracking in Uganda’s primate capital.",
+        tags: ["Hiking", "Food", "Travel", "Culture"],
+        likes: 350,
+        comments: 60,
+        link: "#"
+      },
+      {
+        title: "The Best Time to Visit Uganda for Wildlife Viewing and Gorilla Trekking",
+        date: "Sept 15, 2024",
+        author: "Linh Nguyen",
+        image: "gari-trips-images/blogs-8.jpg",
+        content: "Timing is everything! Get insider advice on dry vs. wet seasons, crowd levels, pricing, and when you’re most likely to see the Big Five and habituated gorilla families.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 390,
+        comments: 75,
+        link: "#"
+      },
+      {
+        title: "Cultural Encounters Beyond the Safari: Meet the Batwa People of Bwindi",
+        date: "Dec 26, 2024",
+        author: "Chloe Dubois",
+        image: "gari-trips-images/blogs-9.jpg",
+        content: "Go deeper than wildlife—experience the rich heritage of Uganda’s indigenous Batwa pygmies through storytelling, dance, and forest survival demonstrations.",
+        tags: ["Adventure", "Communities", "Plantations", "Hiking"],
+        likes: 330,
+        comments: 55,
+        link: "#"
+      },
+      {
+        title: "Murchison Falls vs. Queen Elizabeth National Park",
+        date: "Nov 27, 2024",
+        author: "Omar Ahmed",
+        image: "gari-trips-images/blogs-11.jpg",
+        content: "Compare Uganda’s two iconic parks—booming waterfalls and Nile hippos vs. tree-climbing lions and scenic boat cruises—to choose your perfect adventure.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 410,
+        comments: 80,
+        link: "#"
+      }
+    ];
+
+    function filterPostsByTag(tag) {
+      const filteredPosts = blogPosts.filter(post => post.tags.includes(tag));
+      displayPosts(filteredPosts);
+    }
+
+    function displayPosts(posts) {
+      const blogSection = document.getElementById("blog-posts");
+      if (!blogSection) {
+        console.error("Element with ID 'blog-posts' not found.");
+        return;
+      }
+      blogSection.innerHTML = '';
+      posts.forEach(post => {
+        const article = document.createElement("article");
+        article.className = "blog-post semi-transparent-box";
+        article.innerHTML = `
+          <img src="${post.image}" alt="${post.title}" class="blog-image">
+          <div class="blog-content">
+            <h2>${post.title}</h2>
+            <div class="post-meta">
+              <span class="author"><i class="fas fa-user"></i> ${post.author}</span>
+              <span class="date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+              <span class="likes"><i class="fas fa-heart"></i> ${post.likes}</span>
+              <span class="comments"><i class="fas fa-comment"></i> ${post.comments}</span>
+            </div>
+            <p>${post.content}</p>
+            <div class="tags">
+              ${post.tags.map(tag => `<span class="tag" onclick="filterPostsByTag('${tag}')">${tag}</span>`).join('')}
+            </div>
+            <a href="${post.link}" class="read-more" data-lang="read_more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        `;
+        blogSection.appendChild(article);
+      });
+    }
+
+    function displayTopCategories() {
+      const categoriesCount = {};
+      blogPosts.forEach(post => {
+        post.tags.forEach(tag => {
+          categoriesCount[tag] = (categoriesCount[tag] || 0) + 1;
+        });
+      });
+
+      const sortedCategories = Object.entries(categoriesCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5);
+
+      const categoriesList = document.getElementById('categories-list');
+      if (categoriesList) {
+        categoriesList.innerHTML = '';
+        sortedCategories.forEach(([category, count]) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="#" onclick="filterPostsByTag('${category}')">${category} <span>(${count})</span></a>`;
+          categoriesList.appendChild(li);
+        });
+      }
+    }
+
+    function resetFilters() {
+      displayPosts(blogPosts);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      displayPosts(blogPosts);
+      displayTopCategories();
+
+      const resetBtn = document.getElementById('reset-filters');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', resetFilters);
+      }
+
+      // Optional: Related posts widget
+      const relatedWidget = document.querySelector('.widget:nth-child(3)');
+      if (relatedWidget) {
+        const relatedPosts = blogPosts.slice(1, 4);
+        relatedPosts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'related-post';
+          div.innerHTML = `
+            <img src="${post.image}" alt="${post.title}">
+            <div>
+              <h4>${post.title}</h4>
+              <p>${post.date}</p>
+            </div>
+          `;
+          relatedWidget.appendChild(div);
+        });
+      }
+
+      // Initialize multilingual after content loads
+      if (typeof window.translations !== 'undefined' && typeof applyTranslations === 'function') {
+        applyTranslations(localStorage.getItem('selected_language') || 'en');
+      }
+    });
+
+    // Optional: Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.hero');
+      if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+      }
+    });
+</script>
+
+<!-- ========== MULTILINGUAL SCRIPTS ========== -->
+<script src="translations.js"></script>
+<script src="multilingual.js"></script>
+</body>
+
+</html>

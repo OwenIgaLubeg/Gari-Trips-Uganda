@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="faq-website.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./Image-Gallery/style.css">
+    <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="./navLinks.css">
+    <link rel="stylesheet" href="counter.css" class="rel href">
+
+    <title>Queen Elizabeth Park | Gari Trips Uganda</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="tilt.css">
+    <script src="tilt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+    <script src="index.js" defer></script>
+    <script src="mouseEffect.js"></script>
+    <link rel="stylesheet" href="mouseEffect.css">
+    <script src="Theme.js" defer></script>
+    <script src="path/to/aos.js"></script>
+
+    <!-- ====== DARK MODE CSS VARIABLES ====== -->
+    <style>
+        :root {
+          --text-primary: #123456;
+          --text-secondary: #2c3e50;
+          --text-muted: #555;
+          --bg-body: #ffffff;
+          --card-bg: #ffffff;
+          --border-color: #ddd;
+        }
+
+        .dark-theme {
+          --text-primary: #e0e0ff;
+          --text-secondary: #c5c5e0;
+          --text-muted: #a0a0c0;
+          --bg-body: #121218;
+          --card-bg: #1e1e28;
+          --border-color: #333;
+        }
+
+        body {
+          background-color: var(--bg-body);
+          color: var(--text-secondary);
+          transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+
+    <style>
+        html {
+          scroll-behavior: smooth;
+          font-family: "Afacad Flux", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+          font-variation-settings: "slnt" 0;
+          width: 100vw;
+        }
+        /* Bwindi Content Styling */
+        .bwindi-container {
+          max-width: 1400px;
+          margin: 80px auto;
+          padding: 0 20px;
+        }
+        .bwindi-main {
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+        }
+        .bwindi-content {
+          flex: 2;
+          min-width: 300px;
+          background: var(--card-bg);
+          padding: 30px;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .bwindi-gallery {
+          flex: 1;
+          min-width: 280px;
+          max-width: 450px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .gallery-slide {
+          width: 100%;
+          height: 280px;
+          overflow: hidden;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .gallery-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+        .gallery-slide img:hover {
+          transform: scale(1.03);
+        }
+        .sp-header .location {
+          font-size: 1.1rem;
+          color: var(--text-muted);
+          margin-bottom: 10px;
+        }
+        .sp-header h1 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: var(--text-primary);
+        }
+        .upper-content {
+          margin-bottom: 30px;
+        }
+        .text-content h3 {
+          font-size: 1.5rem;
+          margin: 20px 0 12px;
+          color: var(--text-secondary);
+        }
+        .un-styled-list {
+          padding-left: 20px;
+        }
+        .un-styled-list li {
+          margin-bottom: 8px;
+          line-height: 1.6;
+          color: var(--text-muted);
+        }
+        .map-box {
+          margin-top: 20px;
+        }
+        .map-box iframe {
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        /* FAQ Accordion */
+        .t-faqs h3, .t-reviews h3 {
+          margin: 30px 0 20px;
+          font-size: 1.8rem;
+          color: var(--text-primary);
+        }
+        .accordion-box {
+          list-style: none;
+          padding: 0;
+        }
+        .accordion {
+          margin-bottom: 10px;
+          border: 1px solid var(--border-color);
+          border-radius: 6px;
+          overflow: hidden;
+        }
+        .acc-btn {
+          padding: 15px;
+          background: var(--card-bg);
+          color: var(--text-secondary);
+          cursor: pointer;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .acc-content {
+          padding: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease, padding 0.3s ease;
+          color: var(--text-muted);
+        }
+        .acc-content.current {
+          padding: 15px;
+          max-height: 500px;
+        }
+        /* Reviews Section */
+        .t-reviews .rev-info {
+          background: var(--card-bg);
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          color: var(--text-secondary);
+        }
+        .add-review .form-box {
+          background: var(--card-bg);
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          color: var(--text-secondary);
+        }
+        .add-review input, .add-review textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 15px;
+          border: 1px solid var(--border-color);
+          border-radius: 6px;
+          font-family: inherit;
+          background: var(--bg-body);
+          color: var(--text-secondary);
+        }
+        .add-review textarea {
+          height: 120px;
+          resize: vertical;
+        }
+        .theme-btn {
+          background: #150267;
+          color: white;
+          border: none;
+          padding: 12px 30px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: 600;
+          transition: background 0.3s;
+        }
+        .theme-btn:hover {
+          background: #0d014a;
+        }
+        @media (max-width: 992px) {
+          .bwindi-main {
+            flex-direction: column;
+          }
+          .bwindi-gallery {
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+          .gallery-slide {
+            height: 200px;
+            flex: 1;
+            min-width: 200px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="newNav">
+    <div style="display: flex; align-items: center;">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+            <div style="
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    "
+                 onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';"
+            >
+                <img
+                        src="gari-trips-images/gari-trips-logo-black.png"
+                        alt="Site Logo"
+                        style="
+          width: 32px;
+          height: auto;
+          object-fit: contain;
+        "
+                >
+            </div>
+            <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-right: 0.5vw;">.</span></span>
+        </a>
+    </div>
+    <ul class="navLinks">
+        <li class="link" data-aos=""><a href="index.html">Home</a></li>
+        <li class="link" data-aos=""><a href="about.html">About</a></li>
+        <li class="link dropdown" data-aos="">
+            <a href="#" class="dropdown">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li class="link" data-aos=""><a href="package.html">Safari Packages</a></li>
+        <li class="link" data-aos=""><a href="packages.html">Accomodations</a></li>
+        <li class="link" data-aos=""><a href="blog.html">Our Blogs</a></li>
+        <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+        <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
+    </ul>
+    <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+        <input id="themeToggle" class="toggle" type="checkbox">
+    </div>
+    <div class="language-switcher" style="display: flex; align-items: center; gap: 8px; margin-left: 20px;">
+        <label for="language-select" style="font-size: 0.9rem; color: #333; font-weight: 500;">🌐</label>
+        <select id="language-select" style="padding: 6px 10px; border-radius: 4px; border: 1px solid #ccc; background: white; font-size: 0.9rem; cursor: pointer;">
+            <option value="en">English</option>
+            <option value="de">Deutsch (German)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="nl">Nederlands (Dutch)</option>
+            <option value="fr">Français (French)</option>
+        </select>
+    </div>
+    <div class="hamburger" id="hamburger" data-aos="fade-down">
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+        <div class="line" style="margin-bottom: 5px;"></div>
+    </div>
+</nav>
+
+<!-- ========== Queen Elizabeth park CONTENT ========== -->
+<div class="bwindi-container">
+    <div class="bwindi-main">
+        <!-- Main Text Content -->
+        <div class="bwindi-content">
+            <div class="sp-header">
+                <div class="location">Big Game Safaris in Uganda</div>
+                <h1>Queen Elizabeth National Park</h1>
+            </div>
+
+            <div class="upper-content">
+                <div class="text-content">
+                    <p>Queen Elizabeth National Park is Uganda’s most visited national park and a key destination for anyone
+                        seeking a Big Five safari in East Africa. Located in western Uganda near the Rwenzori Mountains,
+                        the park stretches from Lake George to Lake Edward and features savannah plains, crater lakes,
+                        forests, and wetlands. It’s famous for its tree-climbing lions, scenic Kazinga Channel boat cruises,
+                        and diverse wildlife making it perfect for both luxury Uganda safaris and family wildlife tours.</p>
+                    <!--<p>This park is a top choice for travelers interested in mountaineering in Uganda, Rwenzori trekking
+                        tours, birdwatching safaris, and cultural encounters with the local Bakonzo communities.</p>-->
+                    <!--<p>Popular with trekkers, birdwatchers, and cultural enthusiasts, Mount Elgon National Park Uganda is
+                        a fantastic off-the-beaten-path safari destination that combines natural beauty with rich Bagisu
+                        and Sabiny traditions.</p>-->
+
+                    <div class="upper-content">
+                        <div class="text-content">
+                            <h3>Highlights of Queen Elizabeth Park</h3>
+                            <ul class="un-styled-list">
+                                <li>Tree-climbing lions of the Ishasha sector.</li>
+                                <li>Scenic Kazinga Channel, packed with hippos and crocodiles.</li>
+                                <li>Over 600 bird species.</li>
+                                <li>Guided game drives with chances to see lions, elephants, leopards, buffaloes, and more.</li>
+                                <li>Chimpanzee trekking in Kyambura Gorge.</li>
+                                <!--<li>Lake Albert Excursions – boat rides to spot the rare shoebill stork.</li>-->
+                                <!--<li>Photographic safaris with professional guidance.</li>-->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Top Activities in Queen Elizabeth National Park</h3>
+                    <ul class="un-styled-list">
+                        <li>Game Drives – Explore Kasenyi Plains or the Ishasha Sector for classic Uganda wildlife safaris.</li>
+                        <li>Kazinga Channel Boat Cruise – One of the best places to see hippos, crocodiles, and elephants up close.</li>
+                        <li>Chimpanzee Tracking – Trek through the Kyambura Gorge for a glimpse of primates in the wild.</li>
+                        <li>Crater Lake Exploration – Drive through scenic crater fields with panoramic views.</li>
+                        <li>Bird Watching – Spot African skimmers, shoebills, and kingfishers.</li>
+                        <li>Sunset Viewing – Perfect for romantic and photographic moments on a luxury Uganda safari.</li>
+                        <li>Photography Safaris – Incredible light, wildlife, and unspoiled scenery ideal for professional photographers.</li>
+                        <!-- <li>Photography Safaris – Incredible light, wildlife, and unspoiled scenery ideal for professional photographers.</li>-->
+                        <!--<li>Bird Watching – Over 350 species, including papyrus gonolek, African wattled lapwing, and shoebill.</li>-->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="upper-content">
+                 <div class="text-content">
+                     <h3>All Activities in Rwenzori Mountains National Park</h3>
+                     <ul class="un-styled-list">
+                         <li>Rwenzori Trekking Tours – multi-day hikes to explore glaciers, valleys, and peaks.</li>
+                         <li>Climbing Expeditions – summit Margherita Peak for a once-in-a-lifetime mountaineering experience.</li>
+                         <li>Day Hikes & Nature Walks – short treks for waterfalls, crater lakes, and forest walks.</li>
+                         <li>Birdwatching Safaris in Uganda – spot Albertine Rift endemics like the Rwenzori batis.</li>
+                         <li>Cultural Encounters – immerse yourself in Bakonzo traditions around Ruboni and Kilembe.</li>
+                         <li>Cultural Tours, visit Bagisu coffee farms and learn traditional practices.</li>
+                         <li>Photographic safaris with professional guidance.</li>
+                     </ul>
+                 </div>
+             </div>-->
+
+            <!--<div class="upper-content">
+                <div class="text-content">
+                    <h3>Sectors of Bwindi – Choose Your Gorilla Trekking Adventure</h3>
+                    <p>Bwindi is divided into four trekking sectors, and choosing the right one is essential for getting the best out of your Uganda gorilla safari.</p>
+
+                    <h3>1. Buhoma Sector (Northwest)</h3>
+                    <ul class="un-styled-list">
+                        <li>Steepness: Gentle, relatively easy.</li>
+                        <li>Best for: First-time trekkers, families, and older travelers.</li>
+                        <li>Highlights: Closest to Queen Elizabeth NP; historic Mubare group.</li>
+                        <li>SEO focus: best sector for easy gorilla trekking in Uganda, family friendly Uganda safari.</li>
+                    </ul>
+
+                    <h3>2. Ruhija Sector (East)</h3>
+                    <ul class="un-styled-list">
+                        <li>Steepness: Moderate to steep.</li>
+                        <li>Best for: Birders, nature lovers, moderately fit hikers.</li>
+                        <li>Highlights: Stunning views, fewer crowds, rare birds.</li>
+                        <li>SEO focus: scenic gorilla trekking Uganda, birdwatching safaris Uganda.</li>
+                    </ul>
+
+                    <h3>3. Rushaga Sector (South)</h3>
+                    <ul class="un-styled-list">
+                        <li>Steepness: Steep and hilly.</li>
+                        <li>Best for: Adventure seekers, short-notice bookings.</li>
+                        <li>Highlights: Many gorilla families, Gorilla Habituation Experience.</li>
+                        <li>SEO focus: affordable gorilla permits Uganda, 4-hour gorilla safari Uganda.</li>
+                    </ul>
+
+                    <h3>4. Nkuringo Sector (Southwest)</h3>
+                    <ul class="un-styled-list">
+                        <li>Steepness: Very steep; most challenging.</li>
+                        <li>Best for: Physically fit and experienced hikers.</li>
+                        <li>Highlights: Epic views of Virunga Volcanoes, fewer tourists.</li>
+                        <li>SEO focus: off-the-beaten-track gorilla trekking, photographer’s favorite gorilla tour.</li>
+                    </ul>
+                </div>
+            </div>-->
+
+            <div class="upper-content">
+                <div class="text-content">
+                    <h3>Accommodation in Queen Elizabeth National Park.</h3>
+                    <p>Whether you’re on a budget safari in Uganda or a high-end wildlife tour, Queen Elizabeth has options for every traveler:</p>
+                    <h3>Popular accomodation facilities include:</h3>
+                    <ul class="un-styled-list">
+                        <li>Luxury: Kyambura Gorge Lodge, Mweya Safari Lodge.</li>
+                        <li>Midrange: Buffalo Safari Lodge, Engiri Game Lodge.</li>
+                        <li>Budget: The Bush Lodge, Simba Safari Camp.</li>
+                        <!--<li>Mountain Huts & Campsites: available along trekking trails.</li>-->
+                    </ul>
+                    <!--<p>All lodges are strategically located within Bwindi’s four main sectors as mention above offering easy access to nearby gorilla trekking start points and breathtaking views of the surrounding rainforest.</p>-->
+                </div>
+            </div>
+
+            <div class="upper-content">
+                <div class="text-content">
+                    <h3>Best Time to Visit Queen Elizabeth National Park.</h3>
+                    <!--<ul class="un-styled-list">
+                        <li>December to February and June to August – dry seasons are best for game drives and boat cruises .</li>
+                        <li>Wildlife is easier to spot as animals gather around water sources.</li>
+                        <li>The falls are impressive all year round, but boat trips are smoother during dry months.</li>
+                    </ul>-->
+                  <p>The best time for a safari in Queen Elizabeth National Park is during the dry seasons, January–March
+                      and June–July. These months offer better wildlife viewing conditions, especially for game drives and boat cruises.</p>
+                </div>
+            </div>
+
+            <div class="upper-content">
+                <div class="text-content">
+                    <h3>How to Get to Queen Elizabeth National Park.</h3>
+                    <ul class="un-styled-list">
+                        <li>By Road: Approx. 6–7 hours’ drive from Kampala via Fort Portal or Mbarara.</li>
+                        <li>By Air: Scheduled flights available from Entebbe to Mweya Airstrip.</li>
+                    </ul>
+                    <p>GARI TRIPS uganda will arrange transfers and park entry logistics for you.</p>
+                </div>
+            </div>
+
+            <div class="upper-content">
+                <div class="text-content">
+                    <h3>Ideal For</h3>
+                    <ul class="un-styled-list">
+                        <li>Travelers seeking a classic Uganda safari experience.</li>
+                        <li>Wildlife photographers and nature enthusiasts.</li>
+                        <li>Couples, families, and small groups.</li>
+                        <li>Bird watchers and big cat lovers.</li>
+                        <li>Tourists booking custom safari packages in Uganda.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--<div class="upper-content">
+                <div class="text-content">
+                    <h3>Why Visit Murchison Falls Park?</h3>
+                    <p>For travelers seeking an off-the-beaten-path Uganda safari, Semuliki offers unique attractions not
+                        found elsewhere in East Africa, from bubbling hot springs and rare Central African birds to cultural
+                        encounters and rainforest hikes.</p>
+                </div>
+            </div>-->
+
+            <div class="location">
+                <h3>Map</h3>
+                <div class="map-box">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63811.708374619155!2d29.8057818248653!3d-0.23431422861928445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19da67c8881e7b65%3A0x1b86b7c0c4d0b99c!2sQueen%20Elizabeth%20National%20Park!5e0!3m2!1sen!2sug!4v1698481165916!5m2!1sen!2sug"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="t-faqs">
+                <h3>Frequently Asked Questions</h3>
+                <ul class="accordion-box faqs-accordion clearfix">
+                    <li class="accordion block active-block">
+                        <div class="acc-btn active">1.   What wildlife can I see in Queen Elizabeth National Park?<span class="arrow fa fa-plus"></span></div>
+                        <div class="acc-content current">
+                            <div class="content">
+                                <div class="travilo-text">
+                                    <p>The park is home to a diverse range of wildlife, including elephants, lions, leopards, buffaloes, hippos, and over 600 bird species, making it a prime destination for wildlife enthusiasts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion block">
+                        <div class="acc-btn">2. Are there any cultural experiences available in Queen Elizabeth National Park?<span class="arrow fa fa-plus"></span></div>
+                        <div class="acc-content">
+                            <div class="content">
+                                <div class="travilo-text">
+                                    <p>Yes, visitors can engage in cultural experiences with local communities, including visits to traditional villages, learning about local customs, and participating in community projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion block">
+                        <div class="acc-btn">3.  Can I see tree-climbing lions in Queen Elizabeth National Park?<span class="arrow fa fa-plus"></span></div>
+                        <div class="acc-content">
+                            <div class="content">
+                                <div class="travilo-text">
+                                    <p>Yes, the park is famous for its tree-climbing lions, particularly in the Ishasha sector, where they can often be seen lounging in fig trees.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion block">
+                        <div class="acc-btn">4. What should I pack for a visit to Queen Elizabeth National Park?<span class="arrow fa fa-plus"></span></div>
+                        <div class="acc-content">
+                            <div class="content">
+                                <div class="travilo-text">
+                                    <p>It’s recommended to pack lightweight, breathable clothing, a hat, sunscreen, insect repellent, binoculars, a camera, and sturdy walking shoes for game drives and nature walks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion block">
+                        <div class="acc-btn">5. Is it safe to visit Queen Elizabeth National Park?<span class="arrow fa fa-plus"></span></div>
+                        <div class="acc-content">
+                            <div class="content">
+                                <div class="travilo-text">
+                                    <p>Yes, the park is generally safe for tourists, especially when traveling with a reputable tour company. It is advisable to follow safety guidelines provided by your guides.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Inquiry -->
+            <div class="t-reviews">
+                <h3>Add an Inquiry</h3>
+                <div class="add-review">
+                    <div class="form-box site-form">
+                        <!-- Netlify Form -->
+                        <form name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contact-form" />
+                            <input type="hidden" name="bot-field" />
+                            <div class="row clearfix">
+                                <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="text" name="name" placeholder="Your name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="email" name="email" placeholder="Your email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-inner">
+                                        <input type="text" name="inquiry_title" placeholder="Inquiry title" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-inner">
+                                        <textarea name="inquiry_message" placeholder="Start writing your inquiry here" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <button type="submit" class="theme-btn"><span>Submit Inquiry</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sliding Image Gallery (Right Side) -->
+        <div class="bwindi-gallery">
+            <div class="gallery-slide">
+                <img src="gari-trips-images/gallery-1.jpg" alt="Bwindi Gorilla">
+            </div>
+            <div class="gallery-slide">
+                <img src="gari-trips-images/queen-climbing-lion.jpg" alt="Bwindi Forest">
+            </div>
+            <div class="gallery-slide">
+                <img src="gari-trips-images/gallery-3.jpg" alt="Bwindi Landscape">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" data-aos="fade-up">
+    <div class=" footer__container">
+        <div class="footer_col_1">
+            <div class="footer__col">
+                <div class="footer__area">
+                    <h4 class="contact_us">Contact Us</h4>
+                    <div class="d-flex align-items-center justify-between mb-2">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                    d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z" />
+                        </svg>
+                        <a href="mailto:info@garitripsuganda.com" class="text-nowrap">info@garitripsuganda.com</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                    d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
+                        </svg>
+                        <a href="tel:+256 704 018220" class="text-nowrap">+256 704 018 220</a>
+                    </div>
+                    <div class="icons" style="display: flex; gap: 10px; margin-top: 10px;">
+                        <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                            <div class="icon">
+                                <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                            <div class="icon">
+                                <i class="fab fa-tiktok" title="TikTok" style="cursor: pointer; font-size: 1.2rem;"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/@garitripsuganda">
+                            <div class="icon"><i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i></div>
+                        </a>
+                        <a href="https://www.youtube.com/@GariTrips">
+                            <div class="icon"><i class="fab fa-youtube" title="YouTube" style="cursor: pointer;"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer-head" class="footer__title" style="cursor: default;">Gari Trips<span></span></h3>
+                <p>
+                    Ready for your next adventure? Let's make it unforgettable.<br>
+                </p>
+                <p class="footer__text">
+                    Start planning your dream Safari with us and explore East-Africa.
+                </p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer-head" class="footer__title">National Game Parks<span></span></h3>
+                <p class="footer__text footer_text">
+                    <a href="bwindi-park.html">Bwindi Impenetrable Forest Park</a>
+                    <a href="mgahinga-gorilla-park.html">Mgahinga Gorilla Park</a>
+                    <a href="queen-elizabeth-park.html">Queen Elizabeth Park</a>
+                    <a href="murchison-falls-park.html">Murchison Falls Park</a>
+                    <a href="lake-mburo-park.html">Lake Mburo Park</a>
+                    <a href="kidepo-valley-park.html">Kidepo Valley Park</a>
+                    <a href="kibale-park.html">Kibale Park</a>
+                    <a href="mt-rwenzori-park.html">Mt.Rwenzori Park</a>
+                </p>
+            </div>
+            <div class="footer__col">
+                <div class="footer__area">
+                    <h3 class="footer-head footer__subtitle">Quick Links</h3>
+                    <p class="footer_link_text">
+                        <a href="index.html" class="footer__link">Home</a> <br>
+                        <a href="car-services.html" class="footer__link">Car Services</a><br>
+                        <a href="blog.html" class="footer__link">Our Blogs</a> <br>
+                        <a href="about.html" class="footer__link">About us</a> <br>
+                        <a href="index.html#cnt-form" class="footer__link">Contact Us</a> <br>
+                        <a href="package.html" class="footer__link">Safari Packages</a><br>
+                        <br><a href="Cultural_Exp.html" class="footer__link">Communities</a><br>
+                        <a href="semuliki-park.html">Semuliki Park</a><br>
+                        <a href="mt-elgon-park.html">Mt.Elgon Park</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_col_2">
+            <div class="map_col">
+                <h4 class="footer-head footer-head-map" style="padding-left: 35px; color: var(--text-primary);"> Address</h4>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe
+                                width="100%"
+                                height="300"
+                                id="gmap_canvas"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.427023745181!2d32.6141747!3d0.2829323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbdccca552df%3A0x4d40e4ff5076789f!2sBoston%20International%20School!5e0!3m2!1sen!2sug!4v1730900000000!5m2!1sen!2sug"
+                                frameborder="0"
+                                scrolling="no"
+                                marginheight="0"
+                                marginwidth="0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bar" style="padding: 10px; text-align: center; font-size: 16px; margin-top: 70px;">
+        <div>
+            <li>&copy; <span id="year"></span> All rights reserved @ Gari Trips Uganda Limited</li>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1500, offset: 120 });
+</script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Ask me anything!",
+      "botConversationDescription": "Gari Trips",
+      "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+      "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+      "lazySocket": true,
+      "botName": "Gari Trips",
+      "avatarUrl": "/gari-trips-images/gari-trips-logo-black.png",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+      "themeColor": "#2563eb",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "allowedOrigins": []
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="navbarToggle.js" defer></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+<script>
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.acc-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordion = button.closest('.accordion');
+            const content = accordion.querySelector('.acc-content');
+            const isActive = content.classList.contains('current');
+            document.querySelectorAll('.acc-content').forEach(el => {
+                el.classList.remove('current');
+                el.style.maxHeight = '0';
+            });
+            document.querySelectorAll('.acc-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            if (!isActive) {
+                content.classList.add('current');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                button.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

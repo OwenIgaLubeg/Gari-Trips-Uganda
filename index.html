@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    .center-card {
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      bottom: 18px;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="faq-website.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="./Image-Gallery/style.css">
+  <link rel="stylesheet" href="./Image-Gallery/stylecaptions.css">
+  <link rel="stylesheet" href="explore.css">
+  <link rel="stylesheet" href="./navLinks.css">
+  </link>
+  <link rel="stylesheet" href="counter.css" class="rel href">
+  <title data-lang="page_title">Mountain Gorilla Trekking Adventure Safaris</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="tilt.css">
+  <script src="tilt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+  <script src="index.js" defer></script>
+  <script src="mouseEffect.js"></script>
+  <link rel="stylesheet" href="mouseEffect.css">
+  <script src="Theme.js" defer></script>
+  <script src="path/to/aos.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: "Afacad Flux", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
+      font-variation-settings: "slnt" 0;
+      width: 100vw;
+    }
+  </style>
+  <style>
+    .goupbtn {
+      z-index: 10;
+    }
+    .active {
+      color: red !important;
+    }
+    @media screen and (max-width:390px) {
+      .nav__logo {
+        position: relative;
+        right: 1.9rem;
+      }
+      .contact-btn {
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle-container {
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle {
+        width: 130%;
+      }
+      .line {
+        width: 150%;
+      }
+      .hamburger {
+        position: relative;
+        right: 1rem;
+      }
+    }
+    .gallery-rotate-image .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .gallery-rotate-image .image-container span {
+      display: inline-block;
+    }
+    .trip-gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .trip-gallery-container .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .trip-gallery-container .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+    @media screen and (max-width: 768px) {
+      body {
+        align-items: flex-end;
+        width: auto;
+      }
+    }
+    .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(71, 240, 255, 0.3), rgba(0, 119, 255, 0.3));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+    }
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    #cookie-consent {
+      position: fixed;
+      bottom: 10px;
+      left: 70px;
+      background-color: #e3e4fc;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      height: fit-content;
+      z-index: 10000;
+      border-radius: 10px;
+      margin-bottom: 5px;
+      margin: 20px;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      transition: border-color 0.3s;
+      border: 1px solid rgb(4, 4, 215);
+      border-bottom: #3950ac;
+    }
+    #cookie-consent:hover {
+      border-right: 6px solid #0207a3;
+      border-bottom: 6px solid #3202a3;
+    }
+    #cookie-consent p {
+      color: black;
+      text-align: center;
+    }
+    .accept-cookies,
+    .reject-cookies {
+      width: 260px;
+      height: 35px;
+      color: white;
+      background-color: #150267;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .reject-cookies {
+      margin-top: 10px;
+    }
+    .accept-cookies:hover,
+    .reject-cookies:hover {
+      transform: scale(0.95);
+      box-shadow: 0 0 15px rgb(75, 215, 239, 0.6);
+    }
+    .accept-cookies:hover {
+      background-color: rgb(57, 159, 222);
+      color: #0d0b0b;
+      border: 1px solid rgb(2, 2, 53);
+    }
+    .reject-cookies:hover {
+      background-color: rgb(57, 159, 222);
+      color: #0d0b0b;
+      border: 1px solid rgb(2, 2, 53);
+    }
+    #learn-more-link,
+    #show-less-link {
+      color: #f90814;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .header__image {
+      margin-right: 15rem;
+    }
+    #cookie-content {
+      display: none;
+      margin-top: 10px;
+    }
+    @media (max-width: 725px) {
+      .circle-container {
+        display: none;
+      }
+      .header__image {
+        margin-right: 1rem;
+      }
+    }
+    .card1 {
+      width: 330px;
+      height: 450px;
+      transition: opacity 0.5s ease;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+    .card1:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background-color: rgb(228, 224, 238);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black;
+    }
+    .card-img-top {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 995px) {
+      .row1 {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card1 {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+  <style>
+    #progress-container {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      z-index: 99990;
+    }
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 7px;
+      width: 0;
+      background: linear-gradient(90deg, rgb(0, 72, 255) 0%, rgb(153, 187, 255) 50%, rgb(0, 184, 250) 100%);
+      box-shadow: 0 0 4px rgba(0, 166, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+      transition: width 0.09s ease-in-out;
+      border-radius: 10px;
+    }
+    .center-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .image-container {
+      margin-top: 80px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      overflow: hidden;
+      width: 1200px;
+      height: 400px;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 10px;
+    }
+    .carousell-item {
+      min-width: 50%;
+      max-width: 50%;
+      height: 450px;
+    }
+    .prev,
+    .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="imstyle.css">
+  <link rel="stylesheet" href="jquery.flipster.min.css">
+</head>
+<body style="background-color: var(--secondary-color);">
+<div class="circle-container">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+<div id="pre-loader">
+  <h1 data-lang="preloader_text">GARI TRIPS . . .</h1>
+</div>
+<div id="bg">
+  <canvas></canvas>
+  <canvas></canvas>
+  <canvas></canvas>
+</div>
+<nav class="newNav">
+  <div style="display: flex; align-items: center;">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+      <div style="
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    "
+           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';"
+      >
+        <img
+                src="gari-trips-images/gari-trips-logo-black.png"
+                alt="Site Logo"
+                style="
+          width: 32px;
+          height: auto;
+          object-fit: contain;
+        "
+        >
+      </div>
+      <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-right: 0.5vw;">.</span></span>
+    </a>
+  </div>
+  <ul class="navLinks">
+    <li class="link" data-aos=""><a href="index.html" data-lang="home">Home</a></li>
+    <li class="link" data-aos=""><a href="about.html" data-lang="about">About</a></li>
+    <li class="link dropdown" data-aos="">
+      <a href="#" class="dropdown" data-lang="services">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="Adventure.html" data-lang="destinations">Destinations</a></li>
+        <li><a href="Cultural_Exp.html" data-lang="communities">Communities</a></li>
+        <li><a href="car-services.html" data-lang="car_services">Car Services</a></li>
+        <li><a href="gorilla-trekking.html" data-lang="gorilla_trekking">Gorilla Trekking</a></li>
+        <li><a href="gallery.html" data-lang="gallery">Gallery</a></li>
+      </ul>
+    </li>
+    <li class="link" data-aos=""><a href="package.html" data-lang="safari_packages">Safari Packages</a></li>
+    <li class="link" data-aos=""><a href="packages.html" data-lang="accommodations">Accomodations</a></li>
+    <li class="link" data-aos=""><a href="blog.html" data-lang="our_blogs">Our Blogs</a></li>
+    <li class="link" data-aos=""><a href="feedback.html" data-lang="rate_us">Rate Us?</a></li>
+    <li class="link" data-aos=""><a href="#cnt-form" data-lang="contact_us">Contact Us</a></li>
+  </ul>
+  <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+    <input id="themeToggle" class="toggle" type="checkbox">
+  </div>
+  <div class="language-switcher" style="display: flex; align-items: center; gap: 8px; margin-left: 20px;">
+    <label for="language-select" style="font-size: 0.9rem; color: #333; font-weight: 500;">🌐</label>
+    <select id="language-select" style="padding: 6px 10px; border-radius: 4px; border: 1px solid #ccc; background: white; font-size: 0.9rem; cursor: pointer;">
+      <option value="en">English</option>
+      <option value="de">Deutsch (German)</option>
+      <option value="es">Español (Spanish)</option>
+      <option value="nl">Nederlands (Dutch)</option>
+      <option value="fr">Français (French)</option>
+    </select>
+  </div>
+  <div class="hamburger" id="hamburger" data-aos="fade-down">
+    <div class="line" style="margin-bottom: 5px;"></div>
+    <div class="line" style="margin-bottom: 5px;"></div>
+    <div class="line" style="margin-bottom: 5px;"></div>
+  </div>
+</nav>
+<header>
+  <div class="nav-wrapperr">
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <script>
+      window.addEventListener('scroll', function () {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+      });
+    </script>
+  </div>
+  <section class="section__container header__container" id="Home">
+    <div class="header__image" data-aos="fade-down-right">
+      <img src="gari-trips-images/gorilla-head.jpg" alt="header" />
+      <img src="gari-trips-images/elephants-pg1.jpg" alt="header" />
+    </div>
+    <div class="header__content">
+      <div>
+        <h1 data-aos="fade-in" data-lang="hero_title">The Misty Forests of Uganda.<br />Come visit Mountain Gorillas.<div> <span
+                class="auto-typed" style="color: var(--head-text);"></span></div>
+        </h1>
+        <p class="section__subtitle" data-aos="fade-in" data-lang="hero_subtitle">
+          Experience unforgettable gorilla safaris with East Africa’s trusted travel experts. We deliver premium,
+          personalized wildlife adventures for discerning travelers seeking rare, life-changing encounters in Uganda and beyond.
+        </p>
+        <div class="action__btns">
+          <a href="Adventure.html"><button class="btn" data-lang="plan_trip">Plan a Trip</button></a>
+          <a href="#cnt-form"><button class="btn" data-lang="inquire_now">Inquire Now</button></a>
+        </div>
+        <br>
+        <div class="story">
+          <div class="video">
+            <img src="https://i.ibb.co/KwHd8PQ/pexels-stijn-dijkstra-2499699.jpg" type="video/mp4"
+                 style="box-shadow:2px 2px 8px blue;">
+            <a href="story.html" class="btn_video">
+              <span><i class="ri-play-fill"></i></span>
+            </a>
+          </div>
+        </div>
+        <br>
+        <span data-aos="fade-in" style="color: #5755b6; font-weight: 600;" data-lang="explore_nature">Explore Nature</span>
+      </div>
+    </div>
+  </section>
+</header>
+<section>
+  <div class="section__container destination__container" id="National_Parks" data-aos="fade-up">
+    <div class="section__header" id="national_parks_text" style="text-align: center;">
+      <div>
+        <h2 class="section__title" data-lang="national_parks_title">National Game Parks</h2>
+        <p class="section__subtitle" data-lang="national_parks_subtitle">
+          Discover Uganda’s Top National Parks — From Bwindi’s Mountain Gorillas to Murchison Falls Wildlife Safaris.
+          Your Perfect East African Adventure Starts Here.
+        </p>
+      </div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/bwindi-park-3.jpg" class="card-img" alt="Mgahinga Gorilla Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="mgahinga_title">MGAHINGA GORILLA PARK</h1>
+            <p class="card-info" data-lang="mgahinga_desc">“Where Gold Meets Silver” – Trek Gorillas and Golden Monkeys in one of Uganda’s Smallest Yet Most Magical National Park.</p>
+            <a href="mgahinga-gorilla-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/gal-14.jpg" class="card-img" alt="Queen Elizabeth National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="queen_elizabeth_title">QUEEN ELIZABETH PARK</h1>
+            <p class="card-info" data-lang="queen_elizabeth_desc">Uganda’s most visited national park and a key destination for anyone seeking a Big Five safari in East Africa.</p>
+            <a href="queen-elizabeth-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/kibale-park-pic.jpg" class="card-img" alt="Kibale National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="kibale_title">KIBALE NATIONAL PARK</h1>
+            <p class="card-info" data-lang="kibale_desc">Kibale National Park is Uganda’s premier destination for chimpanzee tracking safaris and primate walks.</p>
+            <a href="kibale-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/lake-mburo-bike.jpg" class="card-img" alt="Lake Mburo National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="lake_mburo_title">LAKE MBURO PARK</h1>
+            <p class="card-info" data-lang="lake_mburo_desc">A small savannah park, it’s a top choice for weekend getaways, short Uganda safaris, and walking tours with wildlife.</p>
+            <a href="lake-mburo-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/semuliki-hot-springs.jpg" class="card-img" alt="Semuliki National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="semuliki_title">SEMULIKI PARK</h1>
+            <p class="card-info" data-lang="semuliki_desc">Semuliki is famous for its Sempaya Hot Springs, over 440 bird species, and the chance to experience Uganda’s only lowland tropical forest safari.</p>
+            <a href="semuliki-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/bwindi-park-pic.jpg" class="card-img" alt="Bwindi Impenetrable Forest">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="bwindi_title">BWINDI IMPENETRABLE FOREST</h1>
+            <p class="card-info" data-lang="bwindi_desc">One of the best safari destinations in Africa and home to nearly half of the world’s remaining mountain gorillas.</p>
+            <a href="bwindi-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/kidepo-park-pic.jpg" class="card-img" alt="Kidepo Valley National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="kidepo_title">KIDEPO VALLEY PARK</h1>
+            <p class="card-info" data-lang="kidepo_desc">Known for its unspoiled beauty and rare wildlife, the park is ideal for tourists looking for authentic Uganda safari experiences far from the crowds.</p>
+            <a href="kidepo-valley-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/L-mburo-park-pic.jpg" class="card-img" alt="Murchison Falls National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="murchison_title">MURCHISON FALLS PARK</h1>
+            <p class="card-info" data-lang="murchison_desc">This iconic park is ideal for travelers searching for a Big Five safari in Uganda, combining spectacular wildlife encounters with powerful natural scenery.</p>
+            <a href="murchison-falls-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/mt-elgon-park-pic.jpg" class="card-img" alt="Mount Elgon National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="mt_elgon_title">MT. ELGON NATIONAL PARK</h1>
+            <p class="card-info" data-lang="mt_elgon_desc">On the Uganda-Kenya border, the park is renowned for its scenic hiking trails, waterfalls, caves, and rich biodiversity.</p>
+            <a href="mt-elgon-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <img src="gari-trips-images/rwenzori-park-pic.jpg" class="card-img" alt="Rwenzori Mountains National Park">
+          <div class="card-body">
+            <h1 class="card-title" data-lang="mt_rwenzori_title">MT. RWENZORI NATIONAL PARK</h1>
+            <p class="card-info" data-lang="mt_rwenzori_desc">This park is a top choice for travelers interested in mountaineering in Uganda, Rwenzori trekking tours, birdwatching safaris, and cultural encounters with the local Bakonzo communities.</p>
+            <a href="mt-rwenzori-park.html"><button class="book__now" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <button class="swiper-button-prev"></button>
+      <button class="swiper-button-next"></button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      centeredSlides: true,
+      grabCursor: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        init: function() {
+          const activeSlide = this.slides[this.activeIndex];
+          if (activeSlide) {
+            activeSlide.style.transform = 'scale(1.05)';
+            activeSlide.style.zIndex = '2';
+            activeSlide.style.transition = 'transform 0.3s ease';
+          }
+        },
+        slideChange: function() {
+          this.slides.forEach(slide => {
+            slide.style.transform = 'scale(1)';
+            slide.style.zIndex = '1';
+          });
+          const active = this.slides[this.activeIndex];
+          active.style.transform = 'scale(1.05)';
+          active.style.zIndex = '2';
+        }
+      }
+    });
+  </script>
+</section>
+<section class="trip" id="trip" data-aos="zoom-in" data-aos-offset="100">
+  <div class="section__container trip__container">
+    <h2 class="section__title" data-lang="safari_packages">Safari packages</h2>
+    <p class="section__subtitle" data-lang="safari_subtitle">
+      Best Gorilla Trekking & Safari Deals in Uganda — Handpicked Packages with Up to 20% Off. Book Your Dream East Africa Adventure Today.
+    </p>
+    <div class="trip__grid">
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-1.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_1_title">11-Day Gorilla Trekking & Bwindi, Mgahinga Parks and more</p>
+          <p data-lang="package_1_desc">From walking safaris in L.Mburo Park to tracking chimpazees and mountain gorillas trekking in Mgahinga & Bwindi park</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+            <a href="11-days-gorilla-trekking-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-2.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_2_title">3-Day Lake Bunyonyi & Ultimate Uganda Safari Adventure</p>
+          <p data-lang="package_2_desc">Embark on a truly unforgettable journey through Uganda’s lush landscapes, vibrant wildlife, and rich cultural heritage</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <a href="3-day-itinerary.html"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-3.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_3_title">6-Day Wildlife, Nature and Culture Adventure</p>
+          <p data-lang="package_3_desc">From the vast savannahs of Queen Elizabeth National Park to the lush forests of Kyambura Gorge.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <a href="6-day-itinerary.html"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-4.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_4_title">6-Day Gorilla Habituation Experience & Wildlife Safari</p>
+          <p data-lang="package_4_desc">Track the iconic shoebill stork, enjoy walking safaris at Lake Mburo, and experience the rare Gorilla Habituation in Bwindi.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+            <a href="6-days-gorilla-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-5.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_5_title">20-Day Gorilla & Ultimate Wildlife Adventure Safari</p>
+          <p data-lang="package_5_desc"> gorilla and chimpanzee trekking, golden monkey, shoebill spotting, thrilling game drives, and a white-water rafting adventure.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+            <a href="20-days-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/package-6.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="package_6_title">14-Day Uganda Adventure Experience</p>
+          <p data-lang="package_6_desc">Highlights of the safari are; Explore rolling hills, shimmering lakes, and lush greenery while connecting with vibrant local traditions.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 4.8</div>
+            <a href="14-days-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view__all">
+      <a href="package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="view_all">View All</button></a>
+      <br>
+      <br>
+    </div>
+  </div>
+</section>
+<br>
+<section class="About" id="AboutUs">
+  <div class="color col-12">
+    <div class="section__container about__container">
+      <div class="col-8 bg primary"></div>
+      <div class="section__container gallary__container relative z-10 max-w-screen-xl px-4 mx-auto text-center pb-14">
+        <div class="aboutcon">
+          <div class="col-span-2 mx-auto lg:mx-0 lg:text-left">
+            <h1 class="headingofAbout section__title" data-lang="about_title">
+              <b>Gari Trips Uganda</b>
+            </h1>
+            <p class="aboutcontent" data-lang="about_content" data-aos="fade-in" style="text-align: justify;">
+              Safari adventures in East Africa’s wild heart with Gari Trips Uganda — your premier safari specialist
+              for gorilla trekking in Bwindi, chimpanzee tracking in Kibale, and unforgettable wildlife adventures
+              across Uganda’s national parks. Expert local guides, custom itineraries, and authentic experiences await.
+              Start your journey today!
+            </p>
+            <br>
+            <div class="video-container">
+              <video src="gari-trips-images/gari-video-about-us.mp4"
+                     controls
+                     playsinline
+                     preload="metadata"
+                     style="width: 100%; height: auto; display: block; border-radius: 10px;">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .aboutcontent:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+    .video-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+    }
+  </style>
+</section>
+<section class="stats">
+  <div class="wrapper">
+    <div class="countitem">
+      <i class="fa-solid fa-handshake-angle"></i>
+      <span class="num" data-val="25000">000</span>
+      <span class="text" data-lang="guides">Guides</span>
+    </div>
+    <div class="countitem">
+      <i class="fa-solid fa-suitcase-rolling"></i>
+      <span class="num" data-val="20000">000</span>
+      <span class="text" data-lang="tours">Tours</span>
+    </div>
+    <div class="countitem">
+      <i class="fa-solid fa-location-dot"></i>
+      <span class="num" data-val="18000">000</span>
+      <span class="text" data-lang="destinations">Destinations</span>
+    </div>
+  </div>
+</section>
+<section class="trip" id="safari-packages" data-aos="zoom-in" data-aos-offset="100">
+  <div class="section__container trip__container">
+    <h2 class="section__title" data-lang="events_packages">Our Events packages</h2>
+    <p class="section__subtitle" data-lang="events_subtitle">
+      Best Safari Deals in Rwanda, Kenya & Tanzania — Book Family Gorilla Camps, Grand Wildlife Expeditions, or
+      Honeymoon Safaris with Expert Local Guides. Save Up to 20%!
+    </p>
+    <div class="trip__grid">
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/events-pic-1.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="event_1_title">Kids’ Wildlife Explorer Camp</p>
+          <p data-lang="event_1_desc">Fun, educational safari adventures for children to discover Uganda’s animals, tracks, and conservation in safe, guided tours.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+            <a href="#cnt-form"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/events-pic-2.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="event_2_title">East Africa Grand Safari Expedition</p>
+          <p data-lang="event_2_desc">An epic 7-day journey through Uganda’s parks—gorillas, lions, elephants—for adventurers of all ages and experience levels.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+            <a href="#cnt-form"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="trip__card cardd tilt-effect">
+        <img src="gari-trips-images/events-pic-3.jpg" alt="trip" height="250" width="45" />
+        <div class="trip__details">
+          <p data-lang="event_3_title">Honeymoon Gorilla & Nile Escape</p>
+          <p data-lang="event_3_desc">Romantic luxury safari for newlyweds: private gorilla trekking, sunset Nile cruises, and candlelit dinners in the wild.</p>
+          <div class="booking__price">
+            <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+            <a href="#cnt-form"><button
+                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view__all">
+      <a href="#cnt-form"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="get_permit">Get a Gorilla Permit</button></a>
+      <br>
+      <br>
+      <a href="#cnt-form"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="customize_trip">Customize your desired Trip</button></a>
+    </div>
+  </div>
+</section>
+<section style="width: 100%; padding: 40px 0;" id="testimonial" class="testimonial">
+  <h2 class="testimonial-heading section__title" data-lang="testimonials">Testimonials</h2>
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.15cm; max-width: 1400px; margin: 0 auto;">
+    <!-- Testimonial 1 -->
+    <div class="card text-center card1"
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+      <div class="card-inner"
+           style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+        <div class="card-front"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <img src="./img/testimonial1.jpg" class="card-img-top" alt="Joseph"
+               style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="card-back"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+          <p data-lang="testimonial_1_text"><sup><i class="fas fa-quote-left"></i></sup>Gari Trips made our dream vacation a reality! From the
+            breathtaking landscapes to the seamless logistics, every moment was a new adventure. The personalized
+            itinerary and expert guides added a special touch to our journey. We can't wait to book our next trip
+            with Gari Trips!<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Joseph</h3>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 2 -->
+    <div class="card text-center card1"
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+      <div class="card-inner"
+           style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+        <div class="card-front"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <img src="./img/testimonial2.jpg" class="card-img-top" alt="Katie"
+               style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="card-back"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+          <p data-lang="testimonial_2_text"><sup><i class="fas fa-quote-left"></i></sup>Traveling with the family has never been easier!
+            Gari Trips took care of every detail, ensuring a stress-free and enjoyable vacation for all. The
+            kid-friendly activities and family-oriented guides made our trip unforgettable.<sup><i
+                    class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Katie</h3>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial 3 -->
+    <div class="card text-center card1"
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+      <div class="card-inner"
+           style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
+        <div class="card-front"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden;">
+          <img src="./img/testimonial3.jpg" class="card-img-top" alt="Charles"
+               style="width: 100%; height: 100%; object-fit: cover" />
+        </div>
+        <div class="card-back"
+             style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); background-color: rgb(228, 224, 238); display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+          <p data-lang="testimonial_3_text"><sup><i class="fas fa-quote-left"></i></sup>Our cultural tour with Gari Trips exceeded all
+            expectations. The immersive experiences, knowledgeable guides, and carefully curated activities
+            allowed us to connect with the local culture in a way we never thought possible. Thanks to
+            Gari Trips.<sup><i class="fas fa-quote-right"></i></sup></p>
+          <div class="user-info">
+            <h3>Charles</h3>
+            <div class="star-rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .star-rating .fa-star {
+    font-size: 20px;
+    color: lightgray;
+  }
+  .star-rating .fa-star.checked {
+    color: gold;
+  }
+</style>
+<!--mod-->
+<section>
+  <h2 class="section__title" data-lang="faq_title" data-aos="zoom-in">
+    Frequently asked questions
+  </h2>
+  <div class="accordion faq-container faq">
+    <div class="accordion__header" data-aos="zoom-in">
+      <h3 class="accordion__question faq-title" data-lang="faq_q1">How do I book my travel arrangements through your website?</h3>
+      <span class="accordion__icon">
+            <i id="accordion-icon" class="ri-add-line"></i>
+            </span>
+    </div>
+    <div class="accordion__content">
+      <p class="faq-text accordion__answer" data-lang="faq_a1">Booking your travel with us is simple and convenient. Start by
+        entering
+        your destination,
+        travel dates, and other relevant details on our homepage. Browse through the available options, including
+        flights, hotels, and car rentals. Once you find the perfect combination for your trip, follow the easy
+        step-by-step process to confirm your booking. If you encounter any issues or have questions during the
+        booking process, our customer support team is available 24/7 to assist you.</p>
+    </div>
+  </div>
+  <div class="accordion faq-container faq">
+    <div class="accordion__header" data-aos="zoom-in">
+      <h3 class="accordion__question faq-title" data-lang="faq_q2">What measures are in place to ensure the safety of my
+        personal information?</h3>
+      <span class="accordion__icon">
+        <i id="accordion-icon" class="ri-add-line"></i>
+      </span>
+    </div>
+    <div class="accordion__content">
+      <p class="faq-text accordion__answer" data-lang="faq_a2">We take the security of your personal information seriously. Our
+        website
+        employs
+        state-of-the-art encryption technology to safeguard your data during the booking process. Additionally, we
+        adhere to strict privacy policies and comply with industry standards to protect your information. Rest
+        assured that your details are used solely for the purpose of facilitating your travel arrangements, and we
+        do not share your information with third parties without your consent. For more details, please email us or give us a virtual call.</p>
+    </div>
+  </div>
+  <div class="accordion faq-container faq">
+    <div class="accordion__header" data-aos="zoom-in">
+      <h3 class="accordion__question faq-title" data-lang="faq_q3">Can I make changes to my booking or cancel it if needed?</h3>
+      <span class="accordion__icon">
+        <i id="accordion-icon" class="ri-add-line"></i>
+      </span>
+    </div>
+    <div class="accordion__content">
+      <p class="faq-text accordion__answer" data-lang="faq_a3">Yes, we understand that plans can change. Depending on the terms and
+        conditions of your
+        specific booking, you may be able to make modifications or cancel your reservation. Keep in
+        mind
+        that there may be associated fees or restrictions depending on the type of booking and the time of the
+        requested changes. For further assistance, feel free to contact our customer support team, and they will
+        guide you through the process.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" id="cnt-form">
+    <div class="items">
+      <div class="contact" data-aos="slide-right">
+        <div>
+          <h1 class="section__title" data-lang="contact_title" style="height: 90px;">Contact Us</h1>
+          <p data-lang="contact_subtitle">Feel Free to drop us a message with any inquiries or feedback. We're here to assist you!</p>
+          <img src="./img/flat-design-illustration-customer-support_23-2148887720.avif">
+          <p style="margin-top: 15px;">
+            📞 <a href="tel:+256704182220" style="text-decoration: none; color: inherit;" data-lang="phone_number">+256 7041 82 220</a>
+          </p>
+        </div>
+      </div>
+      <div class="contact-form" data-aos="fade-in">
+        <h1 data-lang="contact_form_title">Contact Us</h1>
+        <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                autocomplete="off"
+                style="padding-top: 24px;"
+        >
+          <input type="hidden" name="bot-field" />
+          <div class="one" style="position: relative; margin-bottom: 20px;">
+            <i class="icon1 fa-solid fa-user" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-dark);"></i>
+            <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    data-lang-placeholder="name_placeholder"
+                    style="padding-left: 36px; width: 100%; padding: 12px; border: none; border-bottom: 1px solid var(--text-dark); outline: none; font-family: 'Oxygen', sans-serif; background: none; color: var(--text-dark); border-radius: 0;"
+                    required
+            />
+          </div>
+          <div style="position: relative; margin-bottom: 20px;">
+            <i class="icon2 fa-solid fa-envelope" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-dark);"></i>
+            <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    data-lang-placeholder="email_placeholder"
+                    style="padding-left: 36px; width: 100%; padding: 12px; border: none; border-bottom: 1px solid var(--text-dark); outline: none; font-family: 'Oxygen', sans-serif; background: none; color: var(--text-dark); border-radius: 0;"
+                    required
+            />
+          </div>
+          <div style="position: relative; margin-bottom: 20px;">
+            <i class="icon3 fa-solid fa-message" style="position: absolute; left: 12px; top: 12px; color: var(--text-dark);"></i>
+            <textarea
+                    name="message"
+                    placeholder="Type your message here.."
+                    data-lang-placeholder="message_placeholder"
+                    style="padding-left: 36px; padding-top: 12px; width: 100%; min-height: 100px; border: none; border-bottom: 1px solid var(--text-dark); outline: none; font-family: 'Oxygen', sans-serif; background: none; color: var(--text-dark); resize: vertical; border-radius: 0;"
+                    required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-style" data-lang="send_message" data-aos="fade-in" id="btn-style" style="margin-right:
+           40px;box-shadow: 2px 2px 8px red;">Send</button>
+          <button onclick="window.location.href='feed.html'" class="btn btn-style" data-lang="feedback_btn" data-aos="fade-in"
+                  id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe" id="Contact">
+  <div class="section__container subscribe__container">
+    <div class="subscribe__content">
+      <h2 class="section__title" data-lang="subscribe_title" data-aos="fade-up">Subscribe to get special Safari Package</h2>
+      <p class="section__subtitle" data-lang="subscribe_subtitle" data-aos="fade-up">
+        Subscribe to get special trip prizes. Unlock exclusive deals and offers just for you.
+      </p>
+    </div>
+    <div class="subscribe__form" data-aos="fade-up">
+      <!-- Netlify-ready form -->
+      <form id="subscriptionForm" name="subscription" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="subscription" />
+        <input
+                type="email"
+                name="email"
+                id="emailInput"
+                placeholder="Your email here"
+                data-lang-placeholder="email_placeholder"
+                required
+                style="border: none; font-size: 15px; margin: auto;"
+        />
+        <button class="btn-send" type="submit" data-lang="subscribe_btn" id="send" style="box-shadow: 0px 4px 8px blue;
+        font-weight:530; font-size: medium; padding-left: 13px;">
+          Subscribe
+        </button>
+      </form>
+      <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;" data-lang="subscribe_success">Subscription successful! 🎉</p>
+      <p id="errorMessage" style="display: none; color: red; margin-top: 10px;" data-lang="subscribe_error">Please enter a valid email address.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-aos="fade-up">
+  <div class=" footer__container">
+    <div class="footer_col_1">
+      <div class="footer__col">
+        <div class="footer__area">
+          <h4 class="contact_us" data-lang="footer_contact">Contact Us</h4>
+          <div class="d-flex align-items-center justify-between mb-2">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                      d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c1.563-1.562 1.563-4.095 0-5.657-1.562-1.562-4.095-1.563-5.657 0l-3.841 3.841-.333-.009c-.404 0-.802.04-1.189.117l4.656-4.656c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z" />
+            </svg>
+            <a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                      d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
+            </svg>
+            <a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a>
+            <!--<br><a href="tel:+256 782 055441" class="text-nowrap">+256 782 055441</a><br>-->
+          </div>
+          <div class="icons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+              <div class="icon">
+                <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
+              </div>
+            </a>
+            <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+              <div class="icon">
+                <i class="fab fa-tiktok" title="TikTok" style="cursor: pointer; font-size: 1.2rem;"></i>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/@garitripsuganda">
+              <div class="icon"><i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i></div>
+            </a>
+            <a href="https://www.youtube.com/@GariTrips">
+              <div class="icon"><i class="fab fa-youtube" title="YouTube" style="cursor: pointer;"></i></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer-head" data-lang="footer_company">Gari Trips<span>.</span></h3>
+        <p data-lang="footer_slogan1">Ready for your next adventure? Let's make it unforgettable.<br></p>
+        <p class="footer__text" data-lang="footer_slogan2">Start planning your dream Safari with us and explore East-Africa.</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer-head" data-lang="footer_parks">National Game Parks<span>.</span></h3>
+        <p class="footer__text footer_text">
+          <a href="bwindi-park.html">Bwindi Impenetrable Forest Park</a>
+          <a href="mgahinga-gorilla-park.html">Mgahinga Gorilla Park</a>
+          <a href="queen-elizabeth-park.html">Queen Elizabeth Park</a>
+          <a href="murchison-falls-park.html">Murchison Falls Park</a>
+          <a href="lake-mburo-park.html">Lake Mburo Park</a>
+          <a href="kidepo-valley-park.html">Kidepo Valley Park</a>
+          <a href="kibale-park.html">Kibale Park</a>
+          <a href="mt-rwenzori-park.html">Mt.Rwenzori Park</a>
+        </p>
+      </div>
+      <div class="footer__col">
+        <div class="footer__area">
+          <h3 class="footer-head footer__subtitle" data-lang="footer_quick_links">Quick Links</h3>
+          <p class="footer_link_text">
+            <a href="index.html" class="footer__link">Home</a> <br>
+            <a href="car-services.html" class="footer__link">Car Services</a><br>
+            <a href="blog.html" class="footer__link">Our Blogs</a> <br>
+            <a href="about.html" class="footer__link">About us</a> <br>
+            <a href="#cnt-form" class="footer__link">Contact Us</a> <br>
+            <a href="package.html" class="footer__link">Safari Packages</a><br>
+            <br><a href="Cultural_Exp.html" class="footer__link">Communities</a><br>
+            <a href="semuliki-park.html">Semuliki Park</a><br>
+            <a href="mt-elgon-park.html">Mt.Elgon Park</a>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer_col_2">
+      <div class="map_col">
+        <h4 class="footer-head footer-head-map" data-lang="footer_address" style="padding-left: 35px; color: #123456;">Address</h4>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+                    width="100%"
+                    height="300"
+                    id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.427023745181!2d32.6141747!3d0.2829323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbdccca552df%3A0x4d40e4ff5076789f!2sBoston%20International%20School!5e0!3m2!1sen!2sug!4v1730900000000!5m2!1sen!2sug"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 300px;
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+              }
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 100%;
+                width: 100%;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar" style="padding: 10px; text-align: center; font-size: 16px; margin-top: 70px;">
+    <div>
+      <li>&copy; <span id="year"></span>All rights reserved @ Gari Trips Uganda Limited</li>
+    </div>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop: true,
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+      circles.forEach(function (circle) {
+        circle.x = 0;
+        circle.y = 0;
+      });
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.pageX;
+        coords.y = e.pageY - window.scrollY;
+      });
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+        circles.forEach(function (circle, index) {
+          circle.style.left = `${x - 12}px`;
+          circle.style.top = `${y - 12}px`;
+          circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+          const nextCircle = circles[index + 1] || circles[0];
+          circle.x = x;
+          circle.y = y;
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+        requestAnimationFrame(animateCircles);
+      }
+      animateCircles();
+    });
+  </script>
+  <script>
+    let valueDisplays = document.querySelectorAll(".num");
+    let interval = 4000;
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function () {
+        startValue += 10;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  </script>
+  <script>
+    document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var emailInput = document.getElementById('emailInput').value;
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+      if (emailPattern.test(emailInput)) {
+        // Submit form to Netlify
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(new FormData(event.target)).toString()
+        })
+        .then(() => {
+          showSubscriptionMessage();
+          event.target.reset(); // Clear the form
+        })
+        .catch(() => {
+          alert("Oops! Could not subscribe. Please try again.");
+        });
+      } else {
+        showErrorMessage();
+      }
+    });
+
+    function showSubscriptionMessage() {
+      var messageElement = document.getElementById('subscriptionMessage');
+      messageElement.style.display = 'block';
+      setTimeout(function () {
+        messageElement.style.display = 'none';
+      }, 4000);
+    }
+
+    function showErrorMessage() {
+      var errorElement = document.getElementById('errorMessage');
+      errorElement.style.display = 'block';
+      setTimeout(function () {
+        errorElement.style.display = 'none';
+      }, 4000);
+    }
+  </script>
+
+</footer>
+<a class="goupbtn" href="#" onclick="goToTop()"><i class="fa-solid fa-arrow-up"></i></a>
+<script>
+  var mybutton = document.querySelector(".goupbtn");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  });
+  function goToTop() {
+    const currentScroll = window.scrollY;
+    const startTime = performance.now();
+    const duration = 500;
+    function scrollAnimation(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const easeOut = progress * (2 - progress);
+      const scrollPosition = currentScroll * (1 - easeOut);
+      window.scrollTo(0, scrollPosition);
+      if (progress < 1) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+    requestAnimationFrame(scrollAnimation);
+  }
+  mybutton.addEventListener('click', goToTop);
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500,
+    offset: 120
+  });
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-typed", {
+    strings: ["Wonders", "Gems", "Secrets"],
+    typeSpeed: 150,
+    backSpeed: 50,
+    loop: true
+  })
+</script>
+<script src="index.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<!--<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Ask me anything!",
+    "botConversationDescription": "Gari Trips",
+    "botId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "7d93db89-5ddd-48ac-91c7-d5f35eae9bdc",
+    "webhookId": "c874de53-fdf6-4bee-bd45-30a736b1a42e",
+    "lazySocket": true,
+    "botName": "Gari Trips",
+    "avatarUrl": "/gari-trips-images/gari-trips-logo-black.png",
+    "stylesheet": "https://webchat-styler-css.botpress.app/prod/28032111-a170-4e9e-be60-9c9222f20935/v72246/style.css",
+    "themeColor": "#2563eb",
+    "useSessionStorage": true,
+    "enableConversationDeletion": true,
+    "allowedOrigins": []
+  });
+</script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="navbarToggle.js" defer></script>
+<script>
+  let pre = document.querySelector('#pre-loader');
+  window.addEventListener("load", function () {
+    pre.style.display = "none";
+  })
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.navLinks a');
+    function highlightNavLink() {
+      const scrollPosition = window.scrollY;
+      navLinks.forEach(link => {
+        const sectionId = link.getAttribute('href').substring(1);
+        const section = document.getElementById(sectionId);
+        const offsetPercentage = 20;
+        if (section.offsetTop - window.innerHeight * (offsetPercentage / 100) <= scrollPosition &&
+          section.offsetTop + section.offsetHeight > scrollPosition) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+    document.addEventListener('scroll', highlightNavLink);
+    window.addEventListener('resize', highlightNavLink);
+    AOS.init();
+  });
+</script>
+</body>
+<script>
+  function replaceDivs() {
+    var originalDiv = document.getElementById("originalDiv");
+    var newDiv = document.getElementById("newDiv");
+    if (originalDiv) {
+      originalDiv.style.display = "none";
+      newDiv.style.display = "block";
+    }
+  }
+</script>
+<script src="./Image-Gallery/script.js"></script>
+<script src="./index.js"></script>
+<script src="faq-website.js"></script>
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+<script>
+  function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    const startTime = performance.now();
+    function updateValue(timestamp) {
+      const elapsedTime = timestamp - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+      obj.textContent = currentValue;
+      if (progress < 1) {
+        requestAnimationFrame(updateValue);
+      }
+    }
+  }
+</script>
+<script>
+  window.addEventListener('scroll', fillscrollline);
+  document.addEventListener('DOMContentLoaded', () => {
+    animateValue("guidesCount", 0, 25000, 20000)
+    animateValue("toursCount", 0, 20000, 20000);
+    animateValue("destinationsCount", 0, 10994, 20000);
+  })
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+</script>
+</html>

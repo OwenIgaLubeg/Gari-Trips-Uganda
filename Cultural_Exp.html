@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Engagements | Gari Trips</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Added for AOS and navbar from semuliki-park -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="./navLinks.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      /* Remove height: 100% — this causes footer to disappear */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      /* Remove height: 100% and display: flex */
+      position: relative;
+      min-height: 100vh;
+      padding-top: 80px; /* Account for fixed navbar */
+    }
+
+    /* Background Video - keep fixed */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* NAVBAR - Fixed at top */
+    .newNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .nav__logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .navLinks {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
+    }
+
+    .navLinks a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 6px 0;
+      transition: color 0.3s;
+    }
+
+    .navLinks a:hover {
+      color: #FFD700;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #123456;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 3px 0;
+    }
+
+    /* MAIN CONTENT - NO min-height on wrapper */
+    .main-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .sp-header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+      color: #0a1a3f;
+    }
+
+    .loc-rat {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .rating a {
+      color: white;
+      background: #FFD700;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .text-content h3 {
+      font-size: 1.8rem;
+      margin: 30px 0 15px;
+      color: #0a1a3f;
+    }
+
+    .text-content p {
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+
+    .community-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 25px 0 30px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      display: block;
+    }
+
+    .un-styled-list {
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+
+    .un-styled-list li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .t-faqs h3 {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: #0a1a3f;
+    }
+
+    .acc-btn {
+      background: #f0f4ff;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: 600;
+      border: 1px solid #ccd;
+      border-radius: 8px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .acc-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #fafcff;
+      border: 1px solid #ccd;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      padding: 0 20px;
+    }
+
+    .acc-content.current {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    /* FOOTER - Now properly positioned */
+    .footer {
+      margin-top: 60px;
+      background: #0a1a3f;
+      color: #e0e0ff;
+      padding: 50px 20px 20px;
+    }
+
+    @media (max-width: 992px) {
+      .navLinks { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 768px) {
+      .sp-header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="video-bg">
+  <source src="gari-trips-images/community-background-pic.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div class="video-overlay"></div>
+
+<!-- Navbar -->
+<nav class="newNav">
+  <div style="display: flex; align-items: center;">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+      <div style="
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-right: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          "
+           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';"
+      >
+        <img
+                src="gari-trips-images/gari-trips-logo-black.png"
+                alt="Site Logo"
+                style="width: 32px; height: auto; object-fit: contain;"
+        >
+      </div>
+      <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-right: 0.5vw;">.</span></span>
+    </a>
+  </div>
+  <ul class="navLinks">
+    <li class="link" data-aos=""><a href="index.html">Home</a></li>
+    <li class="link" data-aos=""><a href="about.html">About</a></li>
+    <li class="link dropdown" data-aos="">
+      <a href="#" class="dropdown">Services</a>
+      <ul class="dropdown-menu">
+        <li><a href="Adventure.html">Destinations</a></li>
+        <li><a href="Cultural_Exp.html">Communities</a></li>
+        <li><a href="car-services.html">Car Services</a></li>
+        <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </li>
+    <li class="link" data-aos=""><a href="package.html">Safari Packages</a></li>
+    <li class="link" data-aos=""><a href="packages.html">Accomodations</a></li>
+    <li class="link" data-aos=""><a href="blog.html">Our Blogs</a></li>
+    <li class="link" data-aos=""><a href="feedback.html">Rate Us?</a></li>
+    <li class="link" data-aos=""><a href="index.html#cnt-form">Contact Us</a></li>
+  </ul>
+  <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
+    <input id="themeToggle" class="toggle" type="checkbox">
+  </div>
+  <div class="language-switcher" style="display: flex; align-items: center; gap: 8px; margin-left: 20px;">
+    <label for="language-select" style="font-size: 0.9rem; color: #333; font-weight: 500;">🌐</label>
+    <select id="language-select" style="padding: 6px 10px; border-radius: 4px; border: 1px solid #ccc; background: white; font-size: 0.9rem; cursor: pointer;">
+      <option value="en">English</option>
+      <option value="de">Deutsch (German)</option>
+      <option value="es">Español (Spanish)</option>
+      <option value="nl">Nederlands (Dutch)</option>
+      <option value="fr">Français (French)</option>
+    </select>
+  </div>
+  <div class="hamburger" id="hamburger" data-aos="fade-down">
+    <div class="line" style="margin-bottom: 5px;"></div>
+    <div class="line" style="margin-bottom: 5px;"></div>
+    <div class="line" style="margin-bottom: 5px;"></div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+  <div class="dsp-container activity-single">
+    <div class="sp-header">
+      <div class="loc-rat">
+        <div class="location">Gari Trips Uganda</div>
+        <div class="rating"><a href="#"><i class="fa-solid fa-star"></i> <strong>4.8</strong></a></div>
+        <div class="add-fav"><a href="index.html#cnt-form"><i class="far fa-heart"></i> Community Donation</a></div>
+      </div>
+      <h1>Community Engagements</h1>
+    </div>
+
+    <div class="text-content">
+      <h3>Activity Details</h3>
+      <p>At Gari Trips Uganda, we champion community-based tourism. Our safaris create jobs for local guides, lodge staff, and conservation teams—keeping tourism income in Uganda, Rwanda, Kenya, and Tanzania.</p>
+      <img src="gari-trips-images/communities-pic-1.jpg" alt="Community 1" class="community-img">
+
+      <p>We invest in education, healthcare, and anti-poaching efforts—building a sustainable future where people and wildlife thrive together.</p>
+      <img src="gari-trips-images/communities-pic-2.jpg" alt="Community 2" class="community-img">
+
+      <p>Respect for culture drives our tours. We highlight traditional crafts, music, and storytelling—giving travelers authentic East African experiences while safeguarding heritage. Every safari empowers communities.</p>
+      <img src="gari-trips-images/communities-pic-3.jpg" alt="Community 3" class="community-img">
+
+      <h5>Things to Expect When Visiting East African Communities</h5>
+      <ul class="un-styled-list">
+        <li>Warm Hospitality – Experience genuine welcomes from local families and village elders.</li>
+        <img src="gari-trips-images/communities-pic-4.jpg" alt="Community 4" class="community-img">
+        <li>Vibrant Culture – Enjoy traditional dances, beadwork, and oral storytelling.</li>
+        <img src="gari-trips-images/communities-pic-5.jpg" alt="Community 5" class="community-img">
+        <li>Community-Led Conservation – Support villages protecting gorillas, elephants, and forests.</li>
+        <li>Handmade Souvenirs – Buy ethically crafted baskets, carvings, and textiles directly from artisans.</li>
+        <li>Shared Meals – Savor ugali, matooke, or nyama choma in a true communal setting.</li>
+      </ul>
+    </div>
+
+    <!-- FAQs -->
+    <div class="t-faqs">
+      <h3>Frequently Asked Questions</h3>
+      <ul class="accordion-box faqs-accordion">
+        <li class="accordion block">
+          <div class="acc-btn">1. Why is community engagement important for Gari Trips Uganda ? <span class="arrow">+</span></div>
+          <div class="acc-content">
+            <p>Community engagement is vital because it ensures that local populations benefit from tourism. By empowering communities through jobs and education, we create a sustainable model where both people and nature thrive.</p>
+          </div>
+        </li>
+        <li class="accordion block">
+          <div class="acc-btn">2. How does Gari Trips Uganda support local communities? <span class="arrow">+</span></div>
+          <div class="acc-content">
+            <p>We support local communities by providing training and employment opportunities in tourism and conservation. Additionally, we collaborate with local organizations to fund education, healthcare, and conservation initiatives.</p>
+          </div>
+        </li>
+        <li class="accordion block">
+          <div class="acc-btn">3. What cultural experiences can I expect? <span class="arrow">+</span></div>
+          <div class="acc-content">
+            <p>Visitors can expect vibrant cultural experiences, including traditional dances, music, and storytelling. We promote local arts and crafts, allowing travelers to engage authentically with the community.</p>
+          </div>
+        </li>
+        <li class="accordion block">
+          <div class="acc-btn">4. How can I ensure my visit is respectful? <span class="arrow">+</span></div>
+          <div class="acc-content">
+            <p>Engage with locals in a friendly manner, ask for permission before taking photos, and be mindful of cultural customs. Learning a few basic phrases in the local language shows appreciation.</p>
+          </div>
+        </li>
+        <li class="accordion block">
+          <div class="acc-btn">5. What should I bring when visiting communities? <span class="arrow">+</span></div>
+          <div class="acc-content">
+            <p>Bring small gifts for children, school supplies, or donations. Consider bringing cash for purchasing handmade crafts directly from artisans.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER - Now visible at bottom -->
+<footer class="footer" data-aos="fade-up">
+  <div class=" footer__container">
+    <div class="footer_col_1">
+      <div class="footer__col">
+        <div class="footer__area">
+          <h4 class="contact_us">Contact Us</h4>
+          <div class="d-flex align-items-center justify-between mb-2">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M14.851 11.923c-.179-.641-.521-1.246-1.025-1.749-1.562-1.562-4.095-1.563-5.657 0l-4.998 4.998c-1.562 1.563-1.563 4.095 0 5.657 1.562 1.563 4.096 1.561 5.656 0l3.842-3.841.333.009c.404 0 .802-.04 1.189-.117l-4.657 4.656c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-1.952-1.951-1.952-5.12 0-7.071l4.998-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464.493.493.861 1.063 1.105 1.672l-.787.784zm-5.703.147c.178.643.521 1.25 1.026 1.756 1.562 1.563 4.096 1.561 5.656 0l4.999-4.998c.975-.976 2.256-1.464 3.536-1.464 1.279 0 2.56.488 3.535 1.464 1.951 1.951 1.951 5.119 0 7.071l-4.999 4.998c-.975.976-2.255 1.464-3.535 1.464-1.28 0-2.56-.488-3.535-1.464-.494-.495-.863-1.067-1.107-1.678l.788-.785z" />
+            </svg>
+            <a href="mailto:info@garitripsuganda.com" class="text-nowrap">info@garitripsuganda.com</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+              <path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
+            </svg>
+            <a href="tel:+256 704 018220" class="text-nowrap">+256 704 018 220</a>
+          </div>
+          <div class="icons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook" title="Facebook" style="color: white;"></i>
+            </a>
+            <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-tiktok" title="TikTok" style="color: white; font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://www.instagram.com/@garitripsuganda">
+              <i class="fab fa-instagram" title="Instagram" style="color: white;"></i>
+            </a>
+            <a href="https://www.youtube.com/@GariTrips">
+              <i class="fab fa-youtube" title="YouTube" style="color: white;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer-head">Gari Trips<span>.</span></h3>
+        <p>Ready for your next adventure? Let's make it unforgettable.<br></p>
+        <p class="footer__text">Start planning your dream Safari with us and explore East-Africa.</p>
+      </div>
+      <!--<div class="footer__col">
+        <h3 class="footer-head">National Game Parks<span>.</span></h3>
+        <p class="footer__text footer_text">
+          <a href="bwindi-park.html">Bwindi Impenetrable Forest Park</a><br>
+          <a href="mgahinga-gorilla-park.html">Mgahinga Gorilla Park</a><br>
+          <a href="queen-elizabeth-park.html">Queen Elizabeth Park</a><br>
+          <a href="murchison-falls-park.html">Murchison Falls Park</a><br>
+          <a href="lake-mburo-park.html">Lake Mburo Park</a><br>
+          <a href="kidepo-valley-park.html">Kidepo Valley Park</a><br>
+          <a href="kibale-park.html">Kibale Park</a><br>
+          <a href="mt-rwenzori-park.html">Mt.Rwenzori Park</a>
+        </p>
+      </div>-->
+      <div class="footer__col">
+        <div class="footer__area">
+          <h3 class="footer-head footer__subtitle">Quick Links</h3>
+          <p class="footer_link_text">
+            <a href="index.html" class="footer__link">Home</a><br>
+            <a href="car-services.html" class="footer__link">Car Services</a><br>
+            <a href="blog.html" class="footer__link">Our Blogs</a><br>
+            <a href="about.html" class="footer__link">About us</a><br>
+            <!--<a href="#cnt-form" class="footer__link">Contact Us</a><br>-->
+            <a href="package.html" class="footer__link">Safari Packages</a><br>
+            <a href="Cultural_Exp.html" class="footer__link">Communities</a><br>
+            <!--<a href="semuliki-park.html">Semuliki Park</a><br>-->
+           <!-- <a href="mt-elgon-park.html">Mt.Elgon Park</a>-->
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer_col_2">
+      <div class="map_col">
+        <h4 class="footer-head footer-head-map" style="padding-left: 35px; color: #e0e0ff;"> Address</h4>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+                    width="100%"
+                    height="300"
+                    id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.427023745181!2d32.6141747!3d0.2829323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbdccca552df%3A0x4d40e4ff5076789f!2sBoston%20International%20School!5e0!3m2!1sen!2sug!4v1730900000000!5m2!1sen!2sug"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar" style="padding: 10px; text-align: center; font-size: 16px; margin-top: 40px;">
+    <p>&copy; <span id="year"></span> All rights reserved @ Gari Trips Uganda Limited</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1500, offset: 120 });
+</script>
+<script>
+  document.querySelectorAll('.acc-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('current');
+      btn.querySelector('.arrow').textContent = content.classList.contains('current') ? '−' : '+';
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
