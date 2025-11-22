@@ -214,11 +214,11 @@
   --text-same: #0d213f;
   --max-width: 1200px;
   --img-color: white;
-  --head-text: #6a5acd;
+  --head-text: #32cd32;
 
-  --bubble-color: #6a5acd;
+  --bubble-color: #32cd32;
 
-  --testimonials-img-border: #6a5acd;
+  --testimonials-img-border: #32cd32;
 }
 
 * {
@@ -450,7 +450,7 @@
   height: 35px; /* Increase the height of the Google icon */
 }
 
-#google_translate_element .goog-te-gadget-simple {
+#google_translate_element .google-te-gadget-simple {
   padding: 0.5em 0.5em 0.5em 0.5em !important;
   font-size: 18px !important;
   border-color: #f2f2f2 !important;
@@ -666,11 +666,7 @@ body {
   /* padding-left: 20px;
   padding-right: 20px; */
   width: auto;
-  background: linear-gradient(
-    45deg,
-    #6a0dad,
-    #2f73d9
-  ); /* Gradient background */
+   background: linear-gradient(45deg, #32cd32, #2f73d9); /* Gradient background */
   border: 2px solid transparent; /* Remove solid border, keep gradient */
   color: white;
   font-weight: 500;
@@ -737,7 +733,7 @@ body.dark-theme #send {
 /* send button end */
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(45deg, #28a728, #25c025);
 }
 
 /* ensures no box or shadow for the video button */
