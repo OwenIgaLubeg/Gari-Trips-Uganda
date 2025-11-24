@@ -8,7 +8,7 @@ body {
 }
 
 :root {
-  --primary-color: #6a0dad; /* Purple */
+  --primary-color: rgb(149, 150, 36); /* Purple */
   --primary-color-dark: #2f73d9; /* Dark Blue */
   --text-light: #ffffff; /* Light text */
   --extra-light: #fafcff;
@@ -18,9 +18,9 @@ body {
   --secondary-color: #fafcff;
   --text-dark: #0d213f;
   --max-width: 1200px;
-  --img-color: #6a0dad; /* Image accent color */
-  --head-text: #6a0dad;
-  --btn-border: linear-gradient(45deg, #6a0dad, #2f73d9); /* Gradient border for buttons */
+  --img-color: rgb(149, 150, 36); /* Image accent color */
+  --head-text: rgb(149, 150, 36);
+  --btn-border: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20)); /* Gradient border for buttons */
   --btn-color: #ffffff; /* Button text color */
 }
 
@@ -35,9 +35,9 @@ body {
   --text-dark: #ffffff;
   --arr-light: #ffffff;
   --body-light: #0e1525;
-  --img-color: #6a0dad;
-  --head-text: #ff69b4; /* Pink for dark theme headers */
-  --btn-border: linear-gradient(45deg, #6a0dad, #2f73d9);
+  --img-color: rgb(149, 150, 36);
+  --head-text: rgba(26, 78, 14, 0.5); /* Pink for dark theme headers */
+  --btn-border: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20));
   --btn-color: #ffffff;
   --footer-text-color: #ffffff;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .footer__col h4 {
-  color: #6a0dad;
+  color: rgb(149, 150, 36);
 }
 
 .gallery-rotate-image {
@@ -93,7 +93,7 @@ body {
 /* Gradient background for buttons */
 .btn {
   top: -40px;
-  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Purple to Dark Blue gradient */
+  background: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20)); /* Purple to Dark Blue gradient */
   color: var(--btn-color);
   border: none;
   padding: 10px 20px;
@@ -113,7 +113,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: auto;
-  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Gradient background */
+  background: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20)); /* Gradient background */
   border: 2px solid transparent; /* Remove solid border, keep gradient */
   color: var(--arr-light);
   font-weight: 500;
@@ -125,8 +125,8 @@ body {
 }
 
 #btn-style:hover {
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: rgba(255, 184, 48, 0.8);
+  border-color: rgba(255, 184, 48, 0.8);
   color: #fff;
 }
 
@@ -137,7 +137,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   width: auto;
-  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Gradient background */
+  background: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20)); /* Gradient background */
   border: 2px solid var(--btn-border); /* Gradient border */
   color: var(--btn-color);
   font-weight: 500;
@@ -149,8 +149,8 @@ body {
 }
 
 .btn-style:hover {
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: rgba(255, 184, 48, 0.8);
+  border-color: rgba(255, 184, 48, 0.8);
   color: #fff;
 }
 

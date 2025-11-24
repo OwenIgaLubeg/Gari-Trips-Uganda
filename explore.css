@@ -66,7 +66,7 @@
   color: black !important;
   font-family:Georgia, 'Times New Roman', Times, serif ;
   font-weight: bolder;
-  -webkit-text-stroke:1px navy;
+  -webkit-text-stroke:1px rgb(70, 123, 20);
 }
 
 .card p {

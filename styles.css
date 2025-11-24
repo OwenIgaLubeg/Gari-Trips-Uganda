@@ -64,6 +64,7 @@
 
 .link a:hover {
   /* Changes text color on hover */
+  color: rgb(255, 165, 0);
   text-shadow: 0 0 8px rgba(106, 96, 115, 0.8), 0 0 15px rgba(180, 148, 180, 0.6);
 }
 .link a::before {
@@ -73,7 +74,7 @@
   width: 0%;
   bottom: -5px;
   left: 0;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
  
 }
 
@@ -84,7 +85,7 @@
   width: 0%;
   top: -5px;
   right: 0;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
   transition: all 0.2s ease-in-out;
 }
 
@@ -134,7 +135,7 @@
   .navLinks {
     position: absolute;
     top: 70px;
-    background-color: #091020;
+    background-color: rgb(33, 66, 14);
     width: 0%;
     left: 0;
     height: 100vh;
@@ -147,7 +148,7 @@
   .navLinks li {
     width: 100%;
     padding: 0.5rem 0;
-    background-color: #1f2532;
+    background-color: rgb(33, 66, 14);
     z-index: 10;
   }
 
@@ -478,11 +479,11 @@
   transition: all 0.3s ease-in-out;
 }
 .footer__link:hover {
-  color: red;
+  color: rgba(255, 184, 48, 0.8);
 }
 .footer__link:hover::after {
   width: 100%;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
 }
 
 /* new bubble end */
@@ -510,12 +511,12 @@
   --text-dark: #ffffff;
   --arr-light: white;
   --body-light: #0e1525;
-  --img-color: red;
+  --img-color: rgba(255, 184, 48, 0.8);
   --head-text: red;
   --text-same: #0d213f;
 
-  --bubble-color: red;
-  --testimonials-img-border: red;
+  --bubble-color: rgba(255, 184, 48, 0.8);
+  --testimonials-img-border: rgb(149, 150, 36);
 }
 
 body {
@@ -541,8 +542,8 @@ body {
 }
 
 #toggle:hover {
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: rgba(255, 184, 48, 0.8);
+  border-color: rgba(255, 184, 48, 0.8);
   color: #fff;
 }
 
@@ -679,7 +680,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #ff0000;
+  background-color: rgba(255, 184, 48, 0.8);
   border-color: #f5f2f2;
   color: #fff;
 }
@@ -716,7 +717,7 @@ body.dark-theme #send:hover {
 }
 body.dark-theme #send {
   background-color: #141e36;
-  border: 0.0001px solid red;
+  border: 0.0001px solid rgba(255, 184, 48, 0.8);
   color: slateblue;
 }
 #send:hover {
@@ -927,7 +928,7 @@ header {
 }
 
 .close-btn:hover {
-  color: #ff0000;
+  color: rgba(255, 184, 48, 0.8);
 }
 
 .modal-content form {
@@ -945,7 +946,7 @@ header {
 
 .modal-btn {
   padding: 10px;
-  background-color: #091020;
+  background-color: rgb(33, 66, 14);
   border-radius: 5px;
   color: #fff;
   border: none;
@@ -994,7 +995,7 @@ header {
 .video span i {
   padding: 0.5rem;
   font-size: 1rem;
-  color: red;
+  color: rgba(255, 184, 48, 0.8);
   background-color: var(--extra-light);
   border-radius: 100%;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -1159,6 +1160,15 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 4rem 0;
+}
+
+#safari-packages .trip__grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 4rem 0;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .trip__card {
@@ -1354,11 +1364,36 @@ header {
   border-radius: 5rem 0 0 5rem;
 }
 
+@media (max-width: 768px) {
+  .subscribe__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribe__form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .subscribe__form input[type="email"] {
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5rem;
+    width: 100%;
+  }
+  .subscribe__form button {
+    width: auto;
+    border-radius: 5rem;
+  }
+}
+
 .subscribe__form button {
   padding: 0.8rem 1.5rem;
   font-size: medium;
   font-weight: 530;
-  background-color: var(--primary-color);
+  background-color: rgb(70, 123, 20);
   color: #fff;
   border: none;
   outline: none;
@@ -1369,7 +1404,7 @@ header {
 }
 
 .subscribe__form button:hover {
-  background-color: var(--secondary-color);
+  background-color: rgba(26, 78, 14, 0.5);
   box-shadow: 0px 6px 12px slateblue;
 }
 
@@ -1460,7 +1495,7 @@ html {
   color: white;
 }
 .footer__text a:hover {
-  color: red;
+  color: rgba(255, 184, 48, 0.8);
 } */
 
 .footer:hover {
@@ -1528,7 +1563,7 @@ html {
 }
 
 .footer__area a:hover {
-  color: #ff0000;
+  color: rgba(255, 184, 48, 0.8);
 }
 
 .icons {
@@ -1642,6 +1677,12 @@ html {
   .trip__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  #safari-packages .trip__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1653,6 +1694,12 @@ html {
 @media (width < 600px) {
   .trip__grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #safari-packages .trip__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .gallary__container {
@@ -2224,7 +2271,7 @@ body {
   /* margin: 10px 5px; */
   border-radius: 10px;
   padding-top: 0.5rem;
-  background: linear-gradient(#002152, #271050);
+  background: rgb(33, 66, 14);
   /* scale:0.99; */
 
   /* padding: 0rem 1rem;
@@ -2252,14 +2299,14 @@ body {
   box-shadow: rgb(123, 88, 156) 0px 0px 8px 2px inset;
   transition: background-color 0.7s ease-in-out, 
               box-shadow 0.7s ease-in-out; /* Smooth transition */
- color: white;
+ color: rgb(255, 165, 0);
 
 }
 .link > a:hover {
  
   border-radius: 10px;
   box-shadow: inset 0px 0px 12px 4px rgba(123, 88, 156, 0.6);
-  color: #d8b3ff; /* Light purple text on hover */
+  color: rgb(255, 165, 0); /* Light purple text on hover */
 }
 
 
@@ -2270,7 +2317,7 @@ body {
   width: 0%;
   bottom: -5px;
   left: 0;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
 } */
 
 /* .link a::after {
@@ -2280,7 +2327,7 @@ body {
   width: 0%;
   top: -5px;
   right: 0;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
   transition: all 0.2s ease-in-out;
 } */
 
@@ -2316,7 +2363,7 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
   transition: width 0.2s ease-in;
 } */
 
@@ -2842,7 +2889,7 @@ body.dark-theme .testimonials .testimonial-user p {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: hotpink;
+  color: rgba(26, 78, 14, 0.5);
   line-height: 1.1em;
 }
 .testimonialBox .details h3 span {
@@ -3075,11 +3122,11 @@ a::after {
   transition: all 0.3s ease-in-out;
 }
 a:hover {
-  color: red;
+  color: rgba(255, 184, 48, 0.8);
 }
 a:hover::after {
   width: 100%;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
 }
 /* Footer specific styles */
 .footer__link {
@@ -3099,11 +3146,11 @@ a:hover::after {
   transition: all 0.3s ease-in-out;
 }
 .footer__link:hover {
-  color: red;
+  color: rgba(255, 184, 48, 0.8);
 }
 .footer__link:hover::after {
   width: 100%;
-  background-color: red;
+  background-color: rgba(255, 184, 48, 0.8);
 }
 
 .trip {

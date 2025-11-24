@@ -26,13 +26,13 @@ p{
     letter-spacing: 0.08rem;
 }
 button, input[type="submit"]{
-    border: .1rem solid #fff;
+    border: .1rem solid rgb(149,150,36);
     outline: none;
     padding: .6rem 1.2rem;
     font-size: 1.7rem;
     text-transform: capitalize;
     letter-spacing: 0.01rem;
-    background-color: transparent;
+    background-color: rgb(70,123,20);
     color: #fff;
     cursor: pointer;
 }
@@ -148,8 +148,8 @@ main{
 
 }
 .form-text button:hover{
-    background-color: blue;
-    color: #fff;
+    background-color: rgba(71,134,28,0.8);
+    color: rgba(26,78,14,0.5);
 }
 .registration-form, .login-form{
   height: 500px;
@@ -280,7 +280,7 @@ input[type="submit"]{
     width: 0%;
     bottom: -5px;
     left: 0;
-    background-color: red;
+    background-color: rgba(255, 184, 48, 0.8);
   }
   
   .link a::after {
@@ -290,7 +290,7 @@ input[type="submit"]{
     width: 0%;
     top: -5px;
     right: 0;
-    background-color: red;
+    background-color: rgba(255, 184, 48, 0.8);
     transition: all 0.2s ease-in-out;
   }
   
@@ -329,7 +329,7 @@ input[type="submit"]{
     .navLinks {
       position: absolute;
       top: 70px;
-      background-color: #091020;
+      background-color: rgb(33, 66, 14);
       width: 0%;
       left: 0;
       height: 100vh;
@@ -342,7 +342,7 @@ input[type="submit"]{
     .navLinks li {
       width: 100%;
       padding: 0.5rem 0;
-      background-color: #1f2532;
+      background-color: rgb(33, 66, 14);
       z-index: 10;
     }
   
@@ -387,12 +387,12 @@ input[type="submit"]{
   }
 
   .bpw-widget-btn:hover{
-    background-color: linear-gradient(#470de6,#6A0DAD);
+    background-color: linear-gradient(rgb(149, 150, 36),rgb(149, 150, 36));
   }
 
 
   .chatbot-button:hover {
-    background: linear-gradient(45deg, #ff0000, #6a5acd); /* Reverse gradient on hover */
+    background: linear-gradient(45deg, rgba(255, 184, 48, 0.8), rgb(149, 150, 36)); /* Reverse gradient on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
   }
   

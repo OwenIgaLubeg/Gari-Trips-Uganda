@@ -53,7 +53,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgb(33, 66, 14);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 0 20px;
@@ -163,15 +163,89 @@
       font-variation-settings: "slnt" 0;
       width: 100vw;
     }
+    /* Section padding and margins */
+    section {
+    margin-top: 0.5cm !important;
+    margin-bottom: 0.5cm !important;
+  }
+    section:first-of-type {
+    margin-top: 0 !important;
+  }
+     section:last-of-type {
+    margin-bottom: 0 !important;
+  }
+    @media (max-width: 768px) {
+      section {
+        padding: 1.0cm 15px;
+        margin: 1.0cm 0;
+      }
+      .subscribe__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .subscribe__form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .subscribe__form input[type="email"] {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .subscribe__form button {
+        width: auto;
+      }
+      /* Events packages mobile responsive - display one at a time */
+      #safari-packages .trip__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-content: center;
+      }
+      #safari-packages .trip__card {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    /* First event card text color - navy-blue */
+    #safari-packages .trip__card:first-child .trip__details p:first-of-type,
+    #safari-packages .trip__card:first-child .trip__details p:nth-of-type(2) {
+      color: rgb(70, 123, 20);
+    }
   </style>
   <style>
     .goupbtn {
       z-index: 10;
     }
     .active {
-      color: red !important;
+      color: rgba(255, 184, 48, 0.8) !important;
     }
-
+    @media screen and (max-width:390px) {
+      .nav__logo {
+        position: relative;
+        right: 1.9rem;
+      }
+      .contact-btn {
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle-container {
+        position: relative;
+        right: 2.5rem;
+      }
+      .toggle {
+        width: 130%;
+      }
+      .line {
+        width: 150%;
+      }
+      .hamburger {
+        position: relative;
+        right: 1rem;
+      }
+    }
     .gallery-rotate-image .image-container {
       display: flex;
       flex-wrap: wrap;
@@ -242,7 +316,7 @@
       border-right: 4px solid transparent;
       border-bottom: 4px solid transparent;
       transition: border-color 0.3s;
-      border: 1px solid rgb(4, 4, 215);
+      border: 1px solid rgb(70, 123, 20);
       border-bottom: #3950ac;
     }
     #cookie-consent:hover {
@@ -284,7 +358,7 @@
     }
     #learn-more-link,
     #show-less-link {
-      color: #f90814;
+      color: rgba(255, 184, 48, 0.8);
       text-decoration: none;
       cursor: pointer;
       font-size: 16px;
@@ -416,9 +490,58 @@
     .next {
       right: 0;
     }
+
+
+  /* 2. Fix image & card borders to rgb(149, 150, 36) */
+  /* National Parks cards */
+  .swiper-slide.card,
+  .card-body img {
+    border: 2px solid rgb(149, 150, 36) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  /* Testimonial cards (front image) */
+  .card-img-top {
+    border: 2px solid rgb(149, 150, 36) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  /* FAQ section (if using cards or images) */
+  .faq-container,
+  .faq-title {
+    /* FAQs don’t use images, so no border needed — but included for completeness */
+  }
+
+  /* Package cards */
+  .trip__card,
+  .trip__card img {
+    border: 2px solid rgb(149, 150, 36) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  /* Event package cards */
+  #safari-packages .trip__card,
+  #safari-packages .trip__card img {
+    border: 2px solid rgb(149, 150, 36) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  /* Hero images */
+  .header__image img {
+    border: 2px solid rgb(149, 150, 36) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
   </style>
+
   <link rel="stylesheet" href="imstyle.css">
   <link rel="stylesheet" href="jquery.flipster.min.css">
+
 </head>
 <body style="background-color: var(--secondary-color);">
 <div class="circle-container">
@@ -520,15 +643,15 @@
     <div class="header__content">
       <div>
         <h1 data-aos="fade-in" data-lang="hero_title">The Misty Forests of Uganda.<br />Come visit Mountain Gorillas.<div> <span
-                class="auto-typed" style="color: var(--head-text);"></span></div>
+                class="auto-typed" style="color: rgb(70, 123, 20);"></span></div>
         </h1>
         <p class="section__subtitle" data-aos="fade-in" data-lang="hero_subtitle">
           Experience unforgettable gorilla safaris with East Africa’s trusted travel experts. We deliver premium,
           personalized wildlife adventures for discerning travelers seeking rare, life-changing encounters in Uganda and beyond.
         </p>
         <div class="action__btns">
-          <a href="Adventure.html"><button class="btn" data-lang="plan_trip">Plan a Trip</button></a>
-          <a href="#cnt-form"><button class="btn" data-lang="inquire_now">Inquire Now</button></a>
+          <a href="Adventure.html"><button class="book__now" data-lang="plan_trip">Plan a Trip</button></a>
+          <a href="#cnt-form"><button class="book__now" data-lang="inquire_now">Inquire Now</button></a>
         </div>
         <br>
         <div class="story">
@@ -541,7 +664,7 @@
           </div>
         </div>
         <br>
-        <span data-aos="fade-in" style="color: #5755b6; font-weight: 600;" data-lang="explore_nature">Explore Nature</span>
+        <span data-aos="fade-in" style="color: rgb(149, 150, 36); font-weight: 600;" data-lang="explore_nature">Explore Nature</span>
       </div>
     </div>
   </section>
@@ -692,7 +815,7 @@
           <p data-lang="package_1_desc">From walking safaris in L.Mburo Park to tracking chimpazees and mountain gorillas trekking in Mgahinga & Bwindi park</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
-            <a href="11-days-gorilla-trekking-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="11-days-gorilla-trekking-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
@@ -703,8 +826,7 @@
           <p data-lang="package_2_desc">Embark on a truly unforgettable journey through Uganda’s lush landscapes, vibrant wildlife, and rich cultural heritage</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-            <a href="3-day-itinerary.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="3-day-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
@@ -715,8 +837,7 @@
           <p data-lang="package_3_desc">From the vast savannahs of Queen Elizabeth National Park to the lush forests of Kyambura Gorge.</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-            <a href="6-day-itinerary.html"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="6-day-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
@@ -727,7 +848,7 @@
           <p data-lang="package_4_desc">Track the iconic shoebill stork, enjoy walking safaris at Lake Mburo, and experience the rare Gorilla Habituation in Bwindi.</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
-            <a href="6-days-gorilla-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="6-days-gorilla-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
@@ -738,30 +859,30 @@
           <p data-lang="package_5_desc"> gorilla and chimpanzee trekking, golden monkey, shoebill spotting, thrilling game drives, and a white-water rafting adventure.</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
-            <a href="20-days-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="20-days-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
       <div class="trip__card cardd tilt-effect">
         <img src="gari-trips-images/package-4.jpg" alt="trip" height="250" width="45" />
         <div class="trip__details">
-          <p data-lang="package_6_title">14-Day Uganda Adventure Experience</p>
+          <p data-lang="package_6_title">14-Day Uganda Adventure Experience with the Big-5</p>
           <p data-lang="package_6_desc">Highlights of the safari are; Explore rolling hills, shimmering lakes, and lush greenery while connecting with vibrant local traditions.</p>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 4.8</div>
-            <a href="14-days-itinerary.html"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="read_more">Read More</button></a>
+            <a href="14-days-itinerary.html"><button class="book__now" data-lang="read_more">Read More</button></a>
           </div>
         </div>
       </div>
     </div>
     <div class="view__all">
-      <a href="package.html"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="view_all">View All</button></a>
+      <a href="package.html"><button class="book__now" data-lang="view_all">View All</button>
       <br>
       <br>
     </div>
   </div>
 </section>
-<br>
+
 <section class="About" id="AboutUs">
   <div class="color col-12">
     <div class="section__container about__container">
@@ -827,61 +948,64 @@
 </section>
 <section class="trip" id="safari-packages" data-aos="zoom-in" data-aos-offset="100">
   <div class="section__container trip__container">
-    <h2 class="section__title" data-lang="events_packages">Our Events packages</h2>
-    <p class="section__subtitle" data-lang="events_subtitle">
+    <h2 class="section__title">Our Events packages</h2>
+    <p class="section__subtitle">
       Best Safari Deals in Rwanda, Kenya & Tanzania — Book Family Gorilla Camps, Grand Wildlife Expeditions, or
       Honeymoon Safaris with Expert Local Guides. Save Up to 20%!
     </p>
     <div class="trip__grid">
       <div class="trip__card cardd tilt-effect">
-        <img src="gari-trips-images/events-pic-1.jpg" alt="trip" height="250" width="45" />
+        <a href="#cnt-form"><img src="gari-trips-images/events-pic-1.jpg" alt="trip" height="250" width="45" /></a>
         <div class="trip__details">
-          <p data-lang="event_1_title">Kids’ Wildlife Explorer Camp</p>
-          <p data-lang="event_1_desc">Fun, educational safari adventures for children to discover Uganda’s animals, tracks, and conservation in safe, guided tours.</p>
-          <div class="booking__price">
+          <a href="#cnt-form"><p>Kids’ Wildlife Explorer Camp</p></a>
+          <a href="#cnt-form"><p>Fun, educational safari adventures for children to discover Uganda’s animals, tracks, and conservation in safe, guided tours.</p></a>
+            <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
-            <a href="#cnt-form"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+            <a href="#cnt-form"><button class="book__now" data-lang="inquire_now">Inquire Now</button></a>
           </div>
         </div>
       </div>
+
       <div class="trip__card cardd tilt-effect">
-        <img src="gari-trips-images/events-pic-2.jpg" alt="trip" height="250" width="45" />
+        <a href="#cnt-form"><img src="gari-trips-images/events-pic-2.jpg" alt="trip" height="250" width="45" /></a>
         <div class="trip__details">
-          <p data-lang="event_2_title">East Africa Grand Safari Expedition</p>
-          <p data-lang="event_2_desc">An epic 7-day journey through Uganda’s parks—gorillas, lions, elephants—for adventurers of all ages and experience levels.</p>
+          <a href="#cnt-form"><p>East Africa Grand Safari Expedition</p></a>
+          <a href="#cnt-form"><p>An epic 7-day journey through Uganda’s parks—gorillas, lions, elephants—for adventurers of all ages and experience levels.</p></a>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
-            <a href="#cnt-form"><button class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+            <a href="#cnt-form"><button class="book__now" data-lang="inquire_now">Inquire Now</button></a>
           </div>
         </div>
       </div>
+
       <div class="trip__card cardd tilt-effect">
-        <img src="gari-trips-images/events-pic-3.jpg" alt="trip" height="250" width="45" />
+        <a href="#cnt-form"><img src="gari-trips-images/events-pic-3.jpg" alt="trip" height="250" width="45" /></a>
         <div class="trip__details">
-          <p data-lang="event_3_title">Honeymoon Gorilla & Nile Escape</p>
-          <p data-lang="event_3_desc">Romantic luxury safari for newlyweds: private gorilla trekking, sunset Nile cruises, and candlelit dinners in the wild.</p>
+          <a href="#cnt-form"><p>Honeymoon Gorilla & Nile Escape</p></a>
+          <a href="#cnt-form"><p>Romantic luxury safari for newlyweds: private gorilla trekking, sunset Nile cruises, and candlelit dinners in the wild.</p></a>
           <div class="booking__price">
             <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
-            <a href="#cnt-form"><button
-                    class="book__now btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="inquire_now">Inquire Now</button></a>
+            <a href="#cnt-form"><button class="book__now" data-lang="inquire_now">Inquire Now</button></a>
           </div>
         </div>
       </div>
     </div>
+
     <div class="view__all">
-      <a href="#cnt-form"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="get_permit">Get a Gorilla Permit</button></a>
+      <a href="#cnt-form"><a href="#cnt-form"><button class="book__now" data-lang="get_permit">Get a Gorilla Permit</button></a>
       <br>
       <br>
-      <a href="#cnt-form"><button class="btn" id="btn-style" style="box-shadow: 2px 2px 8px red;" data-lang="customize_trip">Customize your desired Trip</button></a>
-    </div>
+      <a href="#cnt-form"><a href="#cnt-form"><button class="book__now" data-lang="customize_trip">Customize your desired Trip</button></a>
+      </div>
   </div>
+
 </section>
 <section style="width: 100%; padding: 40px 0;" id="testimonial" class="testimonial">
   <h2 class="testimonial-heading section__title" data-lang="testimonials">Testimonials</h2>
   <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.15cm; max-width: 1400px; margin: 0 auto;">
     <!-- Testimonial 1 -->
     <div class="card text-center card1"
-         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); perspective: 1000px; transition: transform 0.8s;">
       <div class="card-inner"
            style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
         <div class="card-front"
@@ -910,7 +1034,7 @@
     </div>
     <!-- Testimonial 2 -->
     <div class="card text-center card1"
-         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); perspective: 1000px; transition: transform 0.8s;">
       <div class="card-inner"
            style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
         <div class="card-front"
@@ -939,7 +1063,7 @@
     </div>
     <!-- Testimonial 3 -->
     <div class="card text-center card1"
-         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); perspective: 1000px; transition: transform 0.8s;">
+         style="height: 450px; width: 330px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); perspective: 1000px; transition: transform 0.8s;">
       <div class="card-inner"
            style="position: relative; width: 100%; height: 100%; text-align: center; transform-style: preserve-3d; transition: transform 0.8s;">
         <div class="card-front"
@@ -1097,10 +1221,11 @@
                     required
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-style" data-lang="send_message" data-aos="fade-in" id="btn-style" style="margin-right:
-           40px;box-shadow: 2px 2px 8px red;">Send</button>
-          <button onclick="window.location.href='feed.html'" class="btn btn-style" data-lang="feedback_btn" data-aos="fade-in"
-                  id="btn-style" style="box-shadow: 2px 2px 8px red;">Feedback</button>
+          <div style="display: flex; gap: 20px; margin-top: 20px;">
+            <button type="submit" class="btn btn-style" data-lang="send_message" data-aos="fade-in" id="btn-style" style="box-shadow: 2px 2px 8px rgba(255, 184, 48, 0.8);">Send</button>
+            <button onclick="window.location.href='feed.html'" class="btn btn-style" data-lang="feedback_btn" data-aos="fade-in"
+                    id="btn-style" style="box-shadow: 2px 2px 8px rgba(255, 184, 48, 0.8);">Feedback</button>
+          </div>
         </form>
       </div>
     </div>
@@ -1128,13 +1253,13 @@
                 required
                 style="border: none; font-size: 15px; margin: auto;"
         />
-        <button class="btn-send" type="submit" data-lang="subscribe_btn" id="send" style="box-shadow: 0px 4px 8px blue;
+        <button class="btn-send" type="submit" data-lang="subscribe_btn" id="send" style="background-color: rgb(70, 123, 20); box-shadow: 0px 4px 8px rgb(70, 123, 20);
         font-weight:530; font-size: medium; padding-left: 13px;">
           Subscribe
         </button>
       </form>
       <p id="subscriptionMessage" style="display: none; color: green; margin-top: 10px;" data-lang="subscribe_success">Subscription successful! 🎉</p>
-      <p id="errorMessage" style="display: none; color: red; margin-top: 10px;" data-lang="subscribe_error">Please enter a valid email address.</p>
+      <p id="errorMessage" style="display: none; color: rgba(255, 184, 48, 0.8); margin-top: 10px;" data-lang="subscribe_error">Please enter a valid email address.</p>
     </div>
   </div>
 </section>
@@ -1218,7 +1343,7 @@
     </div>
     <div class="footer_col_2">
       <div class="map_col">
-        <h4 class="footer-head footer-head-map" data-lang="footer_address" style="padding-left: 35px; color: #123456;">Address</h4>
+        <h4 class="footer-head footer-head-map" data-lang="footer_address" style="padding-left: 35px; color: rgb(33, 66, 14);">Address</h4>
         <div class="mapouter">
           <div class="gmap_canvas">
             <iframe

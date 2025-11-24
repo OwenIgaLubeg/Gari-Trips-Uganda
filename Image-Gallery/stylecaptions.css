@@ -6,7 +6,7 @@
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
-  background: linear-gradient(45deg, #6a0dad, #2f73d9); /* Purple to dark blue gradient */
+  background: linear-gradient(45deg, rgb(149, 150, 36), rgb(70, 123, 20)); /* Purple to dark blue gradient */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

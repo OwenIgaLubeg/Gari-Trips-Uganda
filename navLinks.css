@@ -26,7 +26,7 @@ nav {
   background: rgba(15, 15, 25, 0.9);
    
   /* Semi-transparent glass effect */
-  background: rgba(14, 21, 37, 0.85); /* Mix of #0e1525 */
+  background: rgb(33, 66, 14); /* Mix of #0e1525 */
   backdrop-filter: blur(12px);
 
   /* 3D Glow Effect */
@@ -83,7 +83,7 @@ body.light-mode .nav-container {
 }
 /*changed color on hover*/
 .link a:hover {
-  color: #bd8eb6;
+  color: rgb(255, 165, 0);
   
 }
 
@@ -231,7 +231,7 @@ body.light-mode .nav-container {
 .navLinks a:hover,
 .link a:hover {
   /*color: red;*/
-  color: #f6ddff; /* Light purple text on hover */
+  color: rgb(255, 165, 0); /* Light purple text on hover */
   text-shadow: 0px 0px 8px rgba(246, 221, 255, 0.8); /* Soft glow effect */
   background: rgba(255, 255, 255, 0.1); /* Subtle translucent background */
   border-radius: 8px;
@@ -247,7 +247,7 @@ body.light-mode .nav-container {
   height: 2px;
   bottom: -5px;
   left: 50%;
-  background-color: #f6ddff;
+  background-color: rgba(71, 134, 28, 0.8);
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -255,7 +255,7 @@ body.light-mode .nav-container {
 .navLinks a:hover,
 .link a:hover {
   
-  color: #e0b3ff; /* Light purple glow effect */
+  color: rgb(255, 165, 0); /* Light purple glow effect */
   text-shadow: 0px 0px 10px rgba(224, 179, 255, 0.8); /* Soft glow */
 }
 
@@ -405,7 +405,7 @@ body.light-mode .nav-container {
     position: absolute;
     top: 70px;
     display: none;
-    background-color: #091020;
+    background-color: rgb(33, 66, 14);
     /* width: 0%; */
     width: 100%;
     left: 0;
@@ -424,7 +424,7 @@ body.light-mode .nav-container {
   .navLinks li {
     width: 100%;
     padding: 0.5rem 0;
-    background-color: #1f2532;
+    background-color: rgb(33, 66, 14);
     z-index: 10;
   }
 
