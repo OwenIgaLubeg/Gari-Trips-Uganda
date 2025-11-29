@@ -453,6 +453,11 @@
       align-items: center;
       position: relative;
     }
+    .certificate {
+      position: center;
+      box-shadow: 0 0 4px rgb(149, 150, 36);
+    }
+
     .image-container {
       margin-top: 80px;
       justify-content: center;
@@ -543,7 +548,7 @@
   <link rel="stylesheet" href="jquery.flipster.min.css">
 
 </head>
-<body style="background-color: var(--secondary-color);">
+<!--<body style="background-color: var(--secondary-color);">
 <div class="circle-container">
   <div class="circle"></div>
   <div class="circle"></div>
@@ -555,7 +560,7 @@
   <canvas></canvas>
   <canvas></canvas>
   <canvas></canvas>
-</div>
+</div>-->
 
 <nav class="newNav">
   <div style="display: flex; align-items: center;">
@@ -1232,7 +1237,92 @@
   </div>
 </section>
 
-<section class="subscribe" id="Contact">
+<section class="certificate" id="certificate">
+<div class="certificate">
+  <div class="certificate__card cardd tilt-effect">
+    <h2 class="section__title" data-lang="chimpazee__and__gorilla__certificate">CHIMPAZEE AND GORILLA CERTIFICATE</h2>
+    <img src="gari-trips-images/certificate.jpg" alt="certificate" height="450" width="40" />
+    <div class="certificate__details">
+      <p data-lang="package_1_title">CHIMPAZEE AND GORILLA CERTIFICATE</p>
+      <p data-lang="package_1_desc">Receive official gorilla and chimpanzee tracking certificates after your trek! Contact us
+        to learn more and secure your unforgettable Uganda wildlife experience.</p>
+      <div class="booking__price">
+        <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+        <a href="#cnt-form"><button class="book__now" data-lang="inquire_more">Inquire More</button></a>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- Partners Section -->
+<section class="partners-section" style="padding: 30px 0; background-color: #f8f9fa; text-align: center;">
+  <h3 style="margin-bottom: 20px; color: #333; font-weight: 600;">Our Trusted Partners</h3>
+  <div class="partners-logos" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; align-items:
+  center; max-width: 900px; margin: 0 auto;">
+
+    <!-- SafariBookings -->
+    <a href="https://www.safaribookings.com/?utm_source=safaribookings&utm_medium=email" target="_blank" rel="noopener
+    noreferrer" title="SafariBookings">
+      <img src="gari-trips-images/safari-bookings-logo.png" alt="SafariBookings"
+           style="height: 40px; filter: grayscale(0%); transition: filter 0.2s;" onmouseover="this.style.filter='grayscale(20%)'"
+           onmouseout="this.style.filter='grayscale(0%)'">
+    </a>
+
+    <!-- TripAdvisor -->
+    <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+      <img src="gari-trips-images/trip-advisor.jfif" alt="TripAdvisor"
+           style="height: 40px; filter: grayscale(0%); transition: filter 0.2s;" onmouseover="this.style.filter='grayscale(20%)'"
+           onmouseout="this.style.filter='grayscale(0%)'">
+    </a>
+
+    <!-- Uganda Tourism Board -->
+    <a href="https://www.visituganda.com" target="_blank" rel="noopener noreferrer" title="Uganda Tourism Board">
+      <img src="gari-trips-images/uganda-tourism-board-logo.png" alt="Uganda Tourism Board"
+           style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
+           onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
+    </a>
+
+    <!-- Uganda Wildlife Authority -->
+    <a href="https://ugandawildlife.org" target="_blank" rel="noopener noreferrer" title="Uganda Wildlife Authority">
+      <img src="gari-trips-images/uganda-wildlife-logo.png" alt="Uganda Wildlife Authority"
+           style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
+           onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
+    </a>
+
+  </div>
+</section>
+
+<style>
+  /* Optional: Add this to your main CSS if you prefer a stylesheet */
+  .partners-section {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  .partners-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .partners-logos img {
+    height: 40px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: filter 0.2s ease;
+  }
+  .partners-logos img:hover {
+    filter: grayscale(20%);
+  }
+  .partners-logos a {
+    display: inline-block;
+  }
+</style>
+
+<!--<section class="subscribe" id="Contact">
   <div class="section__container subscribe__container">
     <div class="subscribe__content">
       <h2 class="section__title" data-lang="subscribe_title" data-aos="fade-up">Subscribe to get special Safari Package</h2>
@@ -1241,7 +1331,7 @@
       </p>
     </div>
     <div class="subscribe__form" data-aos="fade-up">
-      <!-- Netlify-ready form -->
+
       <form id="subscriptionForm" name="subscription" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="subscription" />
         <input
@@ -1262,7 +1352,7 @@
       <p id="errorMessage" style="display: none; color: rgba(255, 184, 48, 0.8); margin-top: 10px;" data-lang="subscribe_error">Please enter a valid email address.</p>
     </div>
   </div>
-</section>
+</section>-->
 
 <footer class="footer" data-aos="fade-up">
   <div class=" footer__container">
