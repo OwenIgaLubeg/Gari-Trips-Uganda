@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ====== SEO META TAGS ====== -->
     <meta name="description" content="Explore Gari Trips’ handpicked accommodations in Uganda: luxury lodges (Serena, Mweya, Chobe), Bwindi gorilla safari camps, budget stays, and Gari Houses Airbnb. All-inclusive, near parks, and traveler-approved.">
@@ -44,558 +44,429 @@
     <!-- ====== YouTube ====== -->
     <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
     <link rel="me" href="https://www.youtube.com/@GariTrips" />
-
-    <title>Accommodation | Gari Trips</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
-          rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./navLinks.css" />
+    <title>Accommodations | Gari Trips Uganda</title>
     <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Accommodation Page -->
     <style>
-        /* currently mostly css written in style tag after html is used */
-        :root {
-            --primary-color: #d6eaf7;
-            --secondary-color: #e73e76;
-            --bg-color: #f4f4f9;
-            --text-color: #333;
-            --card-bg: #ffffff;
+        /* Global navy-blue text */
+        body, h1, h2, h3, p, li, a, .subtitle {
+          color: #001f3f !important;
         }
-        /* Line after Heading */
-        .line {
-            width: 60%;
-            height: 2px;
-            background-color: var(--secondary-color);
-            /* Use the same orange color */
-            margin: 10px auto;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: none;
-            color: var(--text-color);
-            display: block;
-        }
-        #background-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1000;
-            object-fit: cover;
-            background-size: cover;
-        }
-        .video-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: -999;
-        }
-        .sitelogo {
-            height: 40px;
-            margin-right: 10px;
-            min-width: fit-content;
-        }
-        .link {
-            position: relative;
-        }
-        .link>a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 8px 20px;
-            text-decoration: none;
-            width: 100%;
-            transition: all 0.3s linear;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .link>a:hover {
-            background-color: transparent;
-            color: rgb(255, 165, 0);
-            border-radius: 10px;
-            box-shadow: rgb(56, 0, 109) 0px 0px 8px 2px inset;
-            color: #002152;
-        }
-        .navigationbar_package {
-            align-items: center;
-            display: flex;
-            gap: 5px;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #123456;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-        .dropdown-menu>li {
-            float: none;
-        }
-        .dropdown-menu>li>a {
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            color: white;
-        }
-        .dropdown-menu>li>a:hover {
-            background-color: #575757;
-        }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        .contact-btn {
-            position: relative;
-            right: -55px;
-            box-sizing: border-box;
-        }
-        .btn {
-            padding: 1rem 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            color: white;
-            background-color: #0697f1;
-            margin: 0;
-        }
-        .btn:hover {
-            background-color: #0578c1;
-        }
-        #themeToggle {
-            width: inherit;
-        }
-        .toggle-container {
-            margin-left: 15px;
-        }
+
+        /* Main Content */
         .main-content {
-            position: relative;
-            z-index: 1;
+          padding: 60px 20px 40px;
+          font-family: 'Poppins', sans-serif;
         }
-        .package-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            margin-bottom: 1rem;
-        }
-        .package-card:hover {
-            transform: translateY(-5px);
-        }
-        .package-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .package-info {
-            padding: 20px;
-        }
-        .package-info h3 {
-            margin: 0 0 10px;
-            color: #0697f1;
-        }
-        .package-info p {
-            margin: 0;
-            color: #666;
-        }
-        .login_packages {
-            color: white !important;
-            background-color: #6a5acd !important;
-        }
-        .login_packages:hover {
-            background-color: #ff0000 !important;
-            border-color: #ff0000 !important;
-            color: #fff !important;
-        }
-        @media (max-width: 1024px) {
-            .navLinks {
-                display: none;
-            }
-            body{
-                padding-top: 10rem;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
+
+        /* Section Titles */
         .section-title {
-            text-align: center;
-            font-size: 2.2em;
-            margin: 90px 0 20px !important;
-            font-weight: 800;
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
-            animation: fadeInUp 0.5s ease-out;
+          font-size: 2.2rem;
+          text-align: center;
+          margin: 40px 0 10px;
+          color: #001f3f;
         }
+
+        .line {
+          width: 60px;
+          height: 3px;
+          background: rgb(186, 222, 42);
+          margin: 0 auto 20px;
+        }
+
         .subtitle {
-            color: var(--secondary-color);
-            font-style: italic;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            font-weight: 800;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            animation: fadeInUp 0.5s ease-out 0.2s both;
+          text-align: center;
+          margin-bottom: 40px;
+          font-size: 1.1rem;
         }
-        .center-card {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
+
+        /* Package Grid - Flip Cards */
+        .package-grid {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-bottom: 50px;
         }
-        .center-card img {
-            max-width: 400px;
-            height: auto;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            animation: fadeInUp 0.5s ease-out;
+
+        .hotel-packages .card1 {
+          width: 300px;
+          height: 400px;
+          perspective: 1000px;
+          margin: 0;
         }
-        .center-card img:hover {
-            transform: scale(1.05) translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+
+        .hotel-packages .card1-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
         }
-        .hotel-packages {
-            padding: 40px 0;
-            margin-top: 10px;
+
+        .hotel-packages .card1:hover .card1-inner {
+          transform: rotateY(180deg);
         }
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .hotel-packages .card1-front,
+        .hotel-packages .card1-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          background: #fff;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
         }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .hotel-packages .card1-front {
+          text-align: center;
         }
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out;
+
+        .hotel-packages .card1-img {
+          width: 100%;
+          height: 55%;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 12px;
         }
+
+        .hotel-packages .card1-title {
+          font-size: 1.4rem;
+          margin: 8px 0;
+          font-weight: 700;
+        }
+
+        .hotel-packages .card1-description {
+          font-size: 0.95rem;
+          flex-grow: 1;
+        }
+
+        .hotel-packages .card1-back {
+          transform: rotateY(180deg);
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        .hotel-packages .card1-back p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+
+        .hotel-packages .card1-link {
+          text-decoration: none;
+          color: #001f3f;
+          font-weight: 600;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 8px 16px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          display: inline-block;
+          text-align: center;
+        }
+
+        .hotel-packages .card1-link:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Carousel */
+        .carousel {
+          width: 90%;
+          max-width: 1000px;
+          margin: 40px auto;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel .carousel-item img {
+          height: 400px;
+          object-fit: cover;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          background-size: 16px;
+        }
+
+        /* Pricing Section */
         .pricing-section {
-            padding: 60px 0;
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin-top: 40px;
+          margin-top: 60px;
         }
+
         .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-top: 30px;
         }
+
         .pricing-card {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 30px;
-            flex: 1 1 300px;
-            min-width: 300px;
-            max-width: 400px;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          width: 280px;
+          padding: 25px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.95);
+          box-shadow: 0 4px 12px rgba(0, 31, 63, 0.5);
+          text-align: center;
         }
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-        }
+
         .pricing-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            font-family: 'Poppins', sans-serif;
-            animation: fadeInUp 0.5s ease-out;
+          font-size: 1.4rem;
+          margin-bottom: 12px;
         }
+
         .pricing-card p {
-            font-size: 1em;
-            color: var(--text-color);
-            margin-bottom: 30px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: #001f3f;
         }
+
         .pricing-card ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            font-size: 1em;
-            color: var(--text-color);
+          list-style: none;
+          padding: 0;
+          margin: 20px 0;
         }
+
         .pricing-card ul li {
-            margin-bottom: 10px;
+          margin-bottom: 10px;
+          font-size: 1rem;
         }
+
         .pricing-card ul li i {
-            color: var(--secondary-color);
-            margin-right: 10px;
+          color: rgb(186, 222, 42);
+          margin-right: 6px;
         }
-        .pricing-card .btn {
-            padding: 15px 30px;
-            font-size: 1em;
-            border-radius: 50px;
-            transition: background-color 0.3s ease;
-            animation: fadeInUp 0.5s ease-out;
-            margin-top: 20px;
+
+        /* Buttons */
+        .btn, .btn:hover, .btn:active {
+          background: transparent !important;
+          color: #001f3f !important;
+          border: 2px solid rgb(186, 222, 42) !important;
+          padding: 10px 20px !important;
+          border-radius: 6px !important;
+          font-weight: 600 !important;
+          transition: all 0.3s ease !important;
+          text-decoration: none !important;
+          display: inline-block !important;
+        }
+
+        .btn:hover {
+          background: rgb(186, 222, 42) !important;
+          color: #001f3f !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .main-content {
+            padding-top: 1cm;
+          }
+          .section-title {
+            font-size: 1.8rem;
+          }
+          .hotel-packages .card1 {
+            width: 280px;
+          }
+          .carousel .carousel-item img {
+            height: 300px;
+          }
+          .pricing-card {
+            width: 100%;
+            max-width: 300px;
+          }
         }
     </style>
-    <script src="navbarToggle.js" defer></script>
 </head>
 <body>
-<video autoplay muted loop id="background-video">
-    <source src="packages_bg.mp4" type="video/mp4">
-</video>
-<div class="video-overlay"></div>
-<header>
-    <div class="nav-container" id="top">
 
-        <nav class="newNav">
-            <div style="display: flex; align-items: center;">
-                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-                    <div style="
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin-right: 16px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      "
-                         onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
-                         onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';">
-                        <img
-                                src="gari-trips-images/gari-trips-logo-black.png"
-                                alt="Site Logo"
-                                style="width: 32px; height: auto; object-fit: contain;"
-                        >
-                    </div>
-                    <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-left: 4px;">.</span></span>
-                </a>
-            </div>
-            <ul class="navLinks">
-                <li class="link" data-aos=""><a href="index.html" data-lang="home">Home</a></li>
-                <li class="link" data-aos=""><a href="about.html" data-lang="about">About</a></li>
-                <li class="link dropdown" data-aos="">
-                    <a href="#" class="dropdown" data-lang="services">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="Adventure.html" data-lang="destinations">Destinations</a></li>
-                        <li><a href="Cultural_Exp.html" data-lang="communities">Communities</a></li>
-                        <li><a href="car-services.html" data-lang="car_services">Car Services</a></li>
-                        <li><a href="gorilla-trekking.html" data-lang="gorilla_trekking">Gorilla Trekking</a></li>
-                        <li><a href="gallery.html" data-lang="gallery">Gallery</a></li>
-                    </ul>
-                </li>
-                <li class="link" data-aos=""><a href="package.html" data-lang="safari_packages">Safari Packages</a></li>
-                <li class="link" data-aos=""><a href="packages.html" data-lang="accommodations">Accommodations</a></li>
-                <li class="link" data-aos=""><a href="blog.html" data-lang="our_blogs">Our Blogs</a></li>
-                <li class="link" data-aos=""><a href="feedback.html" data-lang="rate_us">Rate Us?</a></li>
-                <li class="link" data-aos=""><a href="#cnt-form" data-lang="contact_us">Contact Us</a></li>
-            </ul>
-            <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-                <input id="themeToggle" class="toggle" type="checkbox">
-            </div>
-            <div class="language-switcher" style="display: flex; align-items: center; gap: 6px; margin-left: 16px;">
-                <select id="language-select" style="padding: 2px 4px; border-radius: 2px; border: 1px solid #ccc; background: white; font-size: 0.75rem; cursor: pointer; height: 24px;">
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                    <option value="es">Español</option>
-                    <option value="nl">Nederlands</option>
-                    <option value="fr">Français</option>
-                </select>
-            </div>
-            <div class="hamburger" id="hamburger" data-aos="fade-down">
-                <div class="line" style="margin-bottom: 5px;"></div>
-                <div class="line" style="margin-bottom: 5px;"></div>
-                <div class="line" style="margin-bottom: 5px;"></div>
-            </div>
-        </nav>
-
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
     </div>
-</header>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW ACCOMMODATION CONTENT ========== -->
 <main class="main-content">
     <section class="hotel-packages">
-        <h2 class="section-title">Tourists Accomodations</h2>
+        <h2 class="section-title">Tourist Accommodations</h2>
         <div class="line"></div>
-        <p class="subtitle" style="color: #0697f1;">Find the best deals and offers for your adventure!</p>
+        <p class="subtitle">Find the best deals and offers for your adventure!</p>
         <div class="package-grid">
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/hotels-2.jpg" loading="lazy" alt="Card Image"
-                             class="card1-img">
-                        <h3 class="card1-title">KAMPALA SERENA HOTEL </h3>
-                        <p class="card1-description">Luxurious city hotel with rooftop pool and spa, perfect for
-                            relaxation after a day of exploring.</p>
+                        <img src="gari-trips-images/hotels-2.jpg" loading="lazy" alt="Kampala Serena Hotel" class="card1-img">
+                        <h3 class="card1-title">KAMPALA SERENA HOTEL</h3>
+                        <p class="card1-description">Luxurious city hotel with rooftop pool and spa, perfect for relaxation after a day of exploring.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>Nestled in the heart of the city, Kampala Serena Hotel offers luxurious rooms with modern
-                            amenities. Guests can enjoy a stunning rooftop pool, a world-class spa, and fine dining
-                            at our in-house restaurant, serving gourmet meals prepared by top chefs. Perfect for
-                            both business and leisure travelers.</p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Nestled in the heart of the city, Kampala Serena Hotel offers luxurious rooms with modern amenities. Guests can enjoy a stunning rooftop pool, a world-class spa, and fine dining at our in-house restaurant.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/acco-22.jfif"  loading="lazy" alt="Card Image"
-                             class="card1-img">
+                        <img src="gari-trips-images/acco-22.jfif" loading="lazy" alt="Chobe Safari Lodge" class="card1-img">
                         <h3 class="card1-title">CHOBE SAFARI LODGE</h3>
-                        <p class="card1-description">Located in the Murchison Falls National Park, this Five Star lodge
-                            is undoubtedly the gem in Uganda's crown of tourism destinations. </p>
+                        <p class="card1-description">Located in Murchison Falls National Park, this Five Star lodge is the gem of Uganda's tourism destinations.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>The breathtaking panoramic views, coupled with the sounds of the River Nile's magnificent
-                            rapids, sets the scene for an adventure that will impress even the most discerning of
-                            visitors. Chobe Safari Lodge offers a unique opportunity to sample the wildlife, birds,
-                            flora and fauna; all in an area of the park that has yet to be discovered. </p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Breathtaking views and sounds of the Nile’s rapids set the scene for an unforgettable adventure with abundant wildlife, birds, and flora.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/acco-5.jpg" loading="lazy" alt="Card Image"
-                             class="card1-img">
+                        <img src="gari-trips-images/acco-5.jpg" loading="lazy" alt="Mweya Safari Lodge" class="card1-img">
                         <h3 class="card1-title">MWEYA SAFARI LODGE</h3>
-                        <p class="card1-description">Mweya Safari Lodge offers visitors an unforgettable experience.
-                            Located on a peninsula within the heart of the Queen Elizabeth National Park</p>
+                        <p class="card1-description">Unforgettable experience on a peninsula in Queen Elizabeth National Park.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>To the east, lie the guardians of the birthplace of mankind, the Great Rift Valley hills,
-                            separated from the Mountains of the Moon by the meandering Kazinga Channel. Here the
-                            water flows endlessly into two giant lakes – Lake George and Lake Edward.</p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Overlooking the Kazinga Channel between the Great Rift Valley and the Mountains of the Moon, with views of Lakes George and Edward.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/acco-7.jpeg" loading="lazy" alt="Card Image"
-                             class="card1-img">
-                        <h3 class="card1-title">KIHO Gorilla Safari Lodge</h3>
-                        <p class="card1-description"> Experience the epitome of opulence at the prestigious Kiho
-                            Gorilla Safari Lodge, nestled majestically in the heart of the illustrious Ruhija sector of the park.</p>
+                        <img src="gari-trips-images/acco-7.jpeg" loading="lazy" alt="Kiho Gorilla Safari Lodge" class="card1-img">
+                        <h3 class="card1-title">KIHO GORILLA SAFARI LODGE</h3>
+                        <p class="card1-description">Epitome of opulence in the Ruhija sector of Bwindi Impenetrable Forest.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>Revered as the pinnacle of indulgence, this sanctuary boasts the most exquisite gorilla
-                            tracking trailhead in all of Bwindi. Perched regally on Bugarama hill, the lodge commands
-                            an unrivaled position, offering a panoramic spectacle of the high altitude tropical rainforest. </p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Perched on Bugarama Hill with panoramic views of tropical rainforest. Offers the most exquisite gorilla tracking trailhead in Bwindi.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/acco-4.jpg" loading="lazy" alt="Card Image"
-                             class="card1-img">
-                        <h3 class="card1-title">Gari Houses Airbnb</h3>
-                        <p class="card1-description">Charming Airbnb with homemade breakfast and picturesque views,
-                            offering a cozy retreat from city life.</p>
+                        <img src="gari-trips-images/acco-4.jpg" loading="lazy" alt="Gari Houses Airbnb" class="card1-img">
+                        <h3 class="card1-title">GARI HOUSES AIRBNB</h3>
+                        <p class="card1-description">Charming Airbnb with homemade breakfast and picturesque views.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>Experience the charm of the countryside at our cozy bed and breakfast. Enjoy homemade
-                            breakfasts featuring local ingredients, beautifully decorated rooms, and picturesque
-                            views of rolling hills and gardens. Our warm hospitality ensures a delightful and
-                            relaxing stay for all guests.</p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Experience countryside charm with homemade breakfasts, beautifully decorated rooms, and rolling hill views. Warm hospitality guaranteed.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
             <div class="card1">
                 <div class="card1-inner">
                     <div class="card1-front">
-                        <img src="gari-trips-images/acco-6.jpg" loading="lazy" alt="Card Image"
-                             class="card1-img">
-                        <h3 class="card1-title">Budget Lodges in Bwindi</h3>
-                        <p class="card1-description">Cozy cabins in a tranquil mountain setting, ideal for nature
-                            lovers and adventure seekers.</p>
+                        <img src="gari-trips-images/acco-6.jpg" loading="lazy" alt="Budget Lodges in Bwindi" class="card1-img">
+                        <h3 class="card1-title">BUDGET LODGES IN BWINDI</h3>
+                        <p class="card1-description">Cozy cabins in tranquil mountain setting, ideal for nature lovers.</p>
                     </div>
                     <div class="card1-back">
                         <h3>More Information</h3>
-                        <p>Located in the serene mountains, Mountain Retreat provides a tranquil escape with cozy
-                            cabins equipped with modern comforts. Enjoy picturesque hiking trails, breathtaking
-                            views, and unwind in our hot tub after a day of exploration. We also serve complimentary
-                            breakfast to start your day right.</p>
-                        <a href="index.html#cnt-form" class="card1-link">Inquire</a>
+                        <p>Tranquil mountain escape with modern comforts, hiking trails, hot tub, and complimentary breakfast. Perfect after gorilla trekking.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <h2 class="section-title">Snapshots From Famous Hotels</h2>
-    <div class="line"></div>
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-pause="false">
+
+    <!--<h2 class="section-title">Snapshots From Famous Hotels</h2>-->
+    <!--<div class="line"></div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
         <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2500">
-                <img src="gari-trips-images/hotels-2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-item active">
+                <img src="gari-trips-images/hotels-2.jpg" class="d-block w-100" alt="Kampala Serena">
             </div>
-            <div class="carousel-item" data-bs-interval="2500">
-                <img src="gari-trips-images/hotels-1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-item">
+                <img src="gari-trips-images/hotels-1.jpg" class="d-block w-100" alt="Luxury Hotel">
             </div>
-            <div class="carousel-item" data-bs-interval="2500">
-                <img src="gari-trips-images/acco-4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-item">
+                <img src="gari-trips-images/acco-4.jpg" class="d-block w-100" alt="Gari Houses">
             </div>
-            <div class="carousel-item" data-bs-interval="2500">
-                <img src="gari-trips-images/acco-22.jfif" class="d-block w-100" alt="...">
+            <div class="carousel-item">
+                <img src="gari-trips-images/acco-22.jfif" class="d-block w-100" alt="Chobe Lodge">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div>-->
+
     <section class="pricing-section">
-        <h2 class="section-title">Accomodations</h2>
+        <h2 class="section-title">Accommodations</h2>
         <div class="line"></div>
-        <p class="subtitle">Choose the perfect accomodation for your needs</p>
+        <p class="subtitle">Choose the perfect accommodation for your needs</p>
         <div class="pricing-container">
             <div class="pricing-card">
                 <h3>Luxury City Hotels</h3>
@@ -605,9 +476,7 @@
                     <li><i class="fas fa-check"></i> Ground Transport</li>
                     <li><i class="fas fa-check"></i> All meals & Drinks</li>
                 </ul>
-                <a href="index.html#cnt-form">
-                    <button class="btn">Inquire</button>
-                </a>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
             </div>
             <div class="pricing-card">
                 <h3>Safari Cottages & Lodges</h3>
@@ -617,9 +486,7 @@
                     <li><i class="fas fa-check"></i> Ground Transport</li>
                     <li><i class="fas fa-check"></i> All meals & Drinks</li>
                 </ul>
-                <a href="index.html#cnt-form">
-                    <button class="btn">Inquire</button>
-                </a>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
             </div>
             <div class="pricing-card">
                 <h3>Gari Houses Airbnb</h3>
@@ -629,311 +496,65 @@
                     <li><i class="fas fa-check"></i> Ground Transport</li>
                     <li><i class="fas fa-check"></i> All meals & Drinks</li>
                 </ul>
-                <a href="index.html#cnt-form">
-                    <button class="btn">Inquire</button>
-                </a>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
             </div>
         </div>
     </section>
 </main>
 
-<!-- NO FOOTER — COMPLETELY REMOVED -->
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        /* Hide horizontal scrollbar */
-    }
-    body {
-        font-family: 'Poppins', sans-serif;
-        color: var(--text-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #background-video {
-        position: fixed;
-        /* Fixes the video to the background */
-        top: 0;
-        /* Position to the top */
-        left: 0;
-        /* Position to the left */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Makes the video cover the entire screen */
-        z-index: -1;
-        /* Sends video behind other content */
-    }
-    .video-overlay {
-        position: fixed;
-        /* Position overlay over the video */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Optional overlay color */
-        z-index: 1;
-        /* Ensure overlay is above the video */
-    }
-    :root {
-        --primary-color: #d6eaf7;
-        --secondary-color: #e73e76;
-        --bg-color: #f4f4f9;
-        --text-color: #333;
-        --card-bg: #ffffff;
-    }
-    /* Main Content */
-    .main-content {
-        margin-top: 40rem;
-        padding: 40px;
-        font-family: Arial, sans-serif;
-        background-color: transparent
-    }
-    /* Section Titles */
-    .section-title {
-        font-size: 2em;
-        text-align: center;
-        margin-bottom: 10px;
-        color: var(--secondary-color);
-        /* Orange Color */
-    }
-    /* Subtitle Styling */
-    .subtitle {
-        text-align: center;
-        margin-bottom: 20px;
-        color: var(--text-color);
-        /* Change color according to your theme */
-    }
-    /* Package Grid Styling */
-    .package-grid {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        padding: 0 40px;
-    }
-    @media screen and (max-width: 1268px) {
-        .package-grid {
-            padding-top: 20rem;
-        }
-    }
-    .package-card {
-        width: 300px;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
-    .package-card:hover {
-        transform: translateY(-5px);
-    }
-    .package-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .package-info {
-        padding: 20px;
-        background-color: var(--card-bg);
-    }
-    .package-info h3 {
-        font-size: 1.5em;
-        margin: 0;
-        color: var(--text-color);
-    }
-    .package-info p {
-        color: #555;
-    }
-    /* Pricing Section */
-    .pricing-container {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 30px;
-    }
-    .pricing-card {
-        width: 300px;
-        border-radius: 8px;
-        padding: 20px;
-        background-color: var(--primary-color);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
-    .pricing-card h3 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-        color: var(--text-color);
-    }
-    .pricing-card p {
-        font-size: 1.2em;
-        color: var(--text-color);
-    }
-    .pricing-card ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 20px 0;
-    }
-    .pricing-card ul li {
-        margin-bottom: 10px;
-        font-size: 1em;
-        color: #555;
-    }
-    .pricing-card .btn {
-        background-color: #ff6347;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .pricing-card .btn:hover {
-        background-color: #ff4500;
-    }
-    a:hover::after,
-    .link a:hover::after {
-        width: 0%;
-        background-color: transparent;
-    }
-/*
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        margin: 0;
-    } */
-    .hotel-packages .card1 {
-        width: 300px;
-        height: 400px;
-        perspective: 1000px;
-        /* Enable 3D space */
-        margin: 30px 30px;
-    }
-    .hotel-packages .card1-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        /* Maintain 3D effects */
-    }
-    .hotel-packages .card1:hover .card1-inner {
-        transform: rotateY(180deg);
-        /* Rotate card on hover */
-    }
-    .hotel-packages .card1-front,
-    .card1-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        /* Hide the back face when flipped */
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    .hotel-packages .card1-front {
-        background: linear-gradient(135deg, #fff, #fff);
-        color: black;
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center;
-align-items: center; */
-        text-align: center;
-    }
-    .hotel-packages .card1-img {
-        width: 100%;
-        height: 55%;
-        border-radius: 10px 10px 0 0;
-    }
-    .hotel-packages .card1-title {
-        font-size: 1.5em;
-        margin: 10px 0;
-    }
-    .hotel-packages .card1-description {
-        padding: 0 15px;
-        text-align: center;
-    }
-    .hotel-packages .card1-back {
-        background: #fff;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: rotateY(180deg);
-        /* Flip it to be hidden initially */
-        padding: 20px;
-    }
-    .hotel-packages .card1-back h3 {
-        margin-bottom: 10px;
-    }
-    .hotel-packages .card1-link {
-        text-decoration: none;
-        color: #6e7ff3;
-        font-weight: bold;
-        border: 1px solid #6e7ff3;
-        padding: 5px 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-        margin-top: 2rem;
-    }
-    .hotel-packages .card1-link:hover {
-        background-color: #0697f1;
-        color: white;
-    }
-    .hotel-packages .package-grid {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        /* margin-top: 50px; */
-    }
-    .hotel-packages {
-        margin-top: 90rem;
-    }
-    .pricing-section {
-        margin-top: 15rem;
-    }
-    .card1-title {
-        font-family: "Bona Nova SC", serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-    .card1-description {
-        font-family: "Quicksand", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-    }
-    .card1:hover {
-        transform: scale(1.05);
-        /* Scale effect on hover */
-    }
-    .carousel {
-        overflow: hidden;
-        width: 80%;
-        margin: auto;
-        /* margin-top: 100px; */
-        border-radius: 20px;
-        height: 500px;
-    }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+<!-- ========== BOOTSTRAP JS FOR CAROUSEL ========== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
 </body>
 </html>

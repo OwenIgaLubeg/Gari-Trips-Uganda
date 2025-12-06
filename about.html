@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ====== SEO META TAGS ====== -->
     <meta name="description" content="Gari Trips Uganda is a locally owned safari company offering authentic East African adventures since 2014. Specializing in gorilla trekking, chimpanzee tracking, and personalized wildlife tours with expert Ugandan guides.">
@@ -45,245 +44,394 @@
     <!-- ====== YouTube ====== -->
     <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
     <link rel="me" href="https://www.youtube.com/@GariTrips" />
-
-    <title>About Us - Gari Trips</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="./Image-Gallery/style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="./navLinks.css" />
-    <script src="Theme.js" defer></script>
-    <!-- Added for AOS (used in navbar) -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
+    <title>About Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
 
+    <!-- Inline CSS for About Page Only -->
+    <style>
+        /* 🔥 Extra About Page Enhancements Only (Everything else comes from styles.css) */
+
+        /* Navy-blue text for all new content */
+        .about-container,
+        .mission-vision,
+        .partners-section,
+        .hero-overlay-text {
+          color: #001f3f !important;
+        }
+
+        /* Smooth fade animations */
+        .fade-in {
+          opacity: 0;
+          transform: translateY(30px);
+          animation: fadeInUp 1.1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Hero Video Styling */
+        .hero-video-container {
+          position: relative;
+          width: 100%;
+          height: 85vh;
+          overflow: hidden;
+        }
+
+        .hero-video-container video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+
+        .hero-overlay-text {
+          position: absolute;
+          bottom: 15%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          color: white;
+          font-size: 3rem;
+          text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+          font-weight: 700;
+          animation: fadeInUp 2s ease forwards;
+          z-index: 1;
+        }
+
+        /* About Content Layout */
+        .about-container {
+          width: 90%;
+          max-width: 1200px;
+          margin: 4rem auto;
+          padding: 2rem 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          align-items: center;
+        }
+
+        .about-container img {
+          width: 100%;
+          border-radius: 12px;
+          object-fit: cover;
+          box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text h2 {
+          font-size: 2.4rem;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+          color: #001f3f;
+        }
+
+        .about-text p {
+          line-height: 1.7;
+          margin-bottom: 1.2rem;
+          color: #001f3f;
+        }
+
+        /* Mission + Vision Boxes */
+        .mission-vision {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 90%;
+          max-width: 1200px;
+          margin: 3rem auto;
+          gap: 2rem;
+        }
+
+        .mission-vision-box {
+          padding: 2rem;
+          border-radius: 12px;
+          background: white;
+          transition: 0.3s ease;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        .mission-vision-box:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+        }
+
+        .mission-vision-box h3 {
+          margin-bottom: 1rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #001f3f;
+        }
+
+        .mission-vision-box p {
+          color: #62748e;
+          line-height: 1.6;
+        }
+
+        /* Partners Section */
+        .partners-section {
+          padding: 40px 20px;
+          background-color: #f8f9fa;
+          text-align: center;
+          margin: 4rem 0;
+        }
+
+        .partners-section h3 {
+          margin-bottom: 25px;
+          color: #001f3f;
+          font-weight: 700;
+          font-size: 1.8rem;
+        }
+
+        .partners-logos {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 40px;
+          align-items: center;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .partners-logos img {
+          height: 50px;
+          object-fit: contain;
+          filter: grayscale(0%);
+          transition: filter 0.2s ease;
+        }
+
+        .partners-logos img:hover {
+          filter: grayscale(20%);
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+          .about-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+          }
+
+          .about-container img {
+            margin: 0 auto;
+          }
+
+          .mission-vision {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-overlay-text {
+            font-size: 2.2rem;
+            bottom: 20%;
+          }
+
+          .partners-logos {
+            gap: 25px;
+          }
+
+          .partners-logos img {
+            height: 40px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-overlay-text {
+            font-size: 1.8rem;
+          }
+
+          .about-text h2 {
+            font-size: 2rem;
+          }
+
+          .mission-vision-box h3 {
+            font-size: 1.5rem;
+          }
+        }
+    </style>
+</head>
 <body>
 
-<nav class="newNav">
-    <div style="display: flex; align-items: center;">
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-            <div style="
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin-right: 16px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      "
-                 onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';"
-                 onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)';">
-                <img
-                        src="gari-trips-images/gari-trips-logo-black.png"
-                        alt="Site Logo"
-                        style="width: 32px; height: auto; object-fit: contain;"
-                >
-            </div>
-            <span class="nav__logo" data-aos="fade-right">GARI TRIPS<span style="margin-left: 4px;">.</span></span>
-        </a>
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
     </div>
-    <ul class="navLinks">
-        <li class="link" data-aos=""><a href="index.html" data-lang="home">Home</a></li>
-        <li class="link" data-aos=""><a href="about.html" data-lang="about">About</a></li>
-        <li class="link dropdown" data-aos="">
-            <a href="#" class="dropdown" data-lang="services">Services</a>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
             <ul class="dropdown-menu">
-                <li><a href="Adventure.html" data-lang="destinations">Destinations</a></li>
-                <li><a href="Cultural_Exp.html" data-lang="communities">Communities</a></li>
-                <li><a href="car-services.html" data-lang="car_services">Car Services</a></li>
-                <li><a href="gorilla-trekking.html" data-lang="gorilla_trekking">Gorilla Trekking</a></li>
-                <li><a href="gallery.html" data-lang="gallery">Gallery</a></li>
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </li>
-        <li class="link" data-aos=""><a href="package.html" data-lang="safari_packages">Safari Packages</a></li>
-        <li class="link" data-aos=""><a href="packages.html" data-lang="accommodations">Accommodations</a></li>
-        <li class="link" data-aos=""><a href="blog.html" data-lang="our_blogs">Our Blogs</a></li>
-        <li class="link" data-aos=""><a href="feedback.html" data-lang="rate_us">Rate Us?</a></li>
-        <li class="link" data-aos=""><a href="#cnt-form" data-lang="contact_us">Contact Us</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
     </ul>
-    <div class="toggle-container" data-aos="fade-down" style="margin-right: 28px;">
-        <input id="themeToggle" class="toggle" type="checkbox">
-    </div>
-    <div class="language-switcher" style="display: flex; align-items: center; gap: 6px; margin-left: 16px;">
-        <select id="language-select" style="padding: 2px 4px; border-radius: 2px; border: 1px solid #ccc; background: white; font-size: 0.75rem; cursor: pointer; height: 24px;">
-            <option value="en">English</option>
-            <option value="de">Deutsch</option>
-            <option value="es">Español</option>
-            <option value="nl">Nederlands</option>
-            <option value="fr">Français</option>
-        </select>
-    </div>
-    <div class="hamburger" id="hamburger" data-aos="fade-down">
-        <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
-        <div class="line" style="margin-bottom: 5px;"></div>
-    </div>
 </nav>
 
-<!-- ========== REST OF YOUR ORIGINAL CONTENT (UNCHANGED) ========== -->
-<div class="background">
+<!-- 🔥 NEW CONTENT STARTS HERE -->
+
+<!-- 🔥 HERO VIDEO -->
+<header class="hero-video-container">
     <video autoplay muted loop playsinline>
-        <source src="./about.mp4" type="video/mp4">
+        <source src="gari-trips-images/3-day-queen-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-</div>
-
-<div class="content-wrapper">
-    <header>
-        <h1 class="heading">Gari Trips Uganda</h1>
-        <p class="subheading">Discover Your Purpose Through Travel</p>
-    </header>
-
-    <div class="content-block" style="margin-top: 0; padding-top: 0;">
-        <p class="summary">
-            Welcome to Gari Trips Uganda – your premier gateway to authentic East African safari adventures. Discover
-            mountain gorillas in Bwindi Impenetrable Forest, track chimpanzees in Kibale, and witness the Big Five
-            across Uganda’s legendary national parks. We craft personalized wildlife journeys that ignite wonder and
-            leave lifelong memories.
-        </p>
-        <p class="summary">
-            Our expert local Ugandan guides offer deep cultural insight, fluency in regional languages, and unmatched
-            knowledge of hidden trails, animal behavior, and conservation efforts. From luxury lodges to budget-friendly
-            group tours, every itinerary is tailored to your pace, interests, and dreams.
-        </p>
-        <p class="summary">
-            Since 2014, Gari Trips has connected travelers with trusted guides across Uganda, Rwanda, and Kenya — delivering
-            safe, sustainable, and unforgettable primate and wildlife safaris. Begin your East Africa story with us today.
-        </p>
-        <div class="video-container" style="margin-top: 0;">
-            <video src="gari-trips-images/gari-video-about-us.mp4"
-                   controls
-                   playsinline
-                   preload="metadata"
-                   style="width: 100%; height: auto; display: block; border-radius: 10px; margin-top: 0;">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="features">
-            <div class="feature">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Curated Itineraries</h3>
-            </div>
-            <div class="feature">
-                <i class="fas fa-users"></i>
-                <h3>Local Guides</h3>
-            </div>
-            <div class="feature">
-                <i class="fas fa-star"></i>
-                <h3>Unforgettable Experiences</h3>
-            </div>
-        </div>
-        <section class="timeline-section">
-            <h2 class="timeline-title">Our Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-year="2014">
-                    <div class="timeline-icon">🌿</div>
-                    <div class="timeline-content">
-                        <h3>Founded</h3>
-                        <p>Gari Trips Uganda began offering authentic East African safaris with local guides.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-year="2025">
-                    <div class="timeline-icon">🌍</div>
-                    <div class="timeline-content">
-                        <h3>Global Expansion</h3>
-                        <p>Expanded to 200+ countries with 30,000+ local guides worldwide.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-year="2026">
-                    <div class="timeline-icon">🏆</div>
-                    <div class="timeline-content">
-                        <h3>Milestone Achievement</h3>
-                        <p>Recognized as one of the top platforms for personalized travel experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="growth-section">
-            <h2 class="section-title">Our Growth</h2>
-            <div class="growth-counter">
-                <div class="counter-item">
-                    <div class="icon-container">🌍</div>
-                    <div class="count" data-target="200">0</div>
-                    <p>Countries Expanded</p>
-                </div>
-                <div class="counter-item">
-                    <div class="icon-container">🏆</div>
-                    <div class="count" data-target="30000">0</div>
-                    <p>Miles Achievements</p>
-                </div>
-            </div>
-        </section>
-        <a href="index.html#cnt-form" class="cta-button">Talk to us</a>
+    <div class="hero-overlay-text fade-in">
+        Discover Who We Are
     </div>
-</div>
+</header>
 
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 1000 });
-</script>
-<script>
-    let hamburger = document.getElementById("hamburger");
-    let navLinks = document.getElementById("navLinks");
+<!-- 🔥 MAIN ABOUT CONTENT -->
+<section class="about-container fade-in">
+    <img src="gari-trips-images/gari-trips-visitors-10.jpg" alt="About Gari Trips">
+    <div class="about-text">
+        <h2>About Gari Trips Uganda</h2>
+        <p>
+            Gari Trips Uganda is a premier East African tour and travel company dedicated to creating unforgettable safari
+            experiences across Uganda, Kenya, Rwanda, and Tanzania. We specialize in wildlife safaris, gorilla trekking adventures,
+            chimpanzee tracking, cultural and community tours, mountain hiking, birding expeditions, and tailor-made luxury travel
+            packages designed for every type of explorer.
+        </p>
+        <p>
+            At Gari Trips Uganda, we believe travel is more than movement — it is a meaningful journey of discovery, connection,
+            and purpose. Our mission is to craft personalized safari experiences that combine comfort, authenticity, and adventure
+            while showcasing the rich wildlife, diverse cultures, and breathtaking landscapes of East Africa.
+        </p>
+        <p>
+            With expert local guides, reliable transportation, and carefully curated itineraries, we ensure every traveler enjoys
+            a safe, memorable, and immersive safari experience. Whether you're planning a gorilla trekking tour in Bwindi, a Big Five
+            safari in the Serengeti, or a cultural encounter in East Africa’s local communities, Gari Trips Uganda is your trusted
+            partner for exceptional travel.
+        </p>
+    </div>
+</section>
 
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+<!-- 🔥 MISSION & VISION -->
+<section class="mission-vision fade-in">
+    <div class="mission-vision-box">
+        <h3>Our Mission</h3>
+        <p>
+            To offer outstanding safari experiences that connect travelers to the beauty, wildlife,
+            and cultures of East Africa—while promoting conservation and responsible tourism.
+        </p>
+    </div>
+    <div class="mission-vision-box">
+        <h3>Our Vision</h3>
+        <p>
+            To become East Africa’s most trusted and innovative safari company, delivering world-class
+            travel experiences and creating lifelong memories for every traveler.
+        </p>
+    </div>
+</section>
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const items = document.querySelectorAll(".timeline-item");
+<!-- Partners Section -->
+<section class="partners-section">
+    <h3>Our Trusted Partners</h3>
+    <div class="partners-logos">
+        <a href="https://www.safaribookings.com/?utm_source=safaribookings&utm_medium=email" target="_blank" rel="noopener noreferrer" title="SafariBookings">
+            <img src="gari-trips-images/safari-bookings-logo.png" alt="SafariBookings">
+        </a>
+        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+            <img src="gari-trips-images/trip-advisor.jfif" alt="TripAdvisor">
+        </a>
+        <a href="https://www.visituganda.com" target="_blank" rel="noopener noreferrer" title="Uganda Tourism Board">
+            <img src="gari-trips-images/uganda-tourism-board-logo.png" alt="Uganda Tourism Board">
+        </a>
+        <a href="https://ugandawildlife.org" target="_blank" rel="noopener noreferrer" title="Uganda Wildlife Authority">
+            <img src="gari-trips-images/uganda-wildlife-logo.png" alt="Uganda Wildlife Authority">
+        </a>
+    </div>
+</section>
 
-        function checkVisibility() {
-            const triggerBottom = window.innerHeight * 0.85;
-            items.forEach((item) => {
-                const boxTop = item.getBoundingClientRect().top;
-                if (boxTop < triggerBottom) {
-                    item.classList.add("show");
-                }
-            });
-        }
+<!-- 🔥 NEW CONTENT ENDS -->
 
-        window.addEventListener("scroll", checkVisibility);
-        checkVisibility();
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
 
-        const counters = document.querySelectorAll(".count");
-        let hasAnimated = false;
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
 
-        function animateCounters() {
-            const growthSection = document.getElementById("growth-section");
-            const sectionTop = growthSection.getBoundingClientRect().top;
-
-            if (sectionTop < window.innerHeight && !hasAnimated) {
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute("data-target");
-                    let count = 0;
-                    const increment = target / 100;
-
-                    function updateCount() {
-                        count += increment;
-                        if (count < target) {
-                            counter.textContent = Math.ceil(count);
-                            requestAnimationFrame(updateCount);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    }
-                    updateCount();
-                });
-                hasAnimated = true;
-            }
-        }
-
-        window.addEventListener("scroll", animateCounters);
-        animateCounters();
-    });
-</script>
 </body>
-
 </html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Us | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Contact Page -->
+    <style>
+        /* Global font & navy-blue text */
+        html {
+          scroll-behavior: smooth;
+          font-family: "Afacad Flux", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+          font-variation-settings: "slnt" 0;
+          width: 100vw;
+        }
+
+        body,
+        h1, h2, h3, h4, p, li, label, input, textarea {
+          color: #001f3f !important;
+        }
+
+        p, li, label, input, textarea {
+          font-weight: 300 !important;
+        }
+
+
+        /* Main container */
+        .contact-page-container {
+          max-width: 1200px;
+          margin: 40px auto;
+          padding: 0 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 50px;
+        }
+
+        /* Logo Info Section — FULLY CENTERED */
+        .contact-info {
+          background: #ffffff;
+          padding: 30px;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          text-align: center;
+          width: 100%;
+          max-width: 700px;
+        }
+
+        .contact-info img {
+          width: 180px; /* Slightly smaller, centered */
+          height: auto;
+          margin: 16px auto;
+          display: block;
+        }
+
+        .contact-info h1 {
+          margin-bottom: 15px;
+          font-size: 1.8rem;
+        }
+
+        .contact-info p {
+          margin-bottom: 12px;
+          line-height: 1.6;
+        }
+
+        /* Form Section — CENTERED & ENLARGED */
+        .contact-form-container {
+          background: #ffffff;
+          padding: 40px; /* Increased padding */
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          width: 100%;
+          max-width: 700px; /* Wider form */
+        }
+
+        .contact-form-container h1 {
+          text-align: center;
+          margin-bottom: 30px;
+          font-size: 1.9rem;
+        }
+
+        /* Form inputs */
+        .contact-form input,
+        .contact-form textarea {
+          width: 100%;
+          padding: 14px;
+          padding-left: 52px;
+          border: none;
+          border-bottom: 1px solid #001f3f;
+          outline: none;
+          background: none;
+          color: #001f3f;
+          font-family: "Afacad Flux", sans-serif;
+          font-size: 1.05rem;
+          box-sizing: border-box;
+        }
+
+        .contact-form input {
+          height: 54px;
+        }
+
+        .contact-form textarea {
+          padding-top: 14px;
+          min-height: 140px;
+          resize: vertical;
+        }
+
+        /* Icons */
+        .form-icon {
+          position: absolute;
+          left: 18px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #001f3f;
+          font-size: 1.2rem;
+        }
+
+        .form-icon.textarea-icon {
+          top: 18px;
+          transform: none;
+        }
+
+        .input-wrapper {
+          position: relative;
+          margin-bottom: 28px;
+        }
+
+        /* Buttons */
+        .form-buttons {
+          display: flex;
+          gap: 24px;
+          margin-top: 24px;
+          justify-content: center;
+        }
+
+        .btn-style {
+          background: transparent;
+          color: #001f3f;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 13px 28px;
+          border-radius: 6px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-family: "Afacad Flux", sans-serif;
+          box-shadow: 2px 2px 8px rgba(186, 222, 42, 0.6);
+          font-size: 1.05rem;
+        }
+
+        .btn-style:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Map Section */
+        .map-section {
+          max-width: 1200px;
+          margin: 40px auto 60px;
+          padding: 0 20px;
+          width: 100%;
+        }
+
+        .map-box {
+          width: 100%;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .map-box iframe {
+          display: block;
+          width: 100%;
+          height: 400px;
+          border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+          .hero-swiper {
+            height: 150px; /* Halved mobile too */
+          }
+
+          .contact-page-container {
+            margin-top: 30px;
+            gap: 40px;
+            padding: 0 15px;
+          }
+
+          .contact-info,
+          .contact-form-container {
+            padding: 28px 20px;
+            max-width: 100%;
+          }
+
+          .contact-form input,
+          .contact-form textarea {
+            font-size: 1rem;
+            padding-left: 48px;
+          }
+
+          .form-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .btn-style {
+            width: 100%;
+            max-width: 250px;
+          }
+
+          .map-box iframe {
+            height: 300px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+
+<!-- ========== CONTACT CONTENT: SIDE-BY-SIDE + MAP BELOW ========== -->
+<div class="contact-page-container" style="flex-direction: row; gap: 40px; margin-top: 60px; max-width: 1200px;">
+    <!-- Left: Logo & Info -->
+    <!--<div class="contact-info" style="flex: 1; max-width: none;" data-aos="fade-right">
+        <h1 class="section__title" data-lang="contact_title">Contact Us</h1>
+        <p data-lang="contact_subtitle">Feel free to drop us a message with any inquiries or feedback. We're here to assist you!</p>
+        <img src="gari-trips-images/gari-trips-logo-black.png" alt="Gari Trips Logo">
+        <p>
+            📞 <a href="tel:+256704182220" style="text-decoration: none; color: inherit;" data-lang="phone_number">+256 7041 82 220</a>
+        </p>
+        <p>
+            ✉️ <a href="mailto:info@garitripsuganda.com" style="text-decoration: none; color: inherit;">info@garitripsuganda.com</a>
+        </p>
+        <p>Gari House – Kansanga<br>(Opp. Boston International School)</p>
+    </div>-->
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form-container" style="flex: 1; max-width: none;" data-aos="fade-left">
+        <h1 data-lang="contact_form_title">Send a Message</h1>
+
+        <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/success.html"
+                class="contact-form"
+        >
+            <!-- Required by Netlify -->
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="bot-field">
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-user form-icon"></i>
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-envelope form-icon"></i>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-message form-icon textarea-icon"></i>
+                <textarea name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-style">Send</button>
+                <button type="button" onclick="window.location.href='feed.html'" class="btn btn-style">Feedback</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<!--another--form & logo-->
+<div class="contact-page-container" style="flex-direction: row; gap: 40px; margin-top: 60px; max-width: 1200px;">
+    <!-- Left: Logo & Info -->
+   <div class="contact-info" style="flex: 1; max-width: none;" data-aos="fade-right">
+        <h1 class="section__title" data-lang="contact_title">Contact Us</h1>
+        <p data-lang="contact_subtitle">Feel free to drop us a message with any inquiries or feedback. We're here to assist you!</p>
+        <img src="gari-trips-images/gari-trips-logo-black.png" alt="Gari Trips Logo">
+        <p>
+            📞 <a href="tel:+256704182220" style="text-decoration: none; color: inherit;" data-lang="phone_number">+256 7041 82 220</a>
+        </p>
+        <p>
+            ✉️ <a href="mailto:info@garitripsuganda.com" style="text-decoration: none; color: inherit;">info@garitripsuganda.com</a>
+        </p>
+        <p>Gari House – Kansanga<br>(Opp. Boston International School)</p>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <!--<div class="contact-form-container" style="flex: 1; max-width: none;" data-aos="fade-left">
+        <h1 data-lang="contact_form_title">Send a Message</h1>
+        <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                class="contact-form"
+        >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-user form-icon"></i>
+                <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-envelope form-icon"></i>
+                <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+
+            <div class="input-wrapper">
+                <i class="fa-solid fa-message form-icon textarea-icon"></i>
+                <textarea name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-style">Send</button>
+                <button type="button" onclick="window.location.href='feed.html'" class="btn btn-style">Feedback</button>
+            </div>
+        </form>
+    </div>-->
+</div>
+
+
+
+<!-- ========== GOOGLE MAP (CENTERED BELOW) ========== -->
+<div class="map-section">
+    <div class="map-box">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.427023745181!2d32.6141747!3d0.2829323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbdccca552df%3A0x4d40e4ff5076789f!2sBoston%20International%20School!5e0!3m2!1sen!2sug!4v1730900000000!5m2!1sen!2sug"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+
+<!-- Partners Section -->
+<section class="partners-section" style="padding: 30px 0; background-color: #f8f9fa; text-align: center;">
+    <h3 style="margin-bottom: 20px; color: #333; font-weight: 600;">Our Trusted Partners</h3>
+    <div class="partners-logos" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; align-items:
+  center; max-width: 900px; margin: 0 auto;">
+
+        <!-- SafariBookings -->
+        <a href="https://www.safaribookings.com/?utm_source=safaribookings&utm_medium=email" target="_blank" rel="noopener
+    noreferrer" title="SafariBookings">
+            <img src="gari-trips-images/safari-bookings-logo.png" alt="SafariBookings"
+                 style="height: 40px; filter: grayscale(0%); transition: filter 0.2s;" onmouseover="this.style.filter='grayscale(20%)'"
+                 onmouseout="this.style.filter='grayscale(0%)'">
+        </a>
+
+        <!-- TripAdvisor -->
+        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" title="TripAdvisor">
+            <img src="gari-trips-images/trip-advisor.jfif" alt="TripAdvisor"
+                 style="height: 40px; filter: grayscale(0%); transition: filter 0.2s;" onmouseover="this.style.filter='grayscale(20%)'"
+                 onmouseout="this.style.filter='grayscale(0%)'">
+        </a>
+
+        <!-- Uganda Tourism Board -->
+        <a href="https://www.visituganda.com" target="_blank" rel="noopener noreferrer" title="Uganda Tourism Board">
+            <img src="gari-trips-images/uganda-tourism-board-logo.png" alt="Uganda Tourism Board"
+                 style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
+                 onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
+        </a>
+
+        <!-- Uganda Wildlife Authority -->
+        <a href="https://ugandawildlife.org" target="_blank" rel="noopener noreferrer" title="Uganda Wildlife Authority">
+            <img src="gari-trips-images/uganda-wildlife-logo.png" alt="Uganda Wildlife Authority"
+                 style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
+                 onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
+        </a>
+
+    </div>
+</section>
+
+<style>
+    /* Optional: Add this to your main CSS if you prefer a stylesheet */
+    .partners-section {
+      padding: 30px 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+    .partners-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .partners-logos img {
+      height: 40px;
+      object-fit: contain;
+      filter: grayscale(0%);
+      transition: filter 0.2s ease;
+    }
+    .partners-logos img:hover {
+      filter: grayscale(20%);
+    }
+    .partners-logos a {
+      display: inline-block;
+    }
+</style>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Swiper('.hero-swiper .swiper', {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.hero-swiper .swiper-pagination',
+          clickable: true,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
+      });
+    });
+</script>
+<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+</form>
+
+</body>
+</html>
