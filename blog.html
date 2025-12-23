@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO META TAGS ====== -->
+    <meta name="description" content="Explore expert travel blogs on gorilla trekking, Uganda safaris, family-friendly adventures, conservation efforts, and cultural encounters in East Africa — by Gari Trips, your trusted local safari partner.">
+    <meta name="keywords" content="Uganda travel blog, gorilla trekking tips, Bwindi Impenetrable Forest blog, Kibale chimp tracking, family safari Uganda, East Africa travel stories, Uganda conservation, Batwa cultural experience, Murchison Falls blog, Queen Elizabeth National Park, Gari Trips blog, Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="author" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="geo.region" content="UG" />
+    <meta name="geo.placename" content="Kampala" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mountaingorillatrekkingadventuresafaris.com/blog.html">
+
+
+    <!-- ====== Open Graph (General for All Social Platforms) ====== -->
+    <meta property="og:title" content="Our Blogs | Gari Trips Uganda – Safari Stories & Travel Tips">
+    <meta property="og:description" content="Read inspiring travel stories, practical safari tips, and cultural insights from Uganda and East Africa — written by travelers and local experts at Gari Trips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mountaingorillatrekkingadventuresafaris.com/blog.html">
+    <meta property="og:image" content="https://www.mountaingorillatrekkingadventuresafaris.com/gari-trips-images/blogs-1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta property="og:locale" content="en_UG">
+
+
+    <!-- ====== Facebook ====== -->
+    <meta property="article:publisher" content="https://www.facebook.com/garitrips" />
+
+
+    <!-- ====== Instagram ====== -->
+    <link rel="me" href="https://www.instagram.com/garitripsuganda" />
+
+
+    <!-- ====== TikTok ====== -->
+    <meta name="tiktok:creator" content="@garitripsuganda">
+    <meta name="tiktok:site" content="https://www.tiktok.com/@garitripsuganda">
+
+
+    <!-- ====== YouTube ====== -->
+    <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
+    <link rel="me" href="https://www.youtube.com/@GariTrips" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Our Blogs | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Blog Page -->
+    <style>
+        /* Global Text Color */
+        body, h1, h2, h3, h4, p, span, li, a, label, input, button {
+          color: #001f3f !important; /* navy-blue */
+        }
+
+        /* Background Video */
+        #background-video {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -2;
+        }
+
+        .video-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.55);
+          z-index: -1;
+        }
+
+        /* Hero Section */
+        .hero {
+          text-align: center;
+          padding: 120px 20px 80px;
+          color: white;
+          position: relative;
+        }
+
+        .hero h1, .hero p, .hero h2 {
+          color: white !important;
+          margin: 0;
+        }
+
+        .hero h1 {
+          font-size: 3rem;
+          margin-bottom: 16px;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+          max-width: 700px;
+          margin: 0 auto 30px;
+        }
+
+        .hero h2 {
+          font-size: 1.3rem;
+          margin-top: 40px;
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+          max-width: 1300px;
+          margin: 0 auto;
+          padding: 0 20px 60px;
+          display: flex;
+          gap: 40px;
+          position: relative;
+          z-index: 1;
+        }
+
+        main {
+          flex: 3;
+          min-width: 300px;
+        }
+
+        aside {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          min-width: 250px;
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+          margin-bottom: 30px;
+        }
+
+        .reset-filters-btn {
+          background: transparent;
+          color: #001f3f;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 10px 20px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        }
+
+        .reset-filters-btn:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Blog Post */
+        .blog-post {
+          background: rgba(255, 255, 255, 0.92);
+          border-radius: 12px;
+          padding: 24px;
+          margin-bottom: 30px;
+          box-shadow: 0 4px 12px rgba(0, 31, 63, 0.1);
+        }
+
+        .blog-image {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          margin-bottom: 16px;
+        }
+
+        .blog-content h2 {
+          font-size: 1.6rem;
+          margin-bottom: 12px;
+        }
+
+        .post-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 14px;
+          font-size: 0.95rem;
+        }
+
+        .post-meta span {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .tags {
+          margin: 16px 0;
+        }
+
+        .tag {
+          display: inline-block;
+          background: #eef5ff;
+          color: #001f3f;
+          padding: 4px 10px;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          margin-right: 8px;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+
+        .tag:hover {
+          background: rgb(186, 222, 42);
+        }
+
+        .read-more {
+          display: inline-block;
+          margin-top: 12px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        /* Widgets */
+        .widget {
+          background: rgba(255, 255, 255, 0.92);
+          padding: 20px;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 31, 63, 0.1);
+        }
+
+        .widget h3 {
+          margin-top: 0;
+          margin-bottom: 16px;
+          font-size: 1.25rem;
+        }
+
+        .widget ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .widget ul li {
+          margin-bottom: 10px;
+        }
+
+        .widget ul li a {
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        .widget ul li a:hover {
+          color: rgb(186, 222, 42) !important;
+        }
+
+        .widget ul li span {
+          color: #666 !important;
+        }
+
+        /* Newsletter Form */
+        .newsletter-form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .newsletter-form input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+          background: white;
+        }
+
+        .newsletter-form button {
+          background: transparent;
+          color: #001f3f;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 10px;
+          border-radius: 6px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Related Posts */
+        .related-post {
+          display: flex;
+          gap: 12px;
+          margin-bottom: 16px;
+          align-items: flex-start;
+        }
+
+        .related-post img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+
+        .related-post h4 {
+          font-size: 1rem;
+          margin: 0;
+        }
+
+        .related-post p {
+          font-size: 0.85rem;
+          margin: 4px 0 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+          .content-wrapper {
+            flex-direction: column;
+          }
+          aside {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+          .widget {
+            flex: 1 1 45%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .hero {
+            padding-top: 80px;
+          }
+          .hero h1 {
+            font-size: 2.2rem;
+          }
+          .content-wrapper {
+            padding-top: 1cm;
+          }
+          aside {
+            flex-direction: column;
+          }
+          .widget {
+            flex: 1 1 100%;
+          }
+        }
+
+        /* Remove default link colors */
+        a {
+          color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW BLOG CONTENT ========== -->
+<video autoplay muted loop id="background-video">
+    <source src="gari-trips-images/24-day-adventure.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="video-overlay"></div>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 data-lang="blog_hero_title">Our Blogs</h1>
+        <p data-lang="blog_hero_subtitle">Discover amazing safari adventure stories and experiences.</p>
+        <br><br><br><br>
+        <h2 data-lang="scroll_down">Scroll down to see the blogs</h2>
+        <h1>↓</h1>
+    </div>
+</section>
+
+<div class="content-wrapper">
+    <main>
+        <div class="filter-controls">
+            <button id="reset-filters" class="reset-filters-btn" data-lang="our_clients">Our Clients</button>
+        </div>
+        <section id="blog-posts">
+            <!-- Blog posts will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <aside>
+        <div class="widget semi-transparent-box" id="categories-widget">
+            <h3 data-lang="popular_categories">Popular Categories</h3>
+            <ul id="categories-list">
+                <!-- Categories will be dynamically inserted here -->
+            </ul>
+        </div>
+
+        <div class="widget semi-transparent-box">
+            <h3 data-lang="useful_links">Useful Links</h3>
+            <ul>
+                <li><a href="contact.html" data-lang="customize_safari">Customize Safari</a></li>
+                <li><a href="contact.html" data-lang="book_accommodation">Book Your Accommodation</a></li>
+                <li><a href="feedback.html" data-lang="rate_services">Rate Our Services</a></li>
+                <li><a href="feed.html" data-lang="past_customers">Know from Our Past Customers</a></li>
+            </ul>
+        </div>
+
+        <div class="widget semi-transparent-box">
+            <h3 data-lang="related_posts">Related Posts</h3>
+            <!-- Related posts will be dynamically inserted here -->
+        </div>
+
+        <div class="widget semi-transparent-box">
+            <h3 data-lang="subscribe_newsletter">Reach-out to us </h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" data-lang="subscribe_btn">Submit</button>
+            </form>
+        </div>
+    </aside>
+</div>
+
+<!-- ========== BLOG JAVASCRIPT ========== -->
+<script>
+    const blogPosts = [
+      {
+        title: "From Kampala to the Wild",
+        date: "July 12, 2023",
+        author: "Nikos Papadopoulos",
+        image: "gari-trips-images/blogs-2.jpg",
+        content: "A 7-Day Itinerary for First-Time Visitors to Uganda. Maximize your trip with this expertly crafted route: gorillas in Bwindi, chimps in Kibale, lions in Queen Elizabeth, and a sunset cruise on the Nile.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 342,
+        comments: 56,
+        link: "#"
+      },
+      {
+        title: "Family-Friendly Safaris in Uganda",
+        date: "July 16, 2023",
+        author: "Emma Thompson",
+        image: "gari-trips-images/blogs-3.jpg",
+        content: "Yes, You Can Take Kids on a Gorilla Trek! With the right planning, Uganda offers unforgettable—and surprisingly accessible—wildlife experiences for families. Find out age requirements, safety tips, and kid-friendly lodges.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 287,
+        comments: 42,
+        link: "#"
+      },
+      {
+        title: "Why Bwindi Impenetrable Forest Is a Must-Visit for Every Gorilla Lover",
+        date: "July 15, 2024",
+        author: "Carlos Rodriguez",
+        image: "gari-trips-images/blogs-10.jpg",
+        content: "Discover the magic of tracking mountain gorillas in Uganda’s UNESCO-listed Bwindi—and why this once-in-a-lifetime encounter tops every adventurer’s bucket list.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 401,
+        comments: 73,
+        link: "#"
+      },
+      {
+        title: "5 Reasons Uganda Is the Ultimate Safari Destination in East Africa",
+        date: "July 14, 2024",
+        author: "Yuki Tanaka",
+        image: "gari-trips-images/blogs-1.jpg",
+        content: "Beyond gorillas and chimps, Uganda offers incredible biodiversity, the source of the Nile, and landscapes ranging from savannahs to snow-capped mountains.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 365,
+        comments: 58,
+        link: "#"
+      },
+      {
+        title: "Wildlife Safari in Kenya: An Unforgettable Adventure",
+        date: "July 22, 2024",
+        author: "Zara Patel",
+        image: "gari-trips-images/blogs-7.jpg",
+        content: "Embark on a thrilling safari through the vast African savanna. Encounter majestic lions, graceful giraffes, and powerful elephants in their natural habitat. Experience the magic of the African wilderness.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 385,
+        comments: 72,
+        link: "#"
+      },
+      {
+        title: "Packing List for Your First Uganda Safari",
+        date: "Dec 21, 2023",
+        author: "Ben Carter",
+        image: "gari-trips-images/blogs-4.jpg",
+        content: "What to Bring (and What to Leave Behind). Don’t overpack! Learn the essentials—from quick-dry clothing to neutral-toned gear—that will keep you comfortable and camera-ready on your East African adventure.",
+        tags: ["Hiking", "Nature", "Adventure", "Sailing"],
+        likes: 312,
+        comments: 48,
+        link: "#"
+      },
+      {
+        title: "How Gari Trips Supports Conservation and Local Communities in East Africa",
+        date: "Nov 23, 2023",
+        author: "Maria Silva",
+        image: "gari-trips-images/blogs-5.jpg",
+        content: "We believe travel should protect, not exploit. Learn how your safari with Gari Trips directly funds anti-poaching efforts, education, and sustainable tourism.",
+        tags: ["Culture", "Rainforest", "Nature", "Conservation"],
+        likes: 420,
+        comments: 85,
+        link: "#"
+      },
+      {
+        title: "Chimpanzee Trekking in Kibale National Park",
+        date: "Sept 20, 2024",
+        author: "Luca Rossi",
+        image: "gari-trips-images/blogs-6.jpg",
+        content: "From dense rainforest hikes to face-to-face moments with our closest relatives, here’s your ultimate guide to chimp tracking in Uganda’s primate capital.",
+        tags: ["Hiking", "Food", "Travel", "Culture"],
+        likes: 350,
+        comments: 60,
+        link: "#"
+      },
+      {
+        title: "The Best Time to Visit Uganda for Wildlife Viewing and Gorilla Trekking",
+        date: "Sept 15, 2024",
+        author: "Linh Nguyen",
+        image: "gari-trips-images/blogs-8.jpg",
+        content: "Timing is everything! Get insider advice on dry vs. wet seasons, crowd levels, pricing, and when you’re most likely to see the Big Five and habituated gorilla families.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 390,
+        comments: 75,
+        link: "#"
+      },
+      {
+        title: "Cultural Encounters Beyond the Safari: Meet the Batwa People of Bwindi",
+        date: "Dec 26, 2024",
+        author: "Chloe Dubois",
+        image: "gari-trips-images/blogs-9.jpg",
+        content: "Go deeper than wildlife—experience the rich heritage of Uganda’s indigenous Batwa pygmies through storytelling, dance, and forest survival demonstrations.",
+        tags: ["Adventure", "Communities", "Plantations", "Hiking"],
+        likes: 330,
+        comments: 55,
+        link: "#"
+      },
+      {
+        title: "Murchison Falls vs. Queen Elizabeth National Park",
+        date: "Nov 27, 2024",
+        author: "Omar Ahmed",
+        image: "gari-trips-images/blogs-11.jpg",
+        content: "Compare Uganda’s two iconic parks—booming waterfalls and Nile hippos vs. tree-climbing lions and scenic boat cruises—to choose your perfect adventure.",
+        tags: ["Hiking", "City Tours", "Culture", "Adventure"],
+        likes: 410,
+        comments: 80,
+        link: "#"
+      }
+    ];
+
+    function filterPostsByTag(tag) {
+      const filteredPosts = blogPosts.filter(post => post.tags.includes(tag));
+      displayPosts(filteredPosts);
+    }
+
+    function displayPosts(posts) {
+      const blogSection = document.getElementById("blog-posts");
+      if (!blogSection) return;
+      blogSection.innerHTML = '';
+      posts.forEach(post => {
+        const article = document.createElement("article");
+        article.className = "blog-post semi-transparent-box";
+        article.innerHTML = `
+          <img src="${post.image}" alt="${post.title}" class="blog-image">
+          <div class="blog-content">
+            <h2>${post.title}</h2>
+            <div class="post-meta">
+              <span class="author"><i class="fas fa-user"></i> ${post.author}</span>
+              <span class="date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+              <span class="likes"><i class="fas fa-heart"></i> ${post.likes}</span>
+              <span class="comments"><i class="fas fa-comment"></i> ${post.comments}</span>
+            </div>
+            <p>${post.content}</p>
+            <div class="tags">
+              ${post.tags.map(tag => `<span class="tag" onclick="filterPostsByTag('${tag}')">${tag}</span>`).join('')}
+            </div>
+            <a href="${post.link}" class="read-more" data-lang="read_more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        `;
+        blogSection.appendChild(article);
+      });
+    }
+
+    function displayTopCategories() {
+      const categoriesCount = {};
+      blogPosts.forEach(post => {
+        post.tags.forEach(tag => {
+          categoriesCount[tag] = (categoriesCount[tag] || 0) + 1;
+        });
+      });
+
+      const sortedCategories = Object.entries(categoriesCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5);
+
+      const categoriesList = document.getElementById('categories-list');
+      if (categoriesList) {
+        categoriesList.innerHTML = '';
+        sortedCategories.forEach(([category, count]) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="#" onclick="filterPostsByTag('${category}')">${category} <span>(${count})</span></a>`;
+          categoriesList.appendChild(li);
+        });
+      }
+    }
+
+    function resetFilters() {
+      displayPosts(blogPosts);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      displayPosts(blogPosts);
+      displayTopCategories();
+
+      const resetBtn = document.getElementById('reset-filters');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', resetFilters);
+      }
+
+      // Related posts
+      const relatedWidget = document.querySelector('.widget:nth-child(3)');
+      if (relatedWidget) {
+        const relatedPosts = blogPosts.slice(1, 4);
+        relatedWidget.innerHTML = '<h3 data-lang="related_posts">Related Posts</h3>';
+        relatedPosts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'related-post';
+          div.innerHTML = `
+            <img src="${post.image}" alt="${post.title}">
+            <div>
+              <h4>${post.title}</h4>
+              <p>${post.date}</p>
+            </div>
+          `;
+          relatedWidget.appendChild(div);
+        });
+      }
+
+      // Newsletter form
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Thank you for reaching out to us!');
+          this.reset();
+        });
+      }
+    });
+</script>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-tiktok" title="TikTok" style="cursor: pointer; font-size: 1.2rem;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

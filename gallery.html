@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO META TAGS ====== -->
+    <meta name="description" content="Explore Gari Trips Uganda’s photo gallery: authentic images of gorilla trekking, chimpanzee tracking, Murchison Falls, Lake Bunyonyi, cultural encounters, and East African wildlife adventures.">
+    <meta name="keywords" content="Uganda safari photo gallery, gorilla trekking images, Bwindi Impenetrable Forest photos, Murchison Falls pictures, Lake Bunyonyi Uganda, East Africa travel photos, Gari Trips gallery, Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="author" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="geo.region" content="UG" />
+    <meta name="geo.placename" content="Kampala" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mountaingorillatrekkingadventuresafaris.com/gallery.html">
+
+
+    <!-- ====== Open Graph (General for All Social Platforms) ====== -->
+    <meta property="og:title" content="Gari Trips Gallery | Authentic Safari & Gorilla Trekking Photos – Uganda">
+    <meta property="og:description" content="Browse real traveler photos from gorilla safaris, national parks, cultural visits, and scenic East Africa journeys with Gari Trips Uganda.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mountaingorillatrekkingadventuresafaris.com/gallery.html">
+    <meta property="og:image" content="https://www.mountaingorillatrekkingadventuresafaris.com/gari-trips-images/gorilla-trekking-pic-1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta property="og:locale" content="en_UG">
+
+
+    <!-- ====== Facebook ====== -->
+    <meta property="article:publisher" content="https://www.facebook.com/garitrips" />
+
+
+    <!-- ====== Instagram ====== -->
+    <link rel="me" href="https://www.instagram.com/garitripsuganda" />
+
+
+    <!-- ====== TikTok ====== -->
+    <meta name="tiktok:creator" content="@garitripsuganda">
+    <meta name="tiktok:site" content="https://www.tiktok.com/@garitripsuganda">
+
+
+    <!-- ====== YouTube ====== -->
+    <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
+    <link rel="me" href="https://www.youtube.com/@GariTrips" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Our Gallery | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Gallery Page -->
+    <style>
+        /* Global navy-blue text */
+        body, h1, h2, p {
+          color: #001f3f !important;
+        }
+
+        body {
+          background-color: #f7f7fc;
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          overflow-x: hidden;
+        }
+
+        /* Background Circles */
+        .background-circles {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: -1;
+        }
+
+        .circle {
+          position: absolute;
+          background-color: rgba(167, 139, 250, 0.3);
+          border-radius: 50%;
+          opacity: 0.8;
+        }
+
+        .circle1 { width: 10vw; height: 10vw; top: 10%; left: 20%; }
+        .circle2 { width: 15vw; height: 15vw; top: 30%; right: 10%; }
+        .circle3 { width: 5vw; height: 5vw; top: 60%; left: 40%; }
+        .circle4 { width: 12vw; height: 12vw; bottom: 20%; right: 25%; }
+        .circle5 { width: 8vw; height: 8vw; bottom: 15%; left: 10%; }
+        .circle6 { width: 20vw; height: 20vw; top: 5%; right: 15%; }
+        .circle7 { width: 7vw; height: 7vw; top: 50%; right: 50%; }
+        .circle8 { width: 9vw; height: 9vw; bottom: 10%; left: 60%; }
+
+        /* Main Content */
+        .gallery-wrapper {
+          max-width: 1300px;
+          margin: 60px auto 40px;
+          padding: 20px;
+          position: relative;
+          z-index: 1;
+        }
+
+        h1 {
+          text-align: center;
+          font-size: 2.4rem;
+          margin-bottom: 30px;
+        }
+
+        #destinations-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 30px;
+        }
+
+        .destination-item {
+          border: 1px solid #ddd;
+          padding: 0;
+          margin: 0;
+          border-radius: 10px;
+          background-color: #fff;
+          width: calc(33% - 30px);
+          max-width: 300px;
+          text-align: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, box-shadow 0.3s;
+          overflow: hidden;
+        }
+
+        .destination-item:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-item img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 10px 10px 0 0;
+        }
+
+        /* Buttons */
+        .book-now-btn,
+        #back-button {
+          background: transparent;
+          color: #001f3f;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 10px 20px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          margin-top: 10px;
+        }
+
+        .book-now-btn:hover,
+        #back-button:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+          .destination-item {
+            width: calc(50% - 30px);
+          }
+        }
+
+        @media (max-width: 576px) {
+          .destination-item {
+            width: calc(100% - 30px);
+          }
+          .gallery-wrapper {
+            margin-top: 1cm;
+            padding: 15px;
+          }
+        }
+
+        /* Remove link default colors */
+        a {
+          color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW GALLERY CONTENT ========== -->
+<div class="gallery-wrapper">
+    <h1>Gari Trips Gallery</h1>
+    <div id="destinations-list"></div>
+    <div style="text-align: center;">
+        <button id="back-button">Back to Home</button>
+    </div>
+</div>
+
+<!-- Background Circles -->
+<div class="background-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+    <div class="circle circle8"></div>
+</div>
+
+<!-- ========== GALLERY JAVASCRIPT ========== -->
+<script>
+    const imagePaths = [
+      "gari-trips-images/gallery-1.jpg",
+      "gari-trips-images/gallery-2.jpg",
+      "gari-trips-images/gallery-3.jpg",
+      "gari-trips-images/gallery-4.jpg",
+      "gari-trips-images/gallery-5.jpg",
+      "gari-trips-images/gallery-6.jpg",
+      "gari-trips-images/gallery-7.jpg",
+      "gari-trips-images/gallery-8.jpg",
+      "gari-trips-images/gallery-9.jpg",
+      "gari-trips-images/gallery-10.jpg",
+      "gari-trips-images/blogs-1.jpg",
+      "gari-trips-images/blogs-2.jpg",
+      "gari-trips-images/blogs-3.jpg",
+      "gari-trips-images/blogs-4.jpg",
+      "gari-trips-images/blogs-5.jpg",
+      "gari-trips-images/blogs-6.jpg",
+      "gari-trips-images/blogs-7.jpg",
+      "gari-trips-images/blogs-8.jpg",
+      "gari-trips-images/blogs-9.jpg",
+      "gari-trips-images/blogs-10.jpg",
+      "gari-trips-images/blogs-11.jpg",
+      "gari-trips-images/communities-pic-1.jpg",
+      "gari-trips-images/communities-pic-2.jpg",
+      "gari-trips-images/communities-pic-3.jpg",
+      "gari-trips-images/communities-pic-4.jpg",
+      "gari-trips-images/communities-pic-5.jpg",
+      "gari-trips-images/destination-1.jpg",
+      "gari-trips-images/destination-2.jpg",
+      "gari-trips-images/destination-3.jpg",
+      "gari-trips-images/destination-4.jpg",
+      "gari-trips-images/destination-8.jpg",
+      "gari-trips-images/destination-6.jpg",
+      "gari-trips-images/destination-9.jpg",
+      "gari-trips-images/destination-10.jpg",
+      "gari-trips-images/destination-11.jpg",
+      "gari-trips-images/destination-12.jpg",
+      "gari-trips-images/events-pic-3.jpg",
+      "gari-trips-images/events-pic-2.jpg",
+      "gari-trips-images/events-pic-1.jpg",
+      "gari-trips-images/package-1.jpg",
+      "gari-trips-images/package-2.jpg",
+      "gari-trips-images/package-3.jpg",
+      "gari-trips-images/package-4.jpg",
+      "gari-trips-images/package-5.jpg",
+      "gari-trips-images/package-6.jpg",
+      "gari-trips-images/package-7.jpg",
+      "gari-trips-images/package-8.jpg",
+      "gari-trips-images/package-9.jpg",
+      "gari-trips-images/canoe-boat.jpg",
+      "gari-trips-images/gari-trips-visitors-7.jpg",
+      "gari-trips-images/gari-trips-visitors-8.jpg",
+      "gari-trips-images/gari-trips-visitors-9.jpg",
+      "gari-trips-images/hiking-1.jpg",
+      "gari-trips-images/gorilla-trekking-pic-1.jpg",
+      "gari-trips-images/gorilla-trekking-pic-2.jpg",
+      "gari-trips-images/gorilla-trekking-pic-3.jpg",
+      "gari-trips-images/gari-trips-visitors-2.jpg",
+      "gari-trips-images/gari-trips-visitors-1.jpg",
+      "gari-trips-images/gari-trips-visitors-11.jpg",
+      "gari-trips-images/gal-2.jpg",
+      "gari-trips-images/gal-3.jpg",
+      "gari-trips-images/gari-trips-visitors-10.jpg",
+      "gari-trips-images/gal-5.jpg",
+      "gari-trips-images/gal-6.jpg",
+      "gari-trips-images/gal-7.jpg",
+      "gari-trips-images/gal-8.jpg",
+      "gari-trips-images/gari-trips-visitors-4.jpg",
+      "gari-trips-images/gari-trips-visitors-5.jpg",
+      "gari-trips-images/gal-13.jpg",
+      "gari-trips-images/gari-trips-visitors-3.jpg",
+      "gari-trips-images/gal-15.jpg",
+      "gari-trips-images/gal-16.jpg",
+      "gari-trips-images/gari-trips-visitors-6.jpg",
+      "gari-trips-images/gal-18.jpg",
+      "gari-trips-images/mgahinga-bird.jpg",
+      "gari-trips-images/Lake-Bunyonyi-Uganda.jpg"
+    ];
+
+    const destinationsList = document.getElementById("destinations-list");
+
+    imagePaths.forEach(imgPath => {
+      const imgItem = document.createElement("div");
+      imgItem.className = "destination-item";
+      imgItem.innerHTML = `<img src="${imgPath}" alt="Gallery image">`;
+      destinationsList.appendChild(imgItem);
+    });
+
+    document.getElementById("back-button").addEventListener("click", function() {
+      window.location.href = "index.html";
+    });
+</script>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

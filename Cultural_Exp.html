@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO META TAGS ====== -->
+    <meta name="description" content="Discover Gari Trips Uganda’s community engagement initiatives: support local guides, Batwa cultural experiences, conservation projects, and ethical tourism across East Africa. Travel with purpose.">
+    <meta name="keywords" content="community tourism Uganda, Batwa cultural experience, sustainable safari Uganda, ethical travel East Africa, support local communities Uganda, Gari Trips community engagement, cultural immersion Uganda, conservation tourism, Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="author" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="geo.region" content="UG" />
+    <meta name="geo.placename" content="Kampala" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mountaingorillatrekkingadventuresafaris.com/Cultural_Exp.html">
+
+
+    <!-- ====== Open Graph (General for All Social Platforms) ====== -->
+    <meta property="og:title" content="Community Engagements | Gari Trips Uganda – Travel with Purpose">
+    <meta property="og:description" content="Support local communities, experience authentic East African culture, and contribute to conservation through Gari Trips’ community-based tourism model.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mountaingorillatrekkingadventuresafaris.com/Cultural_Exp.html">
+    <meta property="og:image" content="https://www.mountaingorillatrekkingadventuresafaris.com/gari-trips-images/communities-pic-1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta property="og:locale" content="en_UG">
+
+
+    <!-- ====== Facebook ====== -->
+    <meta property="article:publisher" content="https://www.facebook.com/garitrips" />
+
+
+    <!-- ====== Instagram ====== -->
+    <link rel="me" href="https://www.instagram.com/garitripsuganda" />
+
+
+    <!-- ====== TikTok ====== -->
+    <meta name="tiktok:creator" content="@garitripsuganda">
+    <meta name="tiktok:site" content="https://www.tiktok.com/@garitripsuganda">
+
+
+    <!-- ====== YouTube ====== -->
+    <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
+    <link rel="me" href="https://www.youtube.com/@GariTrips" />
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Community Engagements | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for background video and main content -->
+    <style>
+        /* Background Video Styling */
+        .video-bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -2;
+        }
+
+        .video-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.1); /* Dark overlay for readability */
+          z-index: -1;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+          position: relative;
+          padding-top: 20px;
+          padding-bottom: 60px;
+          color: #fff;
+        }
+
+        .dsp-container {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .sp-header {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .sp-header h1 {
+          font-size: 2.4rem;
+          margin: 15px 0;
+        }
+
+        .loc-rat {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 10px;
+          flex-wrap: wrap;
+        }
+
+        .location, .rating, .add-fav {
+          font-size: 1rem;
+        }
+
+        .rating a, .add-fav a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .text-content {
+          background: rgba(255, 255, 255, 0.95);
+          color: #333;
+          padding: 25px;
+          border-radius: 12px;
+          margin-bottom: 30px;
+        }
+
+        .community-img {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+          margin: 15px 0;
+          border-radius: 8px;
+          display: block;
+        }
+
+        .un-styled-list {
+          padding-left: 20px;
+        }
+
+        .un-styled-list li {
+          margin-bottom: 12px;
+        }
+
+        .t-faqs {
+          background: rgba(255, 255, 255, 0.8);
+          color: #333;
+          padding: 30px;
+          border-radius: 12px;
+        }
+
+        .t-faqs h3 {
+          margin-top: 0;
+        }
+
+        /* Accordion styling */
+        .accordion-box {
+          list-style: none;
+          padding: 0;
+        }
+
+        .accordion .acc-btn {
+          background: #f1f1f1;
+          padding: 14px;
+          cursor: pointer;
+          font-weight: 600;
+          border-radius: 6px;
+          margin-bottom: 8px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .accordion .acc-content {
+          padding: 0 14px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .accordion.active .acc-content {
+          padding: 14px;
+          max-height: 500px;
+        }
+
+        .accordion.active .acc-btn .arrow {
+          transform: rotate(45deg);
+        }
+
+        .arrow {
+          transition: transform 0.3s ease;
+          display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW MAIN CONTENT ========== -->
+<video autoplay muted loop playsinline class="video-bg">
+    <source src="gari-trips-images/communi-video-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="video-overlay"></div>
+
+<main class="main-content">
+    <div class="dsp-container activity-single">
+        <div class="sp-header">
+            <div class="loc-rat">
+                <div class="location">Gari Trips Uganda</div>
+                <div class="rating"><a href="#"><i class="fa-solid fa-star"></i> <strong>4.8</strong></a></div>
+                <div class="add-fav"><a href="contact.html"><i class="far fa-heart"></i> Community Donation</a></div>
+            </div>
+            <h1>Community Engagements</h1>
+        </div>
+
+        <div class="text-content">
+            <h3>Activity Details</h3><br>
+            <p>At Gari Trips Uganda, we champion community-based tourism. Our safaris create jobs for local guides, lodge staff,
+                and conservation teams—keeping tourism income in Uganda, Rwanda, Kenya, and Tanzania.</p><br>
+            <img src="gari-trips-images/communities-pic-1.jpg" alt="Community 1" class="community-img">
+
+            <p>We invest in education, healthcare, and anti-poaching efforts—building a sustainable future where people and
+                wildlife thrive together.</p><br>
+            <img src="gari-trips-images/communities-pic-2.jpg" alt="Community 2" class="community-img">
+
+            <p>Respect for culture drives our tours. We highlight traditional crafts, music, and storytelling—giving travelers
+                authentic East African experiences while safeguarding heritage. Every safari empowers communities.</p><br>
+            <img src="gari-trips-images/communities-pic-3.jpg" alt="Community 3" class="community-img">
+
+            <h5>Things to Expect When Visiting East African Communities</h5><br>
+            <ul class="un-styled-list">
+                <li>Warm Hospitality – Experience genuine welcomes from local families and village elders.</li>
+                <img src="gari-trips-images/communities-pic-4.jpg" alt="Community 4" class="community-img">
+                <li>Vibrant Culture – Enjoy traditional dances, beadwork, and oral storytelling.</li>
+                <img src="gari-trips-images/communities-pic-5.jpg" alt="Community 5" class="community-img">
+                <li>Community-Led Conservation – Support villages protecting gorillas, elephants, and forests.</li>
+                <li>Handmade Souvenirs – Buy ethically crafted baskets, carvings, and textiles directly from artisans.</li>
+                <li>Shared Meals – Savor ugali, matooke, or nyama choma in a true communal setting.</li>
+            </ul>
+        </div>
+
+        <!-- FAQs -->
+        <div class="t-faqs">
+            <h3>Frequently Asked Questions</h3><br>
+            <ul class="accordion-box faqs-accordion">
+                <li class="accordion block">
+                    <div class="acc-btn">1. Why is community engagement important for Gari Trips Uganda? <span class="arrow">+</span></div><br>
+                    <div class="acc-content">
+                        <p>Community engagement is vital because it ensures that local populations benefit from tourism. By empowering
+                            communities through jobs and education, we create a sustainable model where both people and nature thrive.</p>
+                    </div>
+                </li>
+                <li class="accordion block">
+                    <div class="acc-btn">2. How does Gari Trips Uganda support local communities? <span class="arrow">+</span></div><br>
+                    <div class="acc-content">
+                        <p>We support local communities by providing training and employment opportunities in tourism and conservation.
+                            Additionally, we collaborate with local organizations to fund education, healthcare, and conservation initiatives.</p>
+                    </div>
+                </li>
+                <li class="accordion block">
+                    <div class="acc-btn">3. What cultural experiences can I expect? <span class="arrow">+</span></div><br>
+                    <div class="acc-content">
+                        <p>Visitors can expect vibrant cultural experiences, including traditional dances, music, and storytelling.
+                            We promote local arts and crafts, allowing travelers to engage authentically with the community.</p>
+                    </div>
+                </li>
+                <li class="accordion block">
+                    <div class="acc-btn">4. How can I ensure my visit is respectful? <span class="arrow">+</span></div><br>
+                    <div class="acc-content">
+                        <p>Engage with locals in a friendly manner, ask for permission before taking photos, and be mindful
+                            of cultural customs. Learning a few basic phrases in the local language shows appreciation.</p>
+                    </div>
+                </li>
+                <li class="accordion block">
+                    <div class="acc-btn">5. What should I bring when visiting communities? <span class="arrow">+</span></div><br>
+                    <div class="acc-content">
+                        <p>Bring small gifts for children, school supplies, or donations. Consider bringing cash for purchasing
+                            handmade crafts directly from artisans.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-tiktok" title="TikTok" style="cursor: pointer; font-size: 1.2rem;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== ACCORDION JS ========== -->
+<script>
+    document.querySelectorAll('.accordion').forEach(acc => {
+      acc.querySelector('.acc-btn').addEventListener('click', function() {
+        acc.classList.toggle('active');
+      });
+    });
+</script>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

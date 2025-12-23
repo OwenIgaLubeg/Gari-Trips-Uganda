@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO META TAGS ====== -->
+    <meta name="description" content="Explore Gari Trips’ handpicked accommodations in Uganda: luxury lodges (Serena, Mweya, Chobe), Bwindi gorilla safari camps, budget stays, and Gari Houses Airbnb. All-inclusive, near parks, and traveler-approved.">
+    <meta name="keywords" content="Uganda safari lodges, Bwindi accommodation, Murchison Falls hotels, luxury safari lodges Uganda, budget gorilla trekking stays, Gari Houses Airbnb, Queen Elizabeth National Park lodges, Uganda wildlife camp, Gari Trips accommodation, Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="author" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="geo.region" content="UG" />
+    <meta name="geo.placename" content="Kampala" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mountaingorillatrekkingadventuresafaris.com/packages.html">
+
+
+    <!-- ====== Open Graph (General for All Social Platforms) ====== -->
+    <meta property="og:title" content="Accommodation in Uganda | Gari Trips – Lodges, Camps & Airbnb Near National Parks">
+    <meta property="og:description" content="From luxury Serena Hotel to Bwindi’s Kiho Gorilla Lodge and cozy Gari Houses Airbnb — find your perfect Uganda stay with Gari Trips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mountaingorillatrekkingadventuresafaris.com/packages.html">
+    <meta property="og:image" content="https://www.mountaingorillatrekkingadventuresafaris.com/gari-trips-images/hotels-2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta property="og:locale" content="en_UG">
+
+
+    <!-- ====== Facebook ====== -->
+    <meta property="article:publisher" content="https://www.facebook.com/garitrips" />
+
+
+    <!-- ====== Instagram ====== -->
+    <link rel="me" href="https://www.instagram.com/garitripsuganda" />
+
+
+    <!-- ====== TikTok ====== -->
+    <meta name="tiktok:creator" content="@garitripsuganda">
+    <meta name="tiktok:site" content="https://www.tiktok.com/@garitripsuganda">
+
+
+    <!-- ====== YouTube ====== -->
+    <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
+    <link rel="me" href="https://www.youtube.com/@GariTrips" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Accommodations | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Accommodation Page -->
+    <style>
+        /* Global navy-blue text */
+        body, h1, h2, h3, p, li, a, .subtitle {
+          color: #001f3f !important;
+        }
+
+        /* Main Content */
+        .main-content {
+          padding: 60px 20px 40px;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        /* Section Titles */
+        .section-title {
+          font-size: 2.2rem;
+          text-align: center;
+          margin: 40px 0 10px;
+          color: #001f3f;
+        }
+
+        .line {
+          width: 60px;
+          height: 3px;
+          background: rgb(186, 222, 42);
+          margin: 0 auto 20px;
+        }
+
+        .subtitle {
+          text-align: center;
+          margin-bottom: 40px;
+          font-size: 1.1rem;
+        }
+
+        /* Package Grid - Flip Cards */
+        .package-grid {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-bottom: 50px;
+        }
+
+        .hotel-packages .card1 {
+          width: 300px;
+          height: 400px;
+          perspective: 1000px;
+          margin: 0;
+        }
+
+        .hotel-packages .card1-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+
+        .hotel-packages .card1:hover .card1-inner {
+          transform: rotateY(180deg);
+        }
+
+        .hotel-packages .card1-front,
+        .hotel-packages .card1-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          background: #fff;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .hotel-packages .card1-front {
+          text-align: center;
+        }
+
+        .hotel-packages .card1-img {
+          width: 100%;
+          height: 55%;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 12px;
+        }
+
+        .hotel-packages .card1-title {
+          font-size: 1.4rem;
+          margin: 8px 0;
+          font-weight: 700;
+        }
+
+        .hotel-packages .card1-description {
+          font-size: 0.95rem;
+          flex-grow: 1;
+        }
+
+        .hotel-packages .card1-back {
+          transform: rotateY(180deg);
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        .hotel-packages .card1-back p {
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+
+        .hotel-packages .card1-link {
+          text-decoration: none;
+          color: #001f3f;
+          font-weight: 600;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 8px 16px;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          display: inline-block;
+          text-align: center;
+        }
+
+        .hotel-packages .card1-link:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Carousel */
+        .carousel {
+          width: 90%;
+          max-width: 1000px;
+          margin: 40px auto;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel .carousel-item img {
+          height: 400px;
+          object-fit: cover;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          background-size: 16px;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+          margin-top: 60px;
+        }
+
+        .pricing-container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-top: 30px;
+        }
+
+        .pricing-card {
+          width: 280px;
+          padding: 25px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.95);
+          box-shadow: 0 4px 12px rgba(0, 31, 63, 0.5);
+          text-align: center;
+        }
+
+        .pricing-card h3 {
+          font-size: 1.4rem;
+          margin-bottom: 12px;
+        }
+
+        .pricing-card p {
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: #001f3f;
+        }
+
+        .pricing-card ul {
+          list-style: none;
+          padding: 0;
+          margin: 20px 0;
+        }
+
+        .pricing-card ul li {
+          margin-bottom: 10px;
+          font-size: 1rem;
+        }
+
+        .pricing-card ul li i {
+          color: rgb(186, 222, 42);
+          margin-right: 6px;
+        }
+
+        /* Buttons */
+        .btn, .btn:hover, .btn:active {
+          background: transparent !important;
+          color: #001f3f !important;
+          border: 2px solid rgb(186, 222, 42) !important;
+          padding: 10px 20px !important;
+          border-radius: 6px !important;
+          font-weight: 600 !important;
+          transition: all 0.3s ease !important;
+          text-decoration: none !important;
+          display: inline-block !important;
+        }
+
+        .btn:hover {
+          background: rgb(186, 222, 42) !important;
+          color: #001f3f !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .main-content {
+            padding-top: 1cm;
+          }
+          .section-title {
+            font-size: 1.8rem;
+          }
+          .hotel-packages .card1 {
+            width: 280px;
+          }
+          .carousel .carousel-item img {
+            height: 300px;
+          }
+          .pricing-card {
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW ACCOMMODATION CONTENT ========== -->
+<main class="main-content">
+    <section class="hotel-packages">
+        <h2 class="section-title">Tourist Accommodations</h2>
+        <div class="line"></div>
+        <p class="subtitle">Find the best deals and offers for your adventure!</p>
+        <div class="package-grid">
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/hotels-2.jpg" loading="lazy" alt="Kampala Serena Hotel" class="card1-img">
+                        <h3 class="card1-title">KAMPALA SERENA HOTEL</h3>
+                        <p class="card1-description">Luxurious city hotel with rooftop pool and spa, perfect for relaxation after a day of exploring.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Nestled in the heart of the city, Kampala Serena Hotel offers luxurious rooms with modern amenities. Guests can enjoy a stunning rooftop pool, a world-class spa, and fine dining at our in-house restaurant.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/acco-22.jfif" loading="lazy" alt="Chobe Safari Lodge" class="card1-img">
+                        <h3 class="card1-title">CHOBE SAFARI LODGE</h3>
+                        <p class="card1-description">Located in Murchison Falls National Park, this Five Star lodge is the gem of Uganda's tourism destinations.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Breathtaking views and sounds of the Nile’s rapids set the scene for an unforgettable adventure with abundant wildlife, birds, and flora.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/acco-5.jpg" loading="lazy" alt="Mweya Safari Lodge" class="card1-img">
+                        <h3 class="card1-title">MWEYA SAFARI LODGE</h3>
+                        <p class="card1-description">Unforgettable experience on a peninsula in Queen Elizabeth National Park.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Overlooking the Kazinga Channel between the Great Rift Valley and the Mountains of the Moon, with views of Lakes George and Edward.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/acco-7.jpeg" loading="lazy" alt="Kiho Gorilla Safari Lodge" class="card1-img">
+                        <h3 class="card1-title">KIHO GORILLA SAFARI LODGE</h3>
+                        <p class="card1-description">Epitome of opulence in the Ruhija sector of Bwindi Impenetrable Forest.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Perched on Bugarama Hill with panoramic views of tropical rainforest. Offers the most exquisite gorilla tracking trailhead in Bwindi.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/acco-4.jpg" loading="lazy" alt="Gari Houses Airbnb" class="card1-img">
+                        <h3 class="card1-title">GARI HOUSES AIRBNB</h3>
+                        <p class="card1-description">Charming Airbnb with homemade breakfast and picturesque views.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Experience countryside charm with homemade breakfasts, beautifully decorated rooms, and rolling hill views. Warm hospitality guaranteed.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card1-inner">
+                    <div class="card1-front">
+                        <img src="gari-trips-images/acco-6.jpg" loading="lazy" alt="Budget Lodges in Bwindi" class="card1-img">
+                        <h3 class="card1-title">BUDGET LODGES IN BWINDI</h3>
+                        <p class="card1-description">Cozy cabins in tranquil mountain setting, ideal for nature lovers.</p>
+                    </div>
+                    <div class="card1-back">
+                        <h3>More Information</h3>
+                        <p>Tranquil mountain escape with modern comforts, hiking trails, hot tub, and complimentary breakfast. Perfect after gorilla trekking.</p>
+                        <a href="contact.html" class="card1-link">Inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<h2 class="section-title">Snapshots From Famous Hotels</h2>-->
+    <!--<div class="line"></div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="gari-trips-images/hotels-2.jpg" class="d-block w-100" alt="Kampala Serena">
+            </div>
+            <div class="carousel-item">
+                <img src="gari-trips-images/hotels-1.jpg" class="d-block w-100" alt="Luxury Hotel">
+            </div>
+            <div class="carousel-item">
+                <img src="gari-trips-images/acco-4.jpg" class="d-block w-100" alt="Gari Houses">
+            </div>
+            <div class="carousel-item">
+                <img src="gari-trips-images/acco-22.jfif" class="d-block w-100" alt="Chobe Lodge">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>-->
+
+    <section class="pricing-section">
+        <h2 class="section-title">Accommodations</h2>
+        <div class="line"></div>
+        <p class="subtitle">Choose the perfect accommodation for your needs</p>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Luxury City Hotels</h3>
+                <p>Starting Price $199</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Accommodation</li>
+                    <li><i class="fas fa-check"></i> Ground Transport</li>
+                    <li><i class="fas fa-check"></i> All meals & Drinks</li>
+                </ul>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Safari Cottages & Lodges</h3>
+                <p>Starting Price $80</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Accommodation</li>
+                    <li><i class="fas fa-check"></i> Ground Transport</li>
+                    <li><i class="fas fa-check"></i> All meals & Drinks</li>
+                </ul>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Gari Houses Airbnb</h3>
+                <p>Starting Price $50</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Accommodation</li>
+                    <li><i class="fas fa-check"></i> Ground Transport</li>
+                    <li><i class="fas fa-check"></i> All meals & Drinks</li>
+                </ul>
+                <a href="contact.html"><button class="btn">Inquire</button></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== BOOTSTRAP JS FOR CAROUSEL ========== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

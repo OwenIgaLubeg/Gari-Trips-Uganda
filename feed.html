@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Safari Feedback | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for Feedback Form Page -->
+    <style>
+        /* Global navy-blue text */
+        body, h2, h3, label, p, .form-control, .form-control::placeholder {
+          color: #001f3f !important;
+        }
+
+        body {
+          background-image: url('gari-trips-images/feed-background-pic.jpg');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          min-height: 100vh;
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+
+        /* Back-to-home button */
+        .back-home-btn {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 1000;
+        }
+        .back-home-btn a {
+          display: inline-block;
+          padding: 8px 16px;
+          background: rgba(0, 0, 0, 0.6);
+          color: white !important;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          transition: background 0.3s;
+        }
+        .back-home-btn a:hover {
+          background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Form container */
+        .container {
+          max-width: 800px;
+          margin: 80px auto 60px;
+          padding: 30px;
+          background: rgba(255, 255, 255, 0.92);
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(0, 31, 63, 0.2);
+        }
+
+        h2 {
+          text-align: center;
+          margin-bottom: 24px;
+          font-size: 1.8rem;
+        }
+
+        h3 {
+          margin: 24px 0 16px;
+          font-size: 1.3rem;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 6px;
+        }
+
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 20px;
+        }
+
+        .col-md-6, .col-md-12 {
+          flex: 1 1 45%;
+          min-width: 250px;
+          position: relative;
+        }
+
+        .col-md-12 {
+          flex-basis: 100%;
+        }
+
+        .icon {
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #666;
+          z-index: 1;
+        }
+
+        .form-control {
+          width: 100%;
+          padding: 12px 12px 12px 40px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 1rem;
+          background: white;
+        }
+
+        input[type="date"] {
+          padding-left: 40px;
+        }
+
+        .d-flex {
+          gap: 8px;
+          margin-top: 8px;
+        }
+
+        .rating-star {
+          font-size: 1.8rem;
+          color: #ddd;
+          cursor: pointer;
+          transition: color 0.2s;
+        }
+
+        .rating-star.active {
+          color: #f8b500;
+        }
+
+        textarea.form-control {
+          padding: 12px;
+          min-height: 120px;
+          resize: vertical;
+        }
+
+        /* Buttons */
+        .btn {
+          background: transparent;
+          color: #001f3f;
+          border: 2px solid rgb(186, 222, 42);
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Social icons */
+        .icons {
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+          margin-top: 20px;
+        }
+
+        .icons a .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #001f3f;
+          color: white;
+          transition: background 0.3s;
+        }
+
+        .icons a:hover .icon {
+          background: rgb(186, 222, 42);
+          color: #001f3f;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .container {
+            margin-top: 1cm;
+            padding: 20px;
+          }
+          .row {
+            flex-direction: column;
+            gap: 12px;
+          }
+          .col-md-6, .col-md-12 {
+            flex-basis: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== NEW FEEDBACK FORM CONTENT ========== -->
+<div class="back-home-btn">
+    <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+</div>
+
+<div class="container">
+    <form
+            name="safari-feedback"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            id="feedback-form"
+    >
+        <input type="hidden" name="form-name" value="safari-feedback" />
+        <input type="hidden" name="bot-field" />
+
+        <div class="row-mb-3">
+            <div class="col-md-12">
+                <h2>Safari Feedback Form</h2>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+                <input
+                        type="text"
+                        name="event_name"
+                        placeholder="Name the tour you attended:"
+                        id="event_name"
+                        class="form-control"
+                        required
+                />
+            </div>
+            <div class="col-md-6">
+                <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                <input
+                        type="date"
+                        class="form-control"
+                        placeholder="Tour Date:"
+                        name="event_date"
+                        id="event_date"
+                        required
+                />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                <input
+                        type="text"
+                        name="FullName"
+                        id="FullName"
+                        placeholder="Your Name"
+                        class="form-control"
+                        required
+                />
+            </div>
+            <div class="col-md-6">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email Id"
+                        name="Email"
+                        id="Email"
+                        required
+                />
+            </div>
+        </div>
+
+        <h3>What's your opinion about:</h3>
+        <div class="group">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Ease of navigation?</label>
+                    <div class="d-flex flex-wrap" id="navigationEase"></div>
+                    <p id="navigationEase-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Inquiry process</label>
+                    <div class="d-flex flex-wrap" id="bookingProcess"></div>
+                    <p id="bookingProcess-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Accuracy of information provided</label>
+                    <div class="d-flex flex-wrap" id="accuracyInformation"></div>
+                    <p id="accuracyInformation-rating-text">Rating: 0</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>How would you rate the following aspects?</h3>
+        <div class="group">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Fees you paid</label>
+                    <div class="d-flex flex-wrap" id="paymentOptions"></div>
+                    <p id="paymentOptions-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Security Measures</label>
+                    <div class="d-flex flex-wrap" id="securityMeasures"></div>
+                    <p id="securityMeasures-rating-text">Rating: 0</p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <label>Customer Support</label>
+                    <div class="d-flex flex-wrap" id="customerSupport"></div>
+                    <p id="customerSupport-rating-text">Rating: 0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+        <textarea
+                name="comments"
+                class="form-control"
+                placeholder="Your suggestions for improving future events"
+                id="comments"
+                rows="6"
+        ></textarea>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6 d-flex align-items-center">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><i class="fab fa-facebook-f"></i></div>
+            </a>
+            <a href="https://www.instagram.com/garitripsuganda" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+            </a>
+            <a href="https://www.youtube.com/@GariTrips" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><i class="fab fa-youtube"></i></div>
+            </a>
+            <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><i class="fab fa-tiktok"></i></div>
+            </a>
+        </div>
+    </form>
+</div>
+
+<!-- ========== FEEDBACK FORM JAVASCRIPT ========== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const today = new Date().toISOString().split("T")[0];
+      const dateInputs = document.querySelectorAll('input[type="date"]');
+      dateInputs.forEach((input) => {
+        input.setAttribute("max", today);
+      });
+
+      // Create star rating systems
+      const categories = [
+        'navigationEase',
+        'bookingProcess',
+        'accuracyInformation',
+        'paymentOptions',
+        'securityMeasures',
+        'customerSupport'
+      ];
+
+      categories.forEach(cat => {
+        const container = document.getElementById(cat);
+        const textEl = document.getElementById(`${cat}-rating-text`);
+        let rating = 0;
+
+        for (let i = 1; i <= 5; i++) {
+          const star = document.createElement('i');
+          star.className = 'fas fa-star rating-star';
+          star.dataset.value = i;
+          star.addEventListener('click', () => {
+            rating = parseInt(star.dataset.value);
+            updateStars(container, rating);
+            textEl.textContent = `Rating: ${rating}`;
+            // Store rating in hidden input (optional for Netlify)
+            const hiddenInput = document.querySelector(`input[name="${cat}"]`);
+            if (hiddenInput) {
+              hiddenInput.value = rating;
+            } else {
+              // Create hidden input if not exists
+              const newInput = document.createElement('input');
+              newInput.type = 'hidden';
+              newInput.name = cat;
+              newInput.value = rating;
+              document.getElementById('feedback-form').appendChild(newInput);
+            }
+          });
+          container.appendChild(star);
+        }
+      });
+
+      function updateStars(container, rating) {
+        const stars = container.querySelectorAll('.rating-star');
+        stars.forEach((star, idx) => {
+          if (idx < rating) {
+            star.classList.add('active');
+          } else {
+            star.classList.remove('active');
+          }
+        });
+      }
+
+      // Form submission handler
+      const form = document.getElementById('feedback-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Thank you for your feedback! We’ll use it to improve your next safari experience.');
+          form.reset();
+          // Optional: reset ratings
+          document.querySelectorAll('.rating-star').forEach(star => star.classList.remove('active'));
+          document.querySelectorAll('p[id$="-rating-text"]').forEach(p => p.textContent = 'Rating: 0');
+        });
+      }
+    });
+</script>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

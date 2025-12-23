@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ====== SEO META TAGS ====== -->
+    <meta name="description" content="Explore Uganda’s top safari destinations with Gari Trips: Bwindi Impenetrable Forest, Murchison Falls, Queen Elizabeth, Kibale, Lake Mburo, Kidepo Valley, and beyond. Also featuring Masai Mara & Serengeti. Expert-guided tours available.">
+    <meta name="keywords" content="Uganda safari destinations, Bwindi Impenetrable Forest, Murchison Falls National Park, Queen Elizabeth Park, Kibale National Park, Lake Mburo Park, Kidepo Valley Park, Mgahinga Gorilla Park, Mt Rwenzori, Mt Elgon, Masai Mara Kenya, Serengeti Tanzania, East Africa national parks, Gari Trips, Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="author" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta name="geo.region" content="UG" />
+    <meta name="geo.placename" content="Kampala" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mountaingorillatrekkingadventuresafaris.com/Adventure.html">
+
+
+    <!-- ====== Open Graph (General for All Social Platforms) ====== -->
+    <meta property="og:title" content="Destinations | Gari Trips Uganda – Explore East Africa’s Top National Parks">
+    <meta property="og:description" content="Discover Uganda’s iconic parks — from gorilla trekking in Bwindi to rhino tracking in Ziwa, boat cruises on the Kazinga Channel, and the wild beauty of Kidepo Valley — plus Masai Mara & Serengeti.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mountaingorillatrekkingadventuresafaris.com/Adventure.html">
+    <meta property="og:image" content="https://www.mountaingorillatrekkingadventuresafaris.com/gari-trips-images/bwind-park-img-1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mountain Gorilla Trekking Adventure Safaris">
+    <meta property="og:locale" content="en_UG">
+
+
+    <!-- ====== Facebook ====== -->
+    <meta property="article:publisher" content="https://www.facebook.com/garitrips" />
+
+
+    <!-- ====== Instagram ====== -->
+    <link rel="me" href="https://www.instagram.com/garitripsuganda" />
+
+
+    <!-- ====== TikTok ====== -->
+    <meta name="tiktok:creator" content="@garitripsuganda">
+    <meta name="tiktok:site" content="https://www.tiktok.com/@garitripsuganda">
+
+
+    <!-- ====== YouTube ====== -->
+    <meta property="og:see_also" content="https://www.youtube.com/@GariTrips" />
+    <link rel="me" href="https://www.youtube.com/@GariTrips" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>National Parks | Gari Trips Uganda</title>
+    <link rel="icon" type="image/x-icon" href="gari-trips-images/favicon.ico.png" />
+
+    <!-- Inline CSS for the new trip section -->
+    <style>
+        .trip {
+          padding: 60px 0;
+        }
+
+        /* Add 1.0 cm margin below navbar on mobile */
+        @media (max-width: 768px) {
+          .trip {
+            margin-top: 1cm;
+          }
+        }
+
+        .trip__container {
+          max-width: 1300px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        .section__title {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+          color: #000;
+        }
+        .section__subtitle {
+          text-align: center;
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 40px;
+        }
+        .trip__grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 25px;
+        }
+        .trip__card {
+          background: #fff;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trip__card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .trip__card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .trip__details {
+          padding: 16px;
+        }
+        .trip__details p {
+          font-weight: 600;
+          font-size: 1.1rem;
+          margin: 8px 0 12px;
+          color: #222;
+        }
+        .tags {
+          display: flex;
+          gap: 8px;
+          margin: 10px 0;
+          color: #666;
+        }
+        .tags i {
+          font-size: 14px;
+        }
+        .booking__price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 12px;
+        }
+        .rating {
+          color: #f8b500;
+          font-weight: 600;
+          font-size: 0.95rem;
+        }
+        .book__now {
+          background: rgb(70, 123, 20);
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: background 0.3s;
+        }
+        .book__now:hover {
+          background: rgba(26, 78, 14, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PRESERVED NAVBAR ========== -->
+<nav>
+    <div class="nav__header">
+        <div class="nav__logo">
+            <a href="index.html">
+                <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+            </a>
+        </div>
+        <div>
+            <a href="https://wa.me/256704018220" class="nav-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" style="font-size: 1.5rem; color: white;"></i>
+            </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+        </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="package.html">Safari Packages</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-link">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="Adventure.html">Destinations</a></li>
+                <li><a href="Cultural_Exp.html">Communities</a></li>
+                <li><a href="car-services.html">Car Services</a></li>
+                <li><a href="packages.html">Accommodation</a></li>
+                <li><a href="gorilla-trekking.html">Gorilla Trekking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="contact.html">Contacts us</a></li>
+        <li>
+            <a href="contact.html"><button class="btn">
+                Plan a Trip
+                <span><i class="ri-arrow-right-long-line"></i></span>
+            </button></a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== REPLACED MAIN CONTENT ========== -->
+<section class="trip" id="trip">
+    <div class="section__container trip__container">
+        <h2 class="section__title">Adventurous Destinations</h2>
+        <p class="section__subtitle">
+            "Unleash Your Adventurous Spirit: Discover the Most Thrilling Destinations Around East-Africa National Game Parks !"
+        </p>
+
+        <div class="trip__grid">
+            <div class="trip__card">
+                <img src="gari-trips-images/bwind-park-img-1.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>MGAHINGA GORILLA PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fa-solid fa-ship"></i>
+                            <i class="fa-solid fa-campground"></i>
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.9</div>
+                        <a href="mgahinga-gorilla-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/package-7.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>QUEEN ELIZABETH PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-biking"></i>
+                            <i class="fas fa-binoculars"></i>
+                            <i class="fa-solid fa-campground"></i>
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.8</div>
+                        <a href="queen-elizabeth-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/destination-3.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>KIBALE NATIONAL PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-skiing-nordic"></i>
+                            <i class="fas fa-parachute-box"></i>
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                        <a href="kibale-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/lake-mburo-buffalos.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>LAKE MBURO PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-fish"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-ship"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                        <a href="lake-mburo-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/semuliki-hot-springs.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>SEMULIKI PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-hiking"></i>
+                            <i class="fas fa-surfer"></i>
+                            <i class="fas fa-ship"></i>
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                        <a href="semuliki-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/destination-4.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>BWINDI IMPENETRABLE FOREST</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-hiking"></i>
+                            <i class="fas fa-mountain"></i>
+                            <i class="fas fa-compass"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+                        <a href="bwindi-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/destination-6.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>KIDEPO VALLEY PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-parachute-box"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
+                        <a href="kidepo-valley-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/gari-trips-visitors-11.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p> MURCHISON FALLS PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-hiking"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-campground"></i>
+                            <i class="fas fa-skiing"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.9</div>
+                        <a href="murchison-falls-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/mt-elgon-park-pic.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>MT. ELGON NATIONAL PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                        <a href="mt-elgon-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/mt-rwenzori-park-pic.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>MT. RWENZORI NATIONAL PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.7</div>
+                        <a href="mt-rwenzori-park.html"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/destination-11.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>MASAI MARA</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 4.9</div>
+                        <a href="https://en.wikipedia.org/wiki/Maasai_Mara"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trip__card">
+                <img src="gari-trips-images/destination-12.jpg" alt="trip" height="250" width="45" />
+                <div class="trip__details">
+                    <p>SERENGETI NATIONAL PARK</p>
+                    <div class="info">
+                        <div class="tags">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <i class="fas fa-swimmer"></i>
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="booking__price">
+                        <div class="rating"><i class="ri-star-fill"></i> 5.0</div>
+                        <a href="https://en.wikipedia.org/wiki/Serengeti_National_Park"><button class="book__now">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PRESERVED FOOTER ========== -->
+<footer id="contact">
+    <div class="section__container footer__container">
+        <div class="footer__logo">
+            <img src="gari-trips-images/gari-trips-logo-black.png" alt="logo" />
+        </div>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="package.html">Safari Packages</a></li>
+            <li><a href="Adventure.html">National Parks</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <ul class="footer__links">
+            <li><a href="mailto:info@garitripsuganda.com" class="text-nowrap" data-lang="footer_email">info@garitripsuganda.com</a></li>
+            <li><a href="tel:+256 704 018220" class="text-nowrap" data-lang="footer_phone">+256 704 018 220</a></li>
+            <li><a href="contact.html">Gari Trips House - Kansanga (opp. Boston International school) </a></li>
+        </ul>
+
+        <ul class="footer__socials">
+            <li>
+                <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-facebook" title="Facebook" style="cursor: pointer;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
+                    <div class="icon">
+                        <i class="fab fa-tiktok" title="TikTok" style="cursor: pointer; font-size: 1.2rem;"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/garitripsuganda">
+                    <div class="icon"><i class="fab fa-instagram" title="Instagram" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@GariTrips">
+                    <div class="icon"><i class="fab fa-youtube" title="YouTube" style="cursor: pointer;"></i></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer__bar">
+        Copyright © 2025 Gari Trips Uganda. All rights reserved.
+    </div>
+</footer>
+
+<!-- ========== PRESERVED SCRIPTS ========== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
