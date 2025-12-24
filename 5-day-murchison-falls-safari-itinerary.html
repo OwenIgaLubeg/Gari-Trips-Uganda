@@ -296,7 +296,7 @@
                 <p><strong>Early Morning:</strong> Enjoy an early breakfast followed by a game drive on the northern bank of the Nile. Expect
                     to see elephants, lions, giraffes, buffaloes, leopards, and several antelope species.<br>
                     <strong>Afternoon:</strong> After lunch, embark on a boat cruise to the base of Murchison Falls, a highlight offering
-                    sightings of hippos, crocodiles, and aquatic birds.<br>
+                    sightings of hippos, crocodiles, and <a href="https://ebird.org/region/UG-C/bird-list" target="_blank" rel="noopener noreferrer">aquatic birds</a>.<br>
                     <strong>Evening:</strong> Return to the lodge for dinner and relaxation.<br>
                     <strong>Accommodation:</strong> Pakuba Safari Lodge</p>
             </div><br>
@@ -388,34 +388,31 @@
             <div class="inquiry-form-box">
 
                 <form
-                        name="itinerary-inquiry"
+                        action="https://getform.io/f/broxyjma"
                         method="POST"
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-                        action="/success.html"
                         class="contact-form"
                 >
-                    <!-- Hidden fields required by Netlify -->
-                    <input type="hidden" name="form-name" value="itinerary-inquiry">
-                    <input type="hidden" name="bot-field">
+                    <!-- Redirect to your success page -->
+                    <input type="hidden" name="_redirect" value="https://mountaingorillatrekkingadventuresafaris.com/success.html">
 
+                    <!-- Your original fields (preserved) -->
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-user form-icon"></i>
+                        <!--<i class="fa-solid fa-user form-icon"></i>-->
                         <input type="text" name="name" placeholder="Your Name" required />
                     </div>
 
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-envelope form-icon"></i>
+                        <!--<i class="fa-solid fa-envelope form-icon"></i>-->
                         <input type="email" name="email" placeholder="Your Email" required />
                     </div>
 
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-map-location-dot form-icon"></i>
+                        <!-- <i class="fa-solid fa-map-location-dot form-icon"></i>-->
                         <input type="text" name="trip" value="3-day-itinerary" readonly />
                     </div>
 
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-message form-icon textarea-icon"></i>
+                        <!-- <i class="fa-solid fa-message form-icon textarea-icon"></i>-->
                         <textarea name="message"
                                   placeholder="Your Message (dates, group size, special requests, etc.)"
                                   required></textarea>
@@ -423,9 +420,7 @@
 
                     <div class="form-buttons">
                         <button type="submit" class="btn btn-style">Send Inquiry</button>
-
                     </div>
-
                 </form>
             </div>
         </div>

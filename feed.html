@@ -24,7 +24,7 @@
         }
 
         body {
-          background-image: url('gari-trips-images/feed-background-pic.jpg');
+          background-image: url('gari-trips-images/mgahinga-bird.jpg');
           background-size: cover;
           background-position: center;
           background-attachment: fixed;
@@ -249,15 +249,14 @@
 </div>
 
 <div class="container">
+    <!-- GETFORM ACTION -->
     <form
-            name="safari-feedback"
+            action="https://getform.io/f/broxyjma"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             id="feedback-form"
     >
-        <input type="hidden" name="form-name" value="safari-feedback" />
-        <input type="hidden" name="bot-field" />
+        <!-- Redirect to success page -->
+        <input type="hidden" name="_redirect" value="https://mountaingorillatrekkingadventuresafaris.com/success.html">
 
         <div class="row-mb-3">
             <div class="col-md-12">
@@ -383,7 +382,7 @@
             </div>
         </div>
 
-        <div class="icons">
+        <!--<div class="icons">
             <a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer">
                 <div class="icon"><i class="fab fa-facebook-f"></i></div>
             </a>
@@ -396,7 +395,7 @@
             <a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer">
                 <div class="icon"><i class="fab fa-tiktok"></i></div>
             </a>
-        </div>
+        </div>-->
     </form>
 </div>
 
@@ -432,17 +431,16 @@
             rating = parseInt(star.dataset.value);
             updateStars(container, rating);
             textEl.textContent = `Rating: ${rating}`;
-            // Store rating in hidden input (optional for Netlify)
-            const hiddenInput = document.querySelector(`input[name="${cat}"]`);
+            // Store rating in hidden input for Getform
+            let hiddenInput = document.querySelector(`input[name="${cat}"]`);
             if (hiddenInput) {
               hiddenInput.value = rating;
             } else {
-              // Create hidden input if not exists
-              const newInput = document.createElement('input');
-              newInput.type = 'hidden';
-              newInput.name = cat;
-              newInput.value = rating;
-              document.getElementById('feedback-form').appendChild(newInput);
+              hiddenInput = document.createElement('input');
+              hiddenInput.type = 'hidden';
+              hiddenInput.name = cat;
+              hiddenInput.value = rating;
+              document.getElementById('feedback-form').appendChild(hiddenInput);
             }
           });
           container.appendChild(star);
@@ -460,16 +458,12 @@
         });
       }
 
-      // Form submission handler
+      // Form submission handler — removed alert to allow real submit
       const form = document.getElementById('feedback-form');
       if (form) {
         form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          alert('Thank you for your feedback! We’ll use it to improve your next safari experience.');
-          form.reset();
-          // Optional: reset ratings
-          document.querySelectorAll('.rating-star').forEach(star => star.classList.remove('active'));
-          document.querySelectorAll('p[id$="-rating-text"]').forEach(p => p.textContent = 'Rating: 0');
+          // Do NOT preventDefault — allow real form submission to Getform
+          // Optional: show loading or success message after redirect
         });
       }
     });
