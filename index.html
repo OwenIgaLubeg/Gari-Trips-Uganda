@@ -196,6 +196,47 @@
         height: 9px;
       }
 
+      .header__image {
+  position: relative;
+  width: fit-content;
+}
+
+.image-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text overlay on image */
+.image-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* Hover effect (optional but professional) */
+.image-link:hover .image-text {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateX(-50%) scale(1.05);
+}
+
+
     }
   </style>
 
@@ -246,8 +287,14 @@
 
 <header class="section__container header__container" id="home">
   <div class="header__image">
-    <a href="story.html"><img src="gari-trips-images/gorilla-home-page-pic.jpg" alt="header" height="450" width="45"/></a>
+    <a href="story.html" class="image-link">
+      <img src="gari-trips-images/gorilla-home-page-pic.jpg" alt="header" height="450" width="450"/>
+      <div class="image-text">
+        Tap to have a real safari experience with GARI TRIPS
+      </div>
+    </a>
   </div>
+
   <div class="header__content">
     <!--<img src="assets/plane.png" alt="plane" />-->
     <h1>Come visit Mountain Gorillas.</h1>
@@ -352,6 +399,33 @@
     </script>
   </div>
 </header>
+<!--About us section --->
+
+<section class="about" id="about">
+  <div class="section__container about__container">
+    <div class="about__image">
+      <img src="gari-trips-images/gari-trips-visitors-10.jpg" alt="about" />
+    </div>
+    <div class="about__content">
+      <h2 class="section__header">
+        It's Time For a <span>New Adventure!</span> Don't Wait Any Longer.
+      </h2>
+      <p class="section__description">
+        If you are looking for a Certified Experienced trusted tour operator with over ten years in the industry, then
+        welcome to Gari Trips Uganda your premier gateway to authentic East African safari adventures. Discover
+        <a href="https://www.garitripsuganda.com/" target="_blank" rel="noopener noreferrer">mountain gorillas</a> in
+        Bwindi Impenetrable Forest, track chimpanzees in Kibale, <a href="https://ebird.org/region/UG-C/bird-list" target="_blank" rel="noopener noreferrer">Bird Watching</a> and witness the Big Five
+        across Uganda’s legendary national parks. We craft personalized wildlife journeys that ignite wonder and
+        leave lifelong memories. <a href="https://www.safaribookings.com/p6877" target="_blank" rel="noopener noreferrer">
+        SafariBookings.com</a> and <a href="https://www.tripadvisor.ie/Attraction_Review-g293841-d32854469-Reviews-Gari_Trips_Uganda-Kampala_Central_Region.html" target="_blank" rel="noopener noreferrer">
+        TripAdvisor.</a>
+      </p>
+      <div class="about__signature">Emmanuel.W.</div>
+    </div>
+  </div>
+</section>
+
+<!--end of the about us -->
 
 <!--transfer of the national game parks-->
 
@@ -601,7 +675,7 @@
 </section>
 <!--end of itineraries-->
 
-<section class="about" id="about">
+<!--<section class="about" id="about">
   <div class="section__container about__container">
     <div class="about__image">
       <img src="gari-trips-images/gari-trips-visitors-10.jpg" alt="about" />
@@ -611,7 +685,8 @@
         It's Time For a <span>New Adventure!</span> Don't Wait Any Longer.
       </h2>
       <p class="section__description">
-        Welcome to Gari Trips Uganda – your premier gateway to authentic East African safari adventures. Discover
+        If you are looking for a Certified Experienced trusted tour operator with over ten years in the industry, then
+        welcome to Gari Trips Uganda your premier gateway to authentic East African safari adventures. Discover
         <a href="https://www.garitripsuganda.com/" target="_blank" rel="noopener noreferrer">mountain gorillas</a> in
         Bwindi Impenetrable Forest, track chimpanzees in Kibale, <a href="https://ebird.org/region/UG-C/bird-list" target="_blank" rel="noopener noreferrer">Bird Watching</a> and witness the Big Five
         across Uganda’s legendary national parks. We craft personalized wildlife journeys that ignite wonder and
@@ -622,7 +697,7 @@
       <div class="about__signature">Emmanuel.W.</div>
     </div>
   </div>
-</section>
+</section>-->
 
 <section class="section__container review__container">
  <!-- <div class="review__image">
